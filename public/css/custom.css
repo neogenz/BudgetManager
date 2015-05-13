@@ -1,0 +1,31 @@
+.medium-bordered{
+    margin: 15px 0px 15px 0px;
+}
+
+.without-margin{
+    margin-bottom: 0px;
+}
+
+.button, .btn {
+	border-radius: 0px;
+}
+
+.panel{
+	border-radius: 0px;
+}
+
+.form-control{
+	border-radius: 0px;
+}
+
+.margin-top-10{
+    margin-top: 10px !important;
+}
+
+.font-size-h2{
+    font-size: 30px;
+}
+
+.small-left-separation{
+    margin-left: 10px;
+}

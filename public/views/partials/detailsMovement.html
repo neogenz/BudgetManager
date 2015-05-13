@@ -1,0 +1,58 @@
+<div class="centered panel panel-default without-margin">
+    <div class="panel-heading">
+        <h3>Détails du mouvement <strong><em>{{movement.name}}</em></strong></h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Montant :</h4>
+            </div>
+            <div class="col-md-8">
+                <h4>
+                    <small>
+                        {{movement.amount}}€
+                    </small>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Type :</h4>
+            </div>
+            <div class="col-md-8">
+                <h4>
+                    <span ng-show="movement.type === 'up'" style="color:green" class="fa fa-arrow-up"></span>
+                    <span ng-show="movement.type === 'down'" style="color:red" class="fa fa-arrow-down"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Répétition(s) :</h4>
+            </div>
+            <div class="col-md-8">
+                <h4>
+                    <small>
+                        {{movement.repeat}}
+                    </small>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Commentaire :</h4>
+            </div>
+            <div class="col-md-8">
+                <h4>
+                    <small>
+                        {{movement.comment}}
+                    </small>
+                </h4>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" ng-click="ok()">Fermer</button>
+        </div>
+        <br/>
+    </div>
+</div>

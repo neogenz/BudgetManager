@@ -1,0 +1,27 @@
+Un plan de prévoyance est représenté par :
+	- Un nom
+	- Une validitée
+	- Des charges
+	- Montant de base
+
+Une charge est représentée par :
+	- Un nom
+	- Un type (frais, gains)
+	- Une somme (frais -> rouge, gain -> vert)
+	- Un nombre de répétitions
+	- Un/des plans de prévoyances associés
+	- Un commentaire
+
+- Création de plan prévisionnel avec model personnalisé
+
+- Possibilité de daté l'activation d'un mouvement
+	- Afficher dans le rapport les mêmes données mais avec tous les mouvements activé
+
+- Popup de confirmation de suppression
+
+- Validation de formulaire
+
+- Toaster de validation d'action
+
+- Loader de données
+
