@@ -8,7 +8,9 @@
             <a ng-click="deleteClickListener(provisionalPlan)" href class="pull-right small-left-separation">
                 <span class="glyphicon glyphicon-trash"></span>
             </a>
-            <a ng-controller="movementCtrl" ng-click="openModalToEditOrAddToProvisionalPlan(provisionalPlan, null, $parent.refresh)" href class="pull-right small-left-separation">
+            <a ng-controller="movementCtrl"
+               ng-click="modalToAddOrEditClickListener(provisionalPlan, null, $parent.refresh)" href
+               class="pull-right small-left-separation">
                 <span class="glyphicon glyphicon-plus"></span>
             </a>
             <a ng-click="openProvisionalPlanModal(provisionalPlan, null)" href class="pull-right small-left-separation">

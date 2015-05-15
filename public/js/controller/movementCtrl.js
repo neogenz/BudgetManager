@@ -6,14 +6,18 @@ appBudgetManager.controller('movementCtrl', function ($scope, $modal, movementWe
 
         $scope.confirmationMessage = "Êtes vous sur de vouloir supprimer ce mouvement ?";
 
-        $scope.inverseActiveState = function (movement, success_callback) {
+        $scope.inverseActiveStateClickListener = function (movement, success_callback) {
+            inverseActiveState(movement, success_callback);
+        };
+
+        function inverseActiveState(movement, success_callback) {
             movement.active = !movement.active;
             movementWebApi.update(movement).then(function () {
-                success_callback();
+                success_callback(movement.MovementsProvisionalPlans.ProvisionalPlanId);
             }, function () {
 
             });
-        };
+        }
 
         var confirmActionModalOpts = {
             templateUrl: 'views/partials/confirmAction', // Url du template HTML
@@ -38,9 +42,10 @@ appBudgetManager.controller('movementCtrl', function ($scope, $modal, movementWe
             });
         };
 
+        //delete is binded to $scope because delete is reserverd word in javascript
         $scope.delete = function (movement, success_callback) {
             movementWebApi.remove(movement).then(function () {
-                success_callback();
+                success_callback(movement.MovementsProvisionalPlans.ProvisionalPlanId);
             }, function () {
 
             });
@@ -59,25 +64,29 @@ appBudgetManager.controller('movementCtrl', function ($scope, $modal, movementWe
             }
         };
 
-        $scope.openModalToEditOrAddToProvisionalPlan = function (provisionalPlan, movementToWork, success_callback) {
+        $scope.modalToAddOrEditClickListener = function (provisionalPlan, movementToWork, success_callback) {
             $scope.provisionalPlan = provisionalPlan;
             if (movementToWork === null) {
                 $scope.movementToWork = new Movement();
             } else {
                 $scope.movementToWork = movementToWork;
             }
+            openModal(success_callback);
+        };
+
+        function openModal(success_callback) {
             var modalInstance = $modal.open(movementModalAddOrEditOpts);
             modalInstance.result.then(function (movement) {
                 $scope.movement = movement;
                 if ($scope.movement.id === undefined || $scope.movement.id === null) {
                     provisionalPlanWebApi.addMovementToProvisionalPlan($scope.provisionalPlan.id, $scope.movementToWork)
                         .then(function () {
-                            success_callback();
+                            success_callback($scope.provisionalPlan.id);
                         });
                 }
                 else {
                     movementWebApi.update($scope.movementToWork).then(function () {
-                        success_callback();
+                        success_callback($scope.movementToWork.MovementsProvisionalPlans.ProvisionalPlanId);
                     }, function () {
 
                     });

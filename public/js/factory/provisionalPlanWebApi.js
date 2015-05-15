@@ -1,4 +1,4 @@
-appBudgetManager.factory('provisionalPlanWebApi', ['$http', '$q',
+appBudgetManager.factory('provisionalPlanWebApi',
     function ($http, $q) {
         //Config
         var config = {
@@ -158,4 +158,4 @@ appBudgetManager.factory('provisionalPlanWebApi', ['$http', '$q',
             return $http(req);
         };
     }
-]);
+);

@@ -36,13 +36,10 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider) {
             .state('provisionalPlans', {
                 url: '/provisionalPlans',
                 templateUrl: 'views/provisionalPlans',
-                controller: 'provisionalPlanCtrl'//,
-                //resolve: {
-                //    userAuthenticated: checkIfUserAuthenticated
-                //}
+                controller: 'provisionalPlanCtrl'
             })
             .state('provisionalPlanDetails', {
-                url: 'provisionalPlans/{id}',
+                url: 'provisionalPlans/:id',
                 templateUrl: 'views/partials/detailsProvisionalPlan',
                 controller: 'detailsProvisionalPlanCtrl',
                 resolve: {

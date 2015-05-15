@@ -1,4 +1,4 @@
-appBudgetManager.factory('movementWebApi', ['$http', '$q',
+appBudgetManager.factory('movementWebApi',
     function ($http, $q) {
         //Config
         var config = {
@@ -74,13 +74,13 @@ appBudgetManager.factory('movementWebApi', ['$http', '$q',
             return def.promise;
         };
 
-        function remove(movement){
+        function remove(movement) {
             var def = $q.defer();
             var promise = internalFunctionsService.buildDeletePromiseToCallThisUrl(urlHeader + '/movements/' + movement.id, movement);
-            promise.success(function(){
+            promise.success(function () {
                 def.resolve();
-            }).error(function(){
-               def.reject();
+            }).error(function () {
+                def.reject();
             });
             return def.promise;
         }
@@ -126,4 +126,4 @@ appBudgetManager.factory('movementWebApi', ['$http', '$q',
             return $http(req);
         };
     }
-]);
+);

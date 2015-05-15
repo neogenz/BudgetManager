@@ -21,7 +21,10 @@ module.exports = function (provider) {
     };
 
     var getProvisionalPlanById = function (req, res) {
-        models.ProvisionalPlan.findOne(req.params.id).success(function (provisionalPlan) {
+        models.ProvisionalPlan.findOne({
+            where: {id: req.params.id},
+            include: [models.Movement]
+        }).success(function (provisionalPlan) {
             res.send(provisionalPlan);
         });
     };

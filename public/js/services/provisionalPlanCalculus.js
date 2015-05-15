@@ -1,11 +1,5 @@
 appBudgetManager.service('provisionalPlanCalculus', function () {
-    return {
-        getTotalMovementsOf: getTotalMovementsOf,
-        getTotalMovementWithoutDownOf: getTotalMovementWithoutDownOf,
-        getTotalMovementWithoutUpOf: getTotalMovementWithoutUpOf
-    };
-
-    function getTotalMovementsOf(provisionalPlan) {
+    this.getTotalMovementsOf = function (provisionalPlan) {
         var total = provisionalPlan.baseAmount;
         for (var i = 0; i < provisionalPlan.Movements.length; i++) {
             var currentMovement = provisionalPlan.Movements[i];
@@ -25,7 +19,7 @@ appBudgetManager.service('provisionalPlanCalculus', function () {
         return total;
     };
 
-    function getTotalMovementWithoutDownOf(provisionalPlan) {
+    this.getTotalMovementWithoutDownOf = function (provisionalPlan) {
         var total = provisionalPlan.baseAmount;
         for (var i = 0; i < provisionalPlan.Movements.length; i++) {
             var currentMovement = provisionalPlan.Movements[i];
@@ -40,7 +34,7 @@ appBudgetManager.service('provisionalPlanCalculus', function () {
         return total;
     };
 
-    function getTotalMovementWithoutUpOf(provisionalPlan) {
+    this.getTotalMovementWithoutUpOf = function (provisionalPlan) {
         var total = provisionalPlan.baseAmount;
         for (var i = 0; i < provisionalPlan.Movements.length; i++) {
             var currentMovement = provisionalPlan.Movements[i];

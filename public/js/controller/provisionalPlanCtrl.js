@@ -1,4 +1,4 @@
-appBudgetManager.controller('provisionalPlanCtrl', function ($scope, $modal, provisionalPlanWebApi, provisionalPlanCalculus) {
+appBudgetManager.controller('provisionalPlanCtrl', function ($scope, $modal, provisionalPlanWebApi, provisionalPlanCalculus, scopeOperations) {
 
         $scope.provisionalPlan = null;
 
@@ -24,16 +24,36 @@ appBudgetManager.controller('provisionalPlanCtrl', function ($scope, $modal, pro
             }
         };
 
-        var refresh = function () {
-            provisionalPlanWebApi.findAllProvisionalPlan()
+        var refreshOne = function (id) {
+            provisionalPlanWebApi.findProvisionalPlanById(id)
                 .then(function (data) {
-                    $scope.provisionalPlans = data;
+                    var nbProvisionalPlans = $scope.provisionalPlans.length;
+                    for (var i = 0; i < nbProvisionalPlans; i++) {
+                        var currentElement = $scope.provisionalPlans[i];
+                        if (currentElement.id === data.id) {
+                            scopeOperations.removeElementOfScope($scope.provisionalPlans, currentElement);
+                            scopeOperations.addElementToScope($scope.provisionalPlans, data);
+                        }
+                    }
                 });
+        };
+
+        var refresh = function (provisionalPlanId) {
+            if (provisionalPlanId === undefined || provisionalPlanId === null) {
+                provisionalPlanWebApi.findAllProvisionalPlan()
+                    .then(function (data) {
+                        $scope.provisionalPlans = data;
+                    });
+            }
+            else {
+                refreshOne(provisionalPlanId);
+            }
+
         };
         refresh();
 
-        $scope.refresh = function () {
-            refresh();
+        $scope.refresh = function (provisionalPlanId) {
+            refresh(provisionalPlanId);
         };
 
         $scope.openProvisionalPlanModal = function (provisionalPlan) {
@@ -56,15 +76,15 @@ appBudgetManager.controller('provisionalPlanCtrl', function ($scope, $modal, pro
         };
 
         $scope.deleteClickListener = function (provisionalPlan) {
-            if(provisionalPlan === null){
+            if (provisionalPlan === null) {
                 return;
             }
             $scope.confirmationMessage = "Êtes vous sur de vouloir supprimer ce plan prévisionnel ?";
             var modalInstance = $modal.open(confirmActionModalOpts);
-            modalInstance.result.then(function(){
+            modalInstance.result.then(function () {
                 $scope.delete(provisionalPlan);
-            }, function(){
-               console.log("Suppression annulé.");
+            }, function () {
+                console.log("Suppression annulé.");
             });
         };
 

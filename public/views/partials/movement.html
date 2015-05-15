@@ -2,7 +2,8 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-md-12">
-                <a ng-click="inverseActiveState(movement, $parent.refresh)" class="pull-right small-left-separation">
+                <a ng-click="inverseActiveStateClickListener(movement, $parent.refresh)"
+                   class="pull-right small-left-separation">
                     <span style="cursor: pointer;"
                           class="font-size-h2"
                           ng-class="{true: 'fa fa-toggle-on', false: 'fa fa-toggle-off'}[movement.active]">
@@ -13,7 +14,7 @@
                           class="font-size-h2 glyphicon glyphicon-trash">
                     </span>
                 </a>
-                <a ng-click="openModalToEditOrAddToProvisionalPlan(null, movement, $parent.refresh)" href class="pull-right">
+                <a ng-click="modalToAddOrEditClickListener(null, movement, $parent.refresh)" href class="pull-right">
                     <span style="cursor: pointer;"
                           class="font-size-h2 glyphicon glyphicon-pencil">
                     </span>
