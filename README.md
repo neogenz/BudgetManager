@@ -2,7 +2,7 @@
 Cette application est destiné à rendre convivale et simple la gestion de son porte feuille (virtuel ou non).
 ## Techonolgies utilisées
 ### Backend
-- Serveur
+- Serveur 
 	- NodeJS (express)
 - Base de données
 	- MySQL
