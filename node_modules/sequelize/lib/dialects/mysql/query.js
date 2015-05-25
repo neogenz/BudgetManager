@@ -29,8 +29,6 @@ module.exports = (function() {
 
     var promise = new Utils.Promise(function(resolve, reject) {
       self.connection.query(self.sql, function(err, results) {
-        promise.emit('sql', self.sql, self.connection.uuid);
-
         if (err) {
           err.sql = sql;
 
@@ -112,7 +110,7 @@ module.exports = (function() {
       case 1062:
         match = err.message.match(/Duplicate entry '(.*)' for key '?((.|\s)*?)'?$/);
 
-        var values = match[1].split('-')
+        var values = match ? match[1].split('-') : undefined
           , fields = {}
           , message = 'Validation error'
           , uniqueKey = this.callee && this.callee.__options.uniqueKeys[match[2]];
@@ -142,7 +140,7 @@ module.exports = (function() {
 
         return new sequelizeErrors.ForeignKeyConstraintError({
           fields: null,
-          index: match[3],
+          index: match ? match[3] : undefined,
           parent: err
         });
 
@@ -151,7 +149,7 @@ module.exports = (function() {
 
         return new sequelizeErrors.ForeignKeyConstraintError({
           fields: null,
-          index: match[1],
+          index: match ? match[1] : undefined,
           parent: err
         });
 

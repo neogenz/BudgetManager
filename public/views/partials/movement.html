@@ -1,4 +1,5 @@
-<div ng-controller="movementCtrl" class="panel panel-default" ng-style="!movement.active && {'background-color': '#F5F5F5'}">
+<div ng-controller="movement.ctrl" class="panel panel-default"
+     ng-style="!movement.active && {'background-color': '#F5F5F5'}">
     <div class="panel-body">
         <div class="row">
             <div class="col-md-12">
@@ -19,41 +20,40 @@
                           class="font-size-h2 glyphicon glyphicon-pencil">
                     </span>
                 </a>
-                    </span>
             </div>
         </div>
         <span style="cursor: pointer;" ng-click="openMovementDetailsModal(movement)">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="text-center margin-top-10">
-                    {{movement.name}}
-                </h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center margin-top-10">
+                        {{movement.name}}
+                    </h2>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="text-center">
-                    <p ng-show="movement.type === 'up'" style="color:green">
-                        {{movement.amount}}€
-                        <span class="fa fa-arrow-up"></span>
-                        <small ng-show="movement.repeat > 1">x {{movement.repeat}}</small>
-                    </p>
-                    <p ng-show="movement.type === 'down'" style="color:red">
-                        {{movement.amount}}€
-                        <span class="fa fa-arrow-down"></span>
-                        <small ng-show="movement.repeat > 1">x {{movement.repeat}}</small>
-                    </p>
-                </h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center">
+                        <p ng-show="movement.type === 'up'" style="color:green">
+                            {{movement.amount}}€
+                            <span class="fa fa-arrow-up"></span>
+                            <small ng-show="movement.repeat > 1">x {{movement.repeat}}</small>
+                        </p>
+                        <p ng-show="movement.type === 'down'" style="color:red">
+                            {{movement.amount}}€
+                            <span class="fa fa-arrow-down"></span>
+                            <small ng-show="movement.repeat > 1">x {{movement.repeat}}</small>
+                        </p>
+                    </h2>
+                </div>
             </div>
-        </div>
-            </span>
+        </span>
     </div>
 </div>
 
 <!--<script>-->
-    <!--jQuery(document).ready(function ($) {-->
-        <!--$(".clickable-row").click(function () {-->
-            <!--window.document.location = $(this).attr("data-href");-->
-        <!--});-->
-    <!--});-->
+<!--jQuery(document).ready(function ($) {-->
+<!--$(".clickable-row").click(function () {-->
+<!--window.document.location = $(this).attr("data-href");-->
+<!--});-->
+<!--});-->
 <!--</script>-->

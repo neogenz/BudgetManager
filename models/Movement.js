@@ -40,7 +40,7 @@ module.exports = function (sequelize, DataTypes) {
         }, {
             classMethods: {
                 associate: function (models) {
-                    Movement.hasMany(models.ProvisionalPlan)
+                    Movement.belongsTo(models.ProvisionalPlan)
                 }
             }
         }

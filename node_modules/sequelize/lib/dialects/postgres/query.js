@@ -102,7 +102,6 @@ module.exports = (function() {
       query.on('error', function(err) {
         receivedError = true;
         err.sql = sql;
-        promise.emit('sql', sql, self.client.uuid);
         reject(self.formatError(err));
       });
 
@@ -111,7 +110,6 @@ module.exports = (function() {
           return;
         }
 
-        promise.emit('sql', self.sql, self.client.uuid);
         resolve([rows, sql, result]);
       });
     }).spread(function(rows, sql, result) {
@@ -354,8 +352,10 @@ module.exports = (function() {
 
     switch (code) {
       case '23503':
-        index = errMessage.match(/violates foreign key constraint \"(.+?)\"/)[1];
-        table = errMessage.match(/on table \"(.+?)\"/)[1];
+        index = errMessage.match(/violates foreign key constraint \"(.+?)\"/);
+        index = index ? index[1] : undefined;
+        table = errMessage.match(/on table \"(.+?)\"/);
+        table = table ? table[1] : undefined;
 
         return new sequelizeErrors.ForeignKeyConstraintError({
           fields: null,
@@ -404,7 +404,9 @@ module.exports = (function() {
       case '23P01':
         match = errDetail.match(/Key \((.*?)\)=\((.*?)\)/);
 
-        fields = Utils._.zipObject(match[1].split(', '), match[2].split(', '));
+        if (match) {
+          fields = Utils._.zipObject(match[1].split(', '), match[2].split(', '));
+        }
         message = 'Exclusion constraint error';
 
         return new sequelizeErrors.ExclusionConstraintError({

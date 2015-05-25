@@ -1,6 +1,6 @@
 <!doctype html>
 <title>Budget manager</title>
-<html ng-app="appBudgetManager" lang="fr">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="loader/loading-bar.css">
 </head>
 
-<body>
+<body ng-app="appBudgetManager">
 <nav role="navigation" class="navbar navbar-default">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -26,28 +26,28 @@
     <!-- Collection of nav links, forms, and other content for toggling -->
     <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <!--<li ng-show="$root.user.username" >-->
-                <!--<a ui-sref="predictionPlans">-->
-                    <!--<span class="glyphicon glyphicon-menu-hamburger"></span>-->
-                <!--</a>-->
-            <!--</li>-->
-            <li>
+            <li ng-show="$root.user">
                 <a ui-sref="provisionalPlans">
                     <span class="fa fa-calculator"></span>
                 </a>
             </li>
+            <!--<li>-->
+            <!--<a ui-sref="provisionalPlans">-->
+            <!--<span class="fa fa-calculator"></span>-->
+            <!--</a>-->
+            <!--</li>-->
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <!--<li ng-show="$root.user.username" >-->
-                <!--<a href>-->
-                    <!--{{$root.user.username}}-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li ng-show="$root.user" class="pull-right">-->
-                <!--<a href="/logout">-->
-                    <!--Se deconnecter-->
-                <!--</a>-->
-            <!--</li>-->
+            <li ng-show="$root.user">
+                <a href>
+                    {{$root.user.email}}
+                </a>
+            </li>
+            <li ng-show="$root.user" class="pull-right">
+                <a ng-controller="logout.ctrl" ng-click="logout()">
+                    <span class="fa fa-sign-out"></span>
+                </a>
+            </li>
 
         </ul>
 
@@ -57,28 +57,40 @@
 <div class="container">
     <div ui-view></div>
 </div>
-<script src="jquery-1.11.1.min.js"></script>
+<!--<script type="text/javascript" src="https://cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>-->
+<script src="vendor/jquery-1.11.1.min.js"></script>
 <script src="angular/angular.min.js"></script>
 <script src="angular/vendor/angular-animate.min.js"></script>
 <script src="angular/vendor/ui-router.min.js"></script>
 <script src="vendor/ui-bootstrap-tpls-0.12.1.min.js"></script>
 <script src="vendor/loading-bar.js"></script>
-<script src="appBudgetManager.js"></script>
-<script src="routing.js"></script>
+<script src="vendor/ngStorage.js"></script>
+<script src="app_start.js"></script>
+<script src="app/__global.js"></script>
+<script src="app/config.js"></script>
+<script src="app_utils/httpRequestOptions.builder.js"></script>
+<script src="DTO/factory.js"></script>
 <script src="models/Movement.js"></script>
 <script src="models/ProvisionalPlan.js"></script>
-<script src="factory/cache.js"></script>
-<script src="factory/scopeOperations.js"></script>
-<script src="factory/provisionalPlanWebApi.js"></script>
-<script src="factory/movementWebApi.js"></script>
-<script src="services/provisionalPlanCalculus.js"></script>
-<script src="controller/confirmActionCtrl.js"></script>
-<script src="controller/movementCtrl.js"></script>
-<script src="controller/addMovementCtrl.js"></script>
-<script src="controller/addProvisionalPlanCtrl.js"></script>
-<script src="controller/detailsMovementCtrl.js"></script>
-<script src="controller/detailsProvisionalPlanCtrl.js"></script>
-<script src="controller/provisionalPlanCtrl.js"></script>
+<script src="data/ressources/provisionalPlan.autocomplete.js"></script>
+<script src="data/ressources/movement.autocomplete.js"></script>
+<script src="appBudgetManager.js"></script>
+<script src="routing.js"></script>
+<script src="BLL/scopeOperations.js"></script>
+<script src="BLL/provisionalPlan.calculus.js"></script>
+<script src="AUTH/authenticate.js"></script>
+<script src="DAL/provisionalPlan.js"></script>
+<script src="DAL/movement.js"></script>
+<script src="controller/logout.ctrl.js"></script>
+<script src="controller/signup.ctrl.js"></script>
+<script src="controller/login.ctrl.js"></script>
+<script src="controller/action.confirm.ctrl.js"></script>
+<script src="controller/movement.ctrl.js"></script>
+<script src="controller/movement.add.ctrl.js"></script>
+<script src="controller/provisionalPlan.add.ctrl.js"></script>
+<script src="controller/movement.details.ctrl.js"></script>
+<script src="controller/provisionalPlan.details.ctrl.js"></script>
+<script src="controller/provisionalPlan.ctrl.js"></script>
 
 </body>
 </html>

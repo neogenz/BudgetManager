@@ -1,0 +1,25 @@
+<div class="col-sm-6 col-sm-offset-3">
+    <h1><span class="fa fa-sign-in"></span> Connexion</h1>
+    <!-- LOGIN FORM -->
+    <div class="alert-warning" ng-show="$root.error !== ''">
+        <p>{{$root.error}}</p>
+    </div>
+    <form role="form" ng-submit="signin()">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="text" class="form-control" name="email" ng-model="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input id="password" type="password" class="form-control" name="password" ng-model="password">
+        </div>
+        <button type="submit" class="btn btn-warning btn-lg">Se connecter</button>
+    </form>
+
+    <hr>
+
+    <p>Vous avez besoin d'un compte ? <a ui-sref="signup">S'inscrire</a></p>
+
+    <p>Ou aller à <a ui-sref="home">l'accueil</a>.</p>
+
+</div>

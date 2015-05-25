@@ -24,7 +24,9 @@ module.exports = function (sequelize, DataTypes) {
         }, {
             classMethods: {
                 associate: function (models) {
-                    ProvisionalPlan.hasMany(models.Movement)
+                    ProvisionalPlan.hasMany(models.Movement);
+                    //ProvisionalPlan.hasMany(models.User);
+                    ProvisionalPlan.belongsTo(models.User);
                 }
             }
         }

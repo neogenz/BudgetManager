@@ -3,6 +3,7 @@ Un plan de prévoyance est représenté par :
 	- Une validitée
 	- Des charges
 	- Montant de base
+	- Un ID d'utilisateur
 
 Une charge est représentée par :
 	- Un nom
@@ -11,13 +12,16 @@ Une charge est représentée par :
 	- Un nombre de répétitions
 	- Un/des plans de prévoyances associés
 	- Un commentaire
+	- Un ID de plan prévisionel
 
 - Création de plan prévisionnel avec model personnalisé
 
 - Possibilité de daté l'activation d'un mouvement
 	- Afficher dans le rapport les mêmes données mais avec tous les mouvements activé
 
-- Popup de confirmation de suppression
+DONE : Popup de confirmation de suppression
+
+- Indiquer si le plan est valide ou non en fonction de son montant (positif / négatif)
 
 - Validation de formulaire
 
@@ -25,3 +29,8 @@ Une charge est représentée par :
 
 - Loader de données
 
+- Faire une page de profil utilisateur
+
+- Gérer les token en détails
+
+- Faire un espace admin
