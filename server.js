@@ -34,7 +34,7 @@ models.sequelize.sync(/*{force: true}*/).then(function () {
     http.createServer(app).listen(app.get('port'), function () {
         console.log('Express server listening on port ' + app.get('port'));
         require('./routing')(app, models, jwt);
-        require(__dirname + "/DAL/ProvisionalPlan")(app, models, jwt);
-        require(__dirname + "/DAL/Movement")(app, models, jwt);
+        require(__dirname + "/dal/ProvisionalPlan")(app, models, jwt);
+        require(__dirname + "/dal/Movement")(app, models, jwt);
     });
 });

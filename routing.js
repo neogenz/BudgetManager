@@ -7,11 +7,8 @@ module.exports = function (provider, models, jwt) {
     var css = publicDir + "css/";
     var js = publicDir + "js/";
     var fonts = publicDir;
-    var angularAppFileName = "appBudgetManager.js";
 
-    provider.get('*/appBudgetManager.js', function (req, res) {
-        res.sendFile(publicDir + angularAppFileName);
-    });
+    var tokenUtils = require("./utils/token")(jwt);
 
     provider.get(['/', '/views/*'], function (req, res) {
         if (req.originalUrl === '/') {
@@ -49,9 +46,18 @@ module.exports = function (provider, models, jwt) {
                     message: 'User not authenticated.'
                 });
             }
-            res.json({
-                token: user.token
-            });
+            try {
+                var token = jwt.sign(user, process.env.JWT_SECRET, {
+                    expiresInMinutes: 1440 // expires in 24 hours
+                });
+                res.send({token: token});
+            } catch (e) {
+                console.log(e);
+                res.status = 500;
+                res.send({
+                    message: e
+                });
+            }
         });
     });
 
@@ -65,12 +71,9 @@ module.exports = function (provider, models, jwt) {
                     var token = jwt.sign(userSaved, process.env.JWT_SECRET, {
                         expiresInMinutes: 1440 // expires in 24 hours
                     });
-                    userSaved.token = token;
-                    userSaved.save().then(function (userReady) {
-                        res.status = 201;
-                        res.send({
-                            token: userReady.token
-                        });
+                    res.status = 201;
+                    res.send({
+                        token: token
                     });
                 }).catch(function (error) {
                     res.status = 500;
@@ -86,33 +89,13 @@ module.exports = function (provider, models, jwt) {
             }
         }, function () {
             res.status = 500;
-            res.send({message: 'An error has occured, see in first the ORM API.'});
+            res.send({message: 'An error has occurred, see first the ORM API.'});
         });
     });
 
-    provider.get('/isAuthenticated', function (req, res) {
-        getUserAuthenticated(req, res);
-    });
+    provider.get('/isAuthenticated', tokenUtils.ensureAuthorized, getUserAuthenticated);
 
     function getUserAuthenticated(req, res) {
-        var bearerToken;
-        var bearerHeader = req.headers["authorization"];
-        if (typeof bearerHeader !== 'undefined') {
-            var bearer = bearerHeader.split(" ");
-            bearerToken = bearer[1];
-            jwt.verify(bearerToken, process.env.JWT_SECRET, function (err, decoded) {
-                if (err) {
-                    return res.json({
-                        success: false,
-                        message: err
-                    });
-                } else {
-                    res.status(200);
-                    res.send(decoded);
-                }
-            });
-        } else {
-            res.status(403).send(null);
-        }
+        res.send(req.user);
     }
 };

@@ -20,13 +20,14 @@ var isAuthenticated = function ($rootScope, $q, $http, $state) {
     return defer.promise;
 };
 
-appBudgetManager.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+appBudgetManager.config(function ($stateProvider, $urlRouterProvider) {
 
         // Système de routage
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'views/home'
+                templateUrl: 'views/home',
+                controller: 'home.ctrl'
             })
             .state('login', {
                 url: '/login',
@@ -38,15 +39,21 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider, $httpProvi
                 controller: 'signup.ctrl',
                 templateUrl: 'views/signup'
             })
-            .state('provisionalPlans', {
+            .state('userProfil', {
+                url: '/profil',
+                controller: 'signup.ctrl',
+                templateUrl: 'views/user.profil'
+            }).state('provisionalPlans', {
                 url: '/provisionalPlans',
                 templateUrl: 'views/provisionalPlan.list',
                 controller: 'provisionalPlan.ctrl',
                 resolve: {
+                    provisionalPlans: function ($stateParams, provisionalPlanWebApi) {
+                        return provisionalPlanWebApi.findAllProvisionalPlan();
+                    },
                     user: isAuthenticated
                 }
-            })
-            .state('provisionalPlanDetails', {
+            }).state('provisionalPlanDetails', {
                 url: 'provisionalPlans/:id',
                 templateUrl: 'views/partials/provisionalPlan.details',
                 controller: 'provisionalPlan.details.ctrl',
@@ -56,27 +63,18 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider, $httpProvi
                     },
                     user: isAuthenticated
                 }
+            }).state('provisionalPlanDetailsStats', {
+                url: 'provisionalPlans/:id/stats',
+                templateUrl: 'views/partials/provisionalPlan.details.stats',
+                controller: 'provisionalPlan.details.stats.ctrl',
+                resolve: {
+                    provisionalPlan: function ($stateParams, provisionalPlanWebApi) {
+                        return provisionalPlanWebApi.findProvisionalPlanById($stateParams.id);
+                    },
+                    user: isAuthenticated
+                }
             });
 
         $urlRouterProvider.otherwise('/');
-
-        $httpProvider.interceptors.push(function ($q, $location, $localStorage) {
-            return {
-                'request': function (config) {
-                    config.headers = config.headers || {};
-                    if ($localStorage.token) {
-                        config.headers["Authorization"] = 'Bearer ' + $localStorage.token;
-                    }
-                    return config;
-                },
-                'responseError': function (response) {
-                    console.log('Http request intercepted in error');
-                    if (response.status === 401 || response.status === 403) {
-                        //@todo redirect to login page
-                    }
-                    return $q.reject(response);
-                }
-            };
-        });
     }
 );

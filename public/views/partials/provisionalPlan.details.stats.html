@@ -1,0 +1,78 @@
+<div class="centered panel panel-default without-margin">
+    <div class="panel-heading">
+        <h3>Détails du plan prévisionnel <strong><em>{{provisionalPlan.name}}</em></strong></h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Nom :</h4>
+            </div>
+            <div class="col-md-8">
+                <h4>
+                    <small>
+                        {{provisionalPlan.name}}
+                    </small>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Validé :</h4>
+            </div>
+            <div class="col-md-8">
+                <h4>
+                    <span ng-show="provisionalPlan.valid === true" style="color:green" class="fa fa-check"></span>
+                    <span ng-show="provisionalPlan.valid === false" style="color:red" class="fa fa-remove"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Montant de base :</h4>
+            </div>
+            <div class="col-md-8">
+                <h4>
+                    <small>
+                        {{provisionalPlan.baseAmount}}€
+                    </small>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Montant restant :</h4>
+            </div>
+            <div class="col-md-8">
+                <h4>
+                    <small>
+                        {{getTotalMovementsOf(provisionalPlan)}}€
+                    </small>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Montant restant sans mouvement déscendants:</h4>
+            </div>
+            <div class="col-md-8">
+                <h4>
+                    <small>
+                        {{getTotalMovementWithoutDownOf(provisionalPlan)}}€
+                    </small>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Montant sans mouvements montants :</h4>
+            </div>
+            <div class="col-md-8">
+                <h4>
+                    <small>
+                        {{getTotalMovementWithoutUpOf(provisionalPlan)}}€
+                    </small>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>

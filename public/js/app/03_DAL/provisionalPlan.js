@@ -30,8 +30,8 @@ appBudgetManager.factory('provisionalPlanWebApi',
 
         function findProvisionalPlanById(id) {
             var def = $q.defer();
-            if (id === null) {
-                def.reject('Id is null.');
+            if (_.isNull(id) || _.isUndefined(id)) {
+                def.reject('Id is null or undefined.');
             }
             else {
                 var requestOptions = app.httpRequestOptions.buildGetRequestOptToCallThisUrl(app.httpRequestOptions.urlHeader + '/provisionalPlans/' + id);

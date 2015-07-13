@@ -15,9 +15,5 @@ function MovementMock() {
 }
 
 app.data.autocomplete.Movement = function () {
-    var objectModelServerLike = new MovementMock();
-    var collection = [];
-    collection[0] = objectModelServerLike;
-    console.log(collection);
-    return app.model.factory.runFactory(collection, 'Movement');
+    return app.model.factory.runFactory(new MovementMock(), 'Movement');
 };

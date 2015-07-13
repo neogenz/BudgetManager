@@ -8,8 +8,7 @@ var appBudgetManager = angular.module('appBudgetManager', [
     'ui.router', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate', 'ngStorage'
 ]);
 
-//appBudgetManager.run(function ($rootScope, $httpProvider) {
-//@todo regarder si un toekn est présent dans le local storage, appelé le WS de refresh de token, puis authentifier l'user
+//appBudgetManager.run(function ($localStorage, $state) {
 //});
 
 appBudgetManager.config(function ($httpProvider) {
@@ -23,7 +22,7 @@ appBudgetManager.config(function ($httpProvider) {
                 return config;
             },
             'responseError': function (response) {
-                if (response.status === 401 || response.status === 403) {
+                if (response.status === 401) {
                     $location.path('/signin');
                 }
                 return $q.reject(response);

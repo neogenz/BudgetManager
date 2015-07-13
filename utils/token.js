@@ -5,9 +5,8 @@ module.exports = function (jwt) {
     };
 
     function ensureAuthorized(req, res, next) {
-
         var bearerToken;
-        var bearerHeader = req.headers.authorization;
+        var bearerHeader = req.headers["authorization"];
         if (typeof bearerHeader !== 'undefined') {
             var bearer = bearerHeader.split(" ");
             bearerToken = bearer[1];

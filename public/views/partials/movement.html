@@ -3,42 +3,47 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-md-12">
-                <a ng-click="inverseActiveStateClickListener(movement, $parent.refresh)"
-                   class="pull-right small-left-separation">
-                    <span style="cursor: pointer;"
-                          class="font-size-h2"
+                <h4>
+                    <a ng-click="inverseActiveStateClickListener(movement, $parent.refresh)"
+                       class="pull-right small-left-separation">
+                    <span class="cursor"
                           ng-class="{true: 'fa fa-toggle-on', false: 'fa fa-toggle-off'}[movement.active]">
                     </span>
-                </a>
-                <a ng-click="deleteClickListener(movement, $parent.refresh)" class="pull-right small-left-separation">
-                    <span style="cursor: pointer;"
-                          class="font-size-h2 glyphicon glyphicon-trash">
+                    </a>
+                </h4>
+                <h4>
+                    <a ng-click="deleteClickListener(movement, $parent.refresh)"
+                       class="pull-right small-left-separation">
+                    <span class="glyphicon glyphicon-trash cursor">
                     </span>
-                </a>
-                <a ng-click="modalToAddOrEditClickListener(null, movement, $parent.refresh)" href class="pull-right">
-                    <span style="cursor: pointer;"
-                          class="font-size-h2 glyphicon glyphicon-pencil">
+                    </a>
+                </h4>
+                <h4>
+                    <a ng-click="modalToAddOrEditClickListener(provisionalPlan, movement, $parent.refresh)" href
+                       class="pull-right">
+                    <span class="glyphicon glyphicon-pencil cursor">
                     </span>
-                </a>
+                    </a>
+                </h4>
             </div>
         </div>
-        <span style="cursor: pointer;" ng-click="openMovementDetailsModal(movement)">
+        <span class="cursor" ng-click="openMovementDetailsModalClickListener(movement)">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center margin-top-10">
+                    <h4 class="text-center margin-top-10">
                         {{movement.name}}
-                    </h2>
+                    </h4>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center">
-                        <p ng-show="movement.type === 'up'" style="color:green">
+                    <h2 class="text-center h2-responsive">
+                        <p ng-show="movement.type === 'up'" class="color-green">
                             {{movement.amount}}€
                             <span class="fa fa-arrow-up"></span>
                             <small ng-show="movement.repeat > 1">x {{movement.repeat}}</small>
                         </p>
-                        <p ng-show="movement.type === 'down'" style="color:red">
+                        <p ng-show="movement.type === 'down'" class="color-red">
                             {{movement.amount}}€
                             <span class="fa fa-arrow-down"></span>
                             <small ng-show="movement.repeat > 1">x {{movement.repeat}}</small>
@@ -49,11 +54,3 @@
         </span>
     </div>
 </div>
-
-<!--<script>-->
-<!--jQuery(document).ready(function ($) {-->
-<!--$(".clickable-row").click(function () {-->
-<!--window.document.location = $(this).attr("data-href");-->
-<!--});-->
-<!--});-->
-<!--</script>-->

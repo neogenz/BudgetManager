@@ -1,17 +1,20 @@
 <div class="container">
     <div class="col-sm-6 col-sm-offset-3">
-        <h1><span class="fa fa-sign-in"></span> Inscription</h1>
+        <h1><span class="fa fa-user-plus"></span> Inscription</h1>
         <!-- LOGIN FORM -->
         <form role="form" ng-submit="signup()">
             <div class="form-group">
                 <label for="email">Email</label>
-                <input id="email" type="text" class="form-control" name="email" ng-model="email">
+                <input id="email" type="text" class="form-control" name="email" ng-model="signupForm.email">
             </div>
             <div class="form-group">
                 <label for="password">Mot de passe</label>
-                <input id="password" type="password" class="form-control" name="password" ng-model="password">
+                <input id="password" type="password" class="form-control" name="password"
+                       ng-model="signupForm.password">
             </div>
-            <button type="submit" class="btn btn-warning btn-lg">S'inscrire</button>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary btn-lg">S'inscrire</button>
+            </div>
         </form>
         <hr>
         <p>Ou aller à <a ui-sref="home">l'accueil</a>.</p>

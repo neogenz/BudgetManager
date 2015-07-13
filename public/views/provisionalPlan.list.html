@@ -15,14 +15,15 @@
 </div>
 <div class="row">
     <div class="col-sm-12 text-center medium-bordered">
-        <button class="btn btn-lg btn-primary" ng-click="openProvisionalPlanModal(null)">Nouveau plan de prévoyance
+        <button class="btn btn-lg btn-info btn-lg-responsive" ng-click="openModalToAddProvisionalPlan()">Nouveau plan de
+            prévoyance
         </button>
     </div>
 </div>
 <div class="row">
     <div class="col-sm-12">
         <div ng-repeat="provisionalPlan in provisionalPlans | orderBy:'-createdAt' ">
-            <div ng-include src="'/views/partials/provisionalPlan.preview'"></div>
+            <div ng-include="'views/partials/provisionalPlan.preview'"></div>
         </div>
     </div>
 </div>

@@ -13,10 +13,6 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNul: false
         },
-        token: {
-            type: DataTypes.STRING(1024),
-            allowNul: true
-        },
         name: {
             type: DataTypes.STRING,
             allowNul: true
