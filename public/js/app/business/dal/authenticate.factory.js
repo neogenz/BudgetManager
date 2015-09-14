@@ -37,7 +37,7 @@ appBudgetManager.factory('authenticateWebApi', function ($http, $localStorage, $
     //Web API
     function signup(formData) {
         var def = $q.defer();
-        var requestOptions = app.httpRequestOptions.buildPostRequestOptToCallThisUrl(app.httpRequestOptions.urlHeader + '/signup', formData);
+        var requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/signup', formData);
         var promise = $http(requestOptions);
         promise.success(function (data) {
             $localStorage.token = data.token;
@@ -50,7 +50,7 @@ appBudgetManager.factory('authenticateWebApi', function ($http, $localStorage, $
 
     function signin(formData) {
         var def = $q.defer();
-        var requestOptions = app.httpRequestOptions.buildPostRequestOptToCallThisUrl(app.httpRequestOptions.urlHeader + '/signin', formData);
+        var requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/signin', formData);
         var promise = $http(requestOptions);
         promise.success(function (data) {
             $localStorage.token = data.token;

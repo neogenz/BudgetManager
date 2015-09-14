@@ -1,28 +1,18 @@
-//app.modelfunction buildDefaultMovement() {
-//    this.id = null;
-//    this.name = "";
-//    this.amount = 0;
-//    this.type = "down";
-//    this.repeat = 1;
-//    this.comment = "";
-//    this.active = true;
-//    this.ProvisionalPlanId = null;
-//};
+'use strict';
 
-__.namespace(app, 'model');
-__.namespace(app, 'Movement');
+myLib.technical.defineNamespace(app, 'bean.Movement');
 
-app.model.Movement = (function () {
-    var _Movement = function (param) {
-        this.id = __.verifparam(param, 'id');
-        this.name = __.verifparam(param, 'name');
-        this.amount = __.verifparam(param, 'amount');
-        this.type = __.verifparam(param, 'type');
-        this.repeat = __.verifparam(param, 'repeat');
-        this.comment = __.verifparam(param, 'comment');
-        this.active = __.verifparam(param, 'active');
-        this.provisionalPlanId = __.verifparam(param, 'ProvisionalPlanId');
-    };
+(function init() {
+    app.bean.Movement = _Movement;
 
-    return _Movement;
+    function _Movement(param) {
+        this.id = myLib.technical.verifParam(param, 'id');
+        this.name = myLib.technical.verifParam(param, 'name');
+        this.amount = myLib.technical.verifParam(param, 'amount');
+        this.type = myLib.technical.verifParam(param, 'type');
+        this.repeat = myLib.technical.verifParam(param, 'repeat');
+        this.comment = myLib.technical.verifParam(param, 'comment');
+        this.active = myLib.technical.verifParam(param, 'active');
+        this.provisionalPlanId = myLib.technical.verifParam(param, 'ProvisionalPlanId');
+    }
 })();
