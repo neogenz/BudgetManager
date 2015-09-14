@@ -5,10 +5,11 @@
  */
 var appBudgetManager = angular.module('appBudgetManager', [
     //Dépendances du module
-    'ui.router', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate', 'ngStorage'
+    'ui.router', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate', 'ngStorage', 'toastr'
 ]);
 
 //appBudgetManager.run(function ($localStorage, $state) {
+//
 //});
 
 appBudgetManager.config(function ($httpProvider) {
@@ -16,7 +17,7 @@ appBudgetManager.config(function ($httpProvider) {
         return {
             'request': function (config) {
                 config.headers = config.headers || {};
-                if ($localStorage.token) {
+                if (!myLib.technical.isUndefinedOrNull($localStorage.token)) {
                     config.headers.Authorization = 'Bearer ' + $localStorage.token;
                 }
                 return config;

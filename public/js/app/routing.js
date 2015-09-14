@@ -49,7 +49,11 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider) {
                 controller: 'provisionalPlan.ctrl',
                 resolve: {
                     provisionalPlans: function ($stateParams, provisionalPlanWebApi) {
-                        return provisionalPlanWebApi.findAllProvisionalPlan();
+                        try {
+                            return provisionalPlanWebApi.findAll();
+                        } catch (err) {
+                            throw new Error(err);
+                        }
                     },
                     user: isAuthenticated
                 }
@@ -59,7 +63,11 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider) {
                 controller: 'provisionalPlan.details.ctrl',
                 resolve: {
                     provisionalPlan: function ($stateParams, provisionalPlanWebApi) {
-                        return provisionalPlanWebApi.findProvisionalPlanById($stateParams.id);
+                        try {
+                            return provisionalPlanWebApi.findById($stateParams.id);
+                        } catch (err) {
+                            throw new Error(err);
+                        }
                     },
                     user: isAuthenticated
                 }
@@ -69,7 +77,11 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider) {
                 controller: 'provisionalPlan.details.stats.ctrl',
                 resolve: {
                     provisionalPlan: function ($stateParams, provisionalPlanWebApi) {
-                        return provisionalPlanWebApi.findProvisionalPlanById($stateParams.id);
+                        try {
+                            return provisionalPlanWebApi.findById($stateParams.id);
+                        } catch (err) {
+                            throw new Error(err);
+                        }
                     },
                     user: isAuthenticated
                 }
