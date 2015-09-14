@@ -2,18 +2,66 @@
     <div class="col-sm-6 col-sm-offset-3">
         <h1><span class="fa fa-user-plus"></span> Inscription</h1>
         <!-- LOGIN FORM -->
-        <form role="form" ng-submit="signup()">
+        <form role="form" ng-submit="signup(signupForm.$valid)" name="signupForm">w
             <div class="form-group">
+                <div class="form-group"
+                     ng-class="{ 'has-error' : signupForm.email.$invalid && !signupForm.email.$pristine }">
                 <label for="email">Email</label>
-                <input id="email" type="text" class="form-control" name="email" ng-model="signupForm.email">
+                    <input id="email" type="email" class="form-control" name="email" ng-model="userInput.email"
+                           required="required">
+
+                    <p ng-show="signupForm.email.$invalid && !signupForm.email.$pristine" class="help-block">Veuillez
+                        entrer une adresse email valide.</p>
             </div>
             <div class="form-group">
+                <div class="form-group"
+                     ng-class="{ 'has-error' : signupForm.password.$invalid && !signupForm.password.$pristine }">
                 <label for="password">Mot de passe</label>
                 <input id="password" type="password" class="form-control" name="password"
-                       ng-model="signupForm.password">
+                       ng-model="userInput.password" ng-minlength="6" required="required">
+
+                    <p ng-show="signupForm.password.$error.minlength" class="help-block">Mot de passe trop court.
+                        Minimum 6 caractères.</p>
             </div>
+                <div class="form-group"
+                     ng-class="{ 'has-error' : signupForm.passwordConfirm.$invalid && !signupForm.passwordConfirm.$pristine }">
+                    <label for="passwordConfirm">Veuillez retaper votre mot de passe</label>
+                    <input id="passwordConfirm" type="password" class="form-control" name="passwordConfirm"
+                           ng-model="userInput.passwordConfirm" ng-minlength="6" required="required">
+
+                    <p ng-show="signupForm.passwordConfirm.$error.minlength" class="help-block">Mot de passe trop court.
+                        Minimum 6 caractères.</p>
+
+                    <p ng-show="signupForm.passwordConfirm.$invalid && !signupForm.passwordConfirm.$pristine"
+                       class="help-block">Le mot de passe ne correspond pas.</p>
+                </div>
+                <div class="form-group"
+                     ng-class="{ 'has-error' : signupForm.lastName.$invalid && !signupForm.lastName.$pristine }">
+                    <label for="lastName">Nom</label>
+                    <input id="lastName" type="text" class="form-control" name="lastName" ng-model="userInput.lastName"
+                           ng-maxlength="35" required="required">
+
+                    <p ng-show="signupForm.lastName.$error.maxlength" class="help-block">Veuillez saisir un nom plus
+                        court.</p>
+
+                    <p ng-show="signupForm.lastName.$invalid && !signupForm.lastName.$pristine && !signupForm.lastName.$error.maxlength"
+                       class="help-block">Le nom est obligatoire.</p>
+                </div>
+                <div class="form-group"
+                     ng-class="{ 'has-error' : signupForm.firstName.$invalid && !signupForm.firstName.$pristine }">
+                    <label for="firstName">Prénom</label>
+                    <input id="firstName" type="text" class="form-control" name="firstName"
+                           ng-model="userInput.firstName" ng-maxlength="35" required>
+
+                    <p ng-show="signupForm.firstName.$error.maxlength" class="help-block">Veuillez saisir un prénom plus
+                        court.</p>
+
+                    <p ng-show="signupForm.firstName.$invalid && !signupForm.firstName.$pristine" class="help-block">Le
+                        prénom est obligatoire.</p>
+                </div>
             <div class="form-group text-center">
-                <button type="submit" class="btn btn-primary btn-lg">S'inscrire</button>
+                <button type="submit" class="btn btn-primary btn-lg" ng-disabled="signupForm.$invalid">S'inscrire
+                </button>
             </div>
         </form>
         <hr>
