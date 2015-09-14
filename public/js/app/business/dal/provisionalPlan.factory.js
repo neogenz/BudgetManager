@@ -2,16 +2,16 @@ appBudgetManager.factory('provisionalPlanWebApi',
     function ($http, $q) {
 
         return {
-            findAllProvisionalPlan: findAllProvisionalPlan,
-            findProvisionalPlanById: findProvisionalPlanById,
-            addMovementToProvisionalPlan: addMovementToProvisionalPlan,
-            createProvisionalPlan: createProvisionalPlan,
-            deleteProvisionalPlan: deleteProvisionalPlan,
-            updateProvisionalPlan: updateProvisionalPlan
+            findAll: _findAll,
+            findById: _findById,
+            addMovement: _addMovement,
+            create: _create,
+            remove: _remove,
+            update: _update
         };
 
         //Web API
-        function findAllProvisionalPlan() {
+        function _findAll() {
             var def = $q.defer();
             var requestOptions = app.httpRequestOptions.buildGetRequestOptToCallThisUrl(app.httpRequestOptions.urlHeader + '/provisionalPlans');
             var promise = $http(requestOptions);
@@ -28,7 +28,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
             return def.promise;
         }
 
-        function findProvisionalPlanById(id) {
+        function _findById(id) {
             var def = $q.defer();
             if (_.isNull(id) || _.isUndefined(id)) {
                 def.reject('Id is null or undefined.');
@@ -47,7 +47,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
             return def.promise;
         }
 
-        function addMovementToProvisionalPlan(movementToAdd) {
+        function _addMovement(movementToAdd) {
             var def = $q.defer();
             if (movementToAdd.provisionalPlanId === null) {
                 def.reject('Id of provisional plan to add is null.');
@@ -64,7 +64,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
             return def.promise;
         }
 
-        function createProvisionalPlan(provisionalPlan) {
+        function _create(provisionalPlan) {
             var def = $q.defer();
             var bodyReq = provisionalPlan;
             var promise;
@@ -83,7 +83,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
             return def.promise;
         }
 
-        function deleteProvisionalPlan(provisionalPlan) {
+        function _remove(provisionalPlan) {
             var def = $q.defer();
             var promise;
             if (provisionalPlan.id === undefined || provisionalPlan.id === null || provisionalPlan.id === "") {
@@ -100,7 +100,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
             return def.promise;
         }
 
-        function updateProvisionalPlan(provisionalPlan) {
+        function _update(provisionalPlan) {
             var def = $q.defer();
             var promise;
             delete provisionalPlan.movements;

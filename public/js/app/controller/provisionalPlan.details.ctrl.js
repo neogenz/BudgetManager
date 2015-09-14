@@ -55,37 +55,44 @@
          * @param {Object|null} provisionalPlan The provisional plan to edit or null if need to create a new
          * @memberOf Controllers.ProvisionalPlanDetailsController
          */
-        function _openProvisionalPlanModal(provisionalPlan) {
-            var provisionalPlanModalOpts = {
-                templateUrl: 'views/partials/provisionalPlan.form', // Url du template HTML
-                controller: 'provisionalPlan.add.ctrl',
-                resolve: {
-                    provisionalPlan: function () {
-                        return $scope.provisionalPlan;
-                    }
-                }
-            };
-
-            if (provisionalPlan === null) {
-                $scope.provisionalPlan = app.data.autocomplete.ProvisionalPlan()[0];
-            } else {
-                $scope.provisionalPlan = provisionalPlan;
+        function _openProvisionalPlanModal(provisionalPlanToEdit) {
+            if (_.isUndefined(provisionalPlanToEdit) || _.isNull(provisionalPlanToEdit)) {
+                throw new Error('The parameter provisionalPlanToEdit is undefined or null.');
             }
-            var modalInstance = $modal.open(provisionalPlanModalOpts);
+            var provisionalPlan = provisionalPlanToEdit;
+
+            function buildProvisionalPlanEditModalOpts(provisionalPlan) {
+                return {
+                    templateUrl: 'views/partials/provisionalPlan.form', // Url du template HTML
+                    controller: 'provisionalPlan.add.ctrl',
+                    resolve: {
+                        provisionalPlan: function () {
+                            return _.clone(provisionalPlan);
+                        }
+                    }
+                };
+            }
+
+            //if (_.isUndefined(provisionalPlanToEdit) || _.isNull(provisionalPlanToEdit)) {
+            //    provisionalPlan = app.data.autocomplete.ProvisionalPlan()[0];
+            //}
+            //else {
+            //    $scope.provisionalPlan = provisionalPlan;
+            //}
+            var modalInstance = $modal.open(buildProvisionalPlanEditModalOpts(provisionalPlan));
             modalInstance.result.then(function (provisionalPlan) {
-                if (provisionalPlan.id === null) {
-                    provisionalPlanWebApi.createProvisionalPlan(provisionalPlan).then(function () {
-                        _refresh();
-                    }, function () {
+                //if (provisionalPlan.id === null) {
+                //    provisionalPlanWebApi.create(provisionalPlan).then(function () {
+                //        _refresh(null);
+                //    }, function () {
+                //
+                //    });
+                //} else {
+                provisionalPlanWebApi.update(provisionalPlan).then(function () {
+                    _refresh(provisionalPlan.id);
+                }, function () {
 
-                    });
-                } else {
-                    provisionalPlanWebApi.updateProvisionalPlan(provisionalPlan).then(function () {
-                        _refresh(provisionalPlan.id);
-                    }, function () {
-
-                    });
-                }
+                });
 
             }, function () {
                 console.log('Modal dismissed at: ' + new Date());
@@ -168,7 +175,7 @@
          * @memberOf Controllers.ProvisionalPlanDetailsController
          */
         function _refresh(id) {
-            provisionalPlanWebApi.findProvisionalPlanById(id)
+            provisionalPlanWebApi.findById(id)
                 .then(function (data) {
                     $scope.provisionalPlan = data;
                 }
@@ -183,7 +190,7 @@
          * @memberOf Controllers.ProvisionalPlanDetailsController
          */
         function _remove(provisionalPlan) {
-            provisionalPlanWebApi.deleteProvisionalPlan(provisionalPlan).then(function () {
+            provisionalPlanWebApi.remove(provisionalPlan).then(function () {
                     $state.go('provisionalPlans');
                 },
                 function (reason) {

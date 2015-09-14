@@ -56,8 +56,8 @@ appBudgetManager.factory('authenticateWebApi', function ($http, $localStorage, $
             $localStorage.token = data.token;
             def.resolve(data);
         }).error(function (data) {
-            data.message = 'Adresse mail ou mot de passe invalide';
-            def.reject(data.message);
+            var message = 'Adresse mail ou mot de passe invalide';
+            def.reject(message);
         });
         return def.promise;
     }

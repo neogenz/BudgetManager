@@ -63,10 +63,10 @@
 
             var modalInstance = $modal.open(buildProvisionalPlanModalOpts());
             modalInstance.result.then(function (provisionalPlan) {
-                provisionalPlanWebApi.createProvisionalPlan(provisionalPlan).then(function () {
+                provisionalPlanWebApi.create(provisionalPlan).then(function () {
                     _refresh(null);
-                }, function () {
-
+                }, function (err) {
+                    throw new Error(err);
                 });
             }, function () {
                 console.log('Modal dismissed at: ' + new Date());
@@ -107,7 +107,7 @@
          * @memberOf Controllers.ProvisionalPlanController
          */
         function _refreshById(id) {
-            provisionalPlanWebApi.findProvisionalPlanById(id)
+            provisionalPlanWebApi.findById(id)
                 .then(function (data) {
                     $scope.provisionalPlan = data;
                 }
@@ -121,7 +121,7 @@
          * @memberOf Controllers.ProvisionalPlanController
          */
         function _refreshAll() {
-            provisionalPlanWebApi.findAllProvisionalPlan()
+            provisionalPlanWebApi.findAll()
                 .then(function (data) {
                     $scope.provisionalPlans = data;
                 }

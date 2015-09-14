@@ -166,7 +166,7 @@
                 modalInstance.result.then(function (movement) {
                     $scope.movementToWork = movement;
                     if ($scope.movementToWork.id === undefined || $scope.movementToWork.id === null) {
-                        provisionalPlanWebApi.addMovementToProvisionalPlan($scope.movementToWork)
+                        provisionalPlanWebApi.addMovement($scope.movementToWork)
                             .then(function () {
                                 success_callback($scope.movementToWork.provisionalPlanId);
                             }, function (reason) {
