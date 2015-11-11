@@ -20,7 +20,14 @@ appBudgetManager.factory('provisionalPlanWebApi',
                     throw new Error('data');
                 }
                 var factory = app.bean.factory;
-                var provisionalPlans = factory.runFactory(data, 'ProvisionalPlan');
+                if (!_.isArray(data)) {
+                    throw new Error('The result of promise must be an array');
+                }
+                var provisionalPlans = [];
+                for (var i = 0; i < data.length; i++) {
+                    provisionalPlans.push(factory.createBean('ProvisionalPlan', data[i]));
+                }
+
                 def.resolve(provisionalPlans);
             }).error(function () {
                 def.reject('Echec de récupération des plans prévisionnels.');
@@ -38,7 +45,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
                 var promise = $http(requestOptions);
                 promise.success(function (data) {
                     var factory = app.bean.factory;
-                    var provisionalPlans = factory.runFactory(data, 'ProvisionalPlan');
+                    var provisionalPlans = factory.createBean('ProvisionalPlan', data);
                     def.resolve(provisionalPlans);
                 }).error(function () {
                     def.reject('DiscussionThread with id ' + id + ' is null.');

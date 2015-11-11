@@ -12,7 +12,9 @@ module.exports = function (jwt) {
             bearerToken = bearer[1];
             jwt.verify(bearerToken, process.env.JWT_SECRET, function (err, decoded) {
                 if (err) {
-                    return res.json({success: false, message: 'Failed to authenticate token.'});
+                    res.status(400);
+                    console.log(decoded);
+                    return res.json({success: false, message: 'Failed to authenticate token. (err : ' + err + ')'});
                 } else {
                     // if everything is good, save to request for use in other routes
                     req.user = decoded;

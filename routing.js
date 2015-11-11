@@ -31,32 +31,37 @@ module.exports = function (provider, models, jwt) {
 
     // Signin ==============================================================
     provider.post('/signin', function (req, res) {
-        models.User.findOne({where: {email: req.body.email}}).then(function (user) {
+        models.User.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
+            .then(function (user) {
             if (!user) {
                 console.error('User not exist.');
                 res.status(404);
                 res.send({
                     message: 'User not authenticated.'
                 });
-            }
-            if (!user.validPassword(req.body.password)) {
+            } else if (!user.validPassword(req.body.password)) {
                 console.error('Invalid password');
                 res.status(403);
                 res.send({
                     message: 'User not authenticated.'
                 });
-            }
-            try {
-                var token = jwt.sign(user, process.env.JWT_SECRET, {
-                    expiresInMinutes: 1440 // expires in 24 hours
-                });
-                res.send({token: token});
-            } catch (e) {
-                console.log(e);
-                res.status = 500;
-                res.send({
-                    message: e
-                });
+            } else {
+                try {
+                    var token = jwt.sign(user, process.env.JWT_SECRET, {
+                        expiresInMinutes: 1440 // expires in 24 hours
+                    });
+                    res.send({token: token});
+                } catch (e) {
+                    console.log(e);
+                    res.status = 500;
+                    res.send({
+                        message: e
+                    });
+                }
             }
         });
     });
@@ -93,9 +98,9 @@ module.exports = function (provider, models, jwt) {
         });
     });
 
-    provider.get('/isAuthenticated', tokenUtils.ensureAuthorized, getUserAuthenticated);
+    provider.get('/isAuthenticated', tokenUtils.ensureAuthorized, _getUserAuthenticated);
 
-    function getUserAuthenticated(req, res) {
+    function _getUserAuthenticated(req, res) {
         res.send(req.user);
     }
 };

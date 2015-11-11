@@ -55,7 +55,7 @@
                     controller: 'provisionalPlan.add.ctrl',
                     resolve: {
                         provisionalPlan: function () {
-                            return app.data.autocomplete.ProvisionalPlan()[0];
+                            return app.data.autocomplete.ProvisionalPlan();
                         }
                     }
                 };

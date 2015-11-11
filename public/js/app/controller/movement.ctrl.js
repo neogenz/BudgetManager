@@ -165,7 +165,7 @@
                 var modalInstance = $modal.open(movementModalAddOrEditOpts);
                 modalInstance.result.then(function (movement) {
                     $scope.movementToWork = movement;
-                    if ($scope.movementToWork.id === undefined || $scope.movementToWork.id === null) {
+                    if (myLib.technical.isUndefinedOrNull($scope.movementToWork.id)) {
                         provisionalPlanWebApi.addMovement($scope.movementToWork)
                             .then(function () {
                                 success_callback($scope.movementToWork.provisionalPlanId);
@@ -175,6 +175,7 @@
                     }
                     else {
                         movementWebApi.update($scope.movementToWork).then(function () {
+                            debugger;
                             success_callback($scope.movementToWork.provisionalPlanId);
                         }, function (reason) {
                             throw new Error(reason);

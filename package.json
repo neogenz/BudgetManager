@@ -2,15 +2,16 @@
   "name": "BudgetManager",
   "author": "Maxime De Sogus",
   "dependencies": {
+    "bcrypt-nodejs": "latest",
     "body-parser": "latest",
     "cookie-parser": "latest",
     "cookie-session": "latest",
+    "cors": "latest",
     "express": "latest",
+    "jsonwebtoken": "latest",
+    "mongoose": "^4.2.5",
     "morgan": "latest",
     "mysql": "latest",
-    "sequelize": "latest",
-    "bcrypt-nodejs": "latest",
-    "jsonwebtoken": "latest",
-    "cors": "latest"
+    "sequelize": "latest"
   }
 }

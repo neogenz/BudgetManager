@@ -8,9 +8,30 @@ var appBudgetManager = angular.module('appBudgetManager', [
     'ui.router', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate', 'ngStorage', 'toastr'
 ]);
 
-//appBudgetManager.run(function ($localStorage, $state) {
-//
-//});
+appBudgetManager.run(function ($localStorage, $state, $rootScope) {
+    $rootScope.$on('$stateChangeSuccess', function (event, to, toParams, from, fromParams) {
+        $rootScope.$previousState = from;
+        debugger;
+    });
+    //$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+    //    debugger;
+    //$state.go(toState.name);
+    //if (toState.name == 'home') {
+    //    if (!_.isUndefined($localStorage.token) && !_.isNull($localStorage.token) && !_.isEmpty($localStorage.token)) {
+    //        event.preventDefault();
+    //        $state.go('provisionalPlans');
+    //    }
+    //}else if(toState.name == 'home' && toState.fromState == 'provisionalPlanDetailsStats'){
+    //    event.preventDefault();
+    //    $state.go('provisionalPlans');
+    //}
+    //$rootScope.previousState = fromState.name;
+    //$rootScope.currentState = toState.name;
+    //console.log('Previous state:'+$rootScope.previousState);
+    //console.log('Current state:'+$rootScope.currentState);
+    //});
+
+});
 
 appBudgetManager.config(function ($httpProvider) {
     $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function ($q, $location, $localStorage) {

@@ -2,43 +2,58 @@ module.exports = function (provider, models, jwt) {
 
     var tokenUtils = require("../utils/token")(jwt);
 
-    var createProvisionalPlan = function (req, res) {
+    var create = function (req, res) {
         var userId = req.user.id;
-        var newProvisionalPlan = {
-            name: req.body.name,
-            valid: ((req.body.valid === undefined || req.body.valid === null) ? true : req.body.valid),
-            baseAmount: req.body.baseAmount,
-            UserId: userId
-        };
-        models.ProvisionalPlan.create(newProvisionalPlan).then(function () {
+        var newProvisionalPlan = null;
+        try {
+            newProvisionalPlan = models.ProvisionalPlan.build({
+                name: req.body.name,
+                valid: ((req.body.valid === undefined || req.body.valid === null) ? true : req.body.valid),
+                baseAmount: req.body.baseAmount,
+                UserId: userId
+            });
+        } catch (err) {
+            console.log(err);
+            res.status(500).send('You have mistake provisionalPlan\'s information in body.')
+        }
+
+        newProvisionalPlan.save().then(function () {
             res.sendStatus(200);
+        }, function (err) {
+            console.log(err);
+            res.status(500).send(err);
         });
     };
 
-    var getAllProvisionalPlans = function (req, res) {
+    var findAll = function (req, res) {
         var userId = req.user.id;
         models.ProvisionalPlan.findAll({
             where: {
                 UserId: userId
-            }
-        }, {include: [models.Movement]}).then(function (provisionalPlans) {
+            },
+            include: [models.Movement]
+        }).then(function (provisionalPlans) {
             res.send(provisionalPlans);
         });
     };
 
-    var getProvisionalPlanById = function (req, res) {
+    var findById = function (req, res) {
         var userId = req.user.id;
         models.ProvisionalPlan.findOne({
             where: {
                 id: req.params.id,
                 userId: userId
-            }
-        }, {include: [models.Movement]}).then(function (provisionalPlan) {
+            },
+            include: [models.Movement]
+        }).then(function (provisionalPlan) {
             res.send(provisionalPlan);
+        }, function (err) {
+            console.log(err);
+            res.status(500).send(err);
         });
     };
 
-    var removeProvisionalPlan = function (req, res) {
+    var remove = function (req, res) {
         var userId = req.user.id;
         models.ProvisionalPlan.findOne({
             where: {
@@ -52,7 +67,7 @@ module.exports = function (provider, models, jwt) {
         });
     };
 
-    var addOrCreateMovement = function (req, res) {
+    var addMovement = function (req, res) {
         var movementId = req.body.id;
         var movementToAdd = req.body;
         delete movementToAdd.id;
@@ -77,7 +92,7 @@ module.exports = function (provider, models, jwt) {
         );
     };
 
-    var updateProvisionalPlan = function (req, res) {
+    var update = function (req, res) {
         var userId = req.user.id;
         var newProvisionalPlan = {
             name: req.body.name,
@@ -103,10 +118,10 @@ module.exports = function (provider, models, jwt) {
         });
     };
 
-    provider.post("/provisionalPlans", tokenUtils.ensureAuthorized, createProvisionalPlan);
-    provider.post("/provisionalPlans/:id", tokenUtils.ensureAuthorized, addOrCreateMovement);
-    provider.get("/provisionalPlans", tokenUtils.ensureAuthorized, getAllProvisionalPlans);
-    provider.get("/provisionalPlans/:id", tokenUtils.ensureAuthorized, getProvisionalPlanById);
-    provider.put("/provisionalPlans", tokenUtils.ensureAuthorized, updateProvisionalPlan);
-    provider.delete("/provisionalPlans/:id", tokenUtils.ensureAuthorized, removeProvisionalPlan);
+    provider.post("/provisionalPlans", tokenUtils.ensureAuthorized, create);
+    provider.post("/provisionalPlans/:id", tokenUtils.ensureAuthorized, addMovement);
+    provider.get("/provisionalPlans", tokenUtils.ensureAuthorized, findAll);
+    provider.get("/provisionalPlans/:id", tokenUtils.ensureAuthorized, findById);
+    provider.put("/provisionalPlans", tokenUtils.ensureAuthorized, update);
+    provider.delete("/provisionalPlans/:id", tokenUtils.ensureAuthorized, remove);
 };

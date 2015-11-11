@@ -39,10 +39,13 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider) {
                 controller: 'signup.ctrl',
                 templateUrl: 'views/signup'
             })
-            .state('userProfil', {
-                url: '/profil',
-                controller: 'signup.ctrl',
-                templateUrl: 'views/user.profil'
+            .state('userProfile', {
+                url: '/myAccount',
+                controller: 'user.profile.ctrl',
+                templateUrl: 'views/user.profile',
+                resolve: {
+                    user: isAuthenticated
+                }
             }).state('provisionalPlans', {
                 url: '/provisionalPlans',
                 templateUrl: 'views/provisionalPlan.list',
@@ -64,6 +67,7 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider) {
                 resolve: {
                     provisionalPlan: function ($stateParams, provisionalPlanWebApi) {
                         try {
+                            debugger;
                             return provisionalPlanWebApi.findById($stateParams.id);
                         } catch (err) {
                             throw new Error(err);

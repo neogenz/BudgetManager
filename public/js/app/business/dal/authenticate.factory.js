@@ -1,8 +1,12 @@
 appBudgetManager.factory('authenticateWebApi', function ($http, $localStorage, $q) {
     return {
-        signup: signup,
-        signin: signin,
-        logout: logout
+        signup: _signup,
+        signin: _signin,
+        logout: _logout,
+        getUserFromToken: _getUserFromToken,
+        getUserFromLocalStorageToken: _getUserFromLocalStorageToken,
+        checkIfThisPasswordIsGood: _checkIfThisPasswordIsGood,
+        changePassword: _changePassword
     };
 
     function urlBase64Decode(str) {
@@ -22,8 +26,20 @@ appBudgetManager.factory('authenticateWebApi', function ($http, $localStorage, $
         return window.atob(output);
     }
 
-    function getUserFromToken() {
+    function _getUserFromLocalStorageToken() {
         var token = $localStorage.token;
+        var user = {};
+        if (!myLib.technical.isUndefinedOrNull(token)) {
+            var encoded = token.split('.')[1];
+            user = JSON.parse(urlBase64Decode(encoded));
+        } else {
+            myLib.technical.logInfo('authenticate.factory.js', '_getUserFromLocalStorageToken()', 'The token in local storage is null or undefined.');
+        }
+        return user;
+    }
+
+    function _getUserFromToken(token) {
+        var token = token;
         var user = {};
         if (typeof token !== 'undefined') {
             var encoded = token.split('.')[1];
@@ -32,10 +48,10 @@ appBudgetManager.factory('authenticateWebApi', function ($http, $localStorage, $
         return user;
     }
 
-    getUserFromToken();
+    //getUserFromToken();
 
     //Web API
-    function signup(formData) {
+    function _signup(formData) {
         var def = $q.defer();
         var requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/signup', formData);
         var promise = $http(requestOptions);
@@ -48,7 +64,7 @@ appBudgetManager.factory('authenticateWebApi', function ($http, $localStorage, $
         return def.promise;
     }
 
-    function signin(formData) {
+    function _signin(formData) {
         var def = $q.defer();
         var requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/signin', formData);
         var promise = $http(requestOptions);
@@ -62,7 +78,7 @@ appBudgetManager.factory('authenticateWebApi', function ($http, $localStorage, $
         return def.promise;
     }
 
-    function logout() {
+    function _logout() {
         var def = $q.defer();
         try {
             delete $localStorage.token;
@@ -71,6 +87,40 @@ appBudgetManager.factory('authenticateWebApi', function ($http, $localStorage, $
         catch (e) {
             def.reject('An error has occured on logout.');
         }
+        return def.promise;
+    }
+
+    function _checkIfThisPasswordIsGood(password) {
+        var def = null,
+            requestOptions = null,
+            promise = null;
+        def = $q.defer();
+        requestOptions = myLib.technical.buildGetRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/checkPassword/' + password);
+        promise = $http(requestOptions);
+        promise.then(function () {
+            def.resolve();
+        }, function (err) {
+            def.reject(err.data.message);
+        });
+
+        return def.promise;
+    }
+
+    function _changePassword(formData) {
+        var def = null,
+            requestOptions = null,
+            promise = null;
+        def = $q.defer();
+        def = $q.defer();
+        requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/changePassword', formData);
+        promise = $http(requestOptions);
+        promise.success(function (data) {
+            $localStorage.token = data.token;
+            def.resolve(data);
+        }).error(function (err) {
+            debugger;
+            def.reject(err.message);
+        });
         return def.promise;
     }
 });

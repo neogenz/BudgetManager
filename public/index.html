@@ -41,7 +41,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li ng-show="$root.user">
-                    <a href class="link-color">
+                    <a href class="link-color" ui-sref="userProfile">
                         {{$root.user.email}}
                     </a>
                 </li>
@@ -71,6 +71,7 @@
 <script src="app/app_start.js"></script>
 <script src="app/config/budgetManager.config.js"></script>
 <script src="app/config/budgetManager.endpoints.config.dev.js"></script>
+<script src="app/business/bean/Schema.js"></script>
 <script src="app/business/bean/factory.js"></script>
 <script src="app/business/bean/Movement.js"></script>
 <script src="app/business/bean/ProvisionalPlan.js"></script>
@@ -96,6 +97,8 @@
 <script src="app/controller/provisionalPlan.details.ctrl.js"></script>
 <script src="app/controller/provisionalPlan.details.stats.ctrl.js"></script>
 <script src="app/controller/provisionalPlan.ctrl.js"></script>
+<script src="app/controller/user.profile.ctrl.js"></script>
+<script src="app/controller/user.profile.changePassword.ctrl.js"></script>
 
 </body>
 </html>

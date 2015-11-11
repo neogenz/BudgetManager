@@ -1,3 +1,5 @@
+//var env       = process.env.NODE_ENV || "development";
+//var dbConfig = require('./config/database.json')[env];
 var express = require('express');
 var app = express();
 var port = 5000;
@@ -10,6 +12,8 @@ var bodyParser = require('body-parser');
 var jwt = require('jsonwebtoken');
 var cors = require('cors');
 
+var mongoose = require('mongoose');
+//var Schema = mongoose.Schema;
 
 // configuration ==============================================================
 app.set('port', process.env.PORT || port);
@@ -30,5 +34,19 @@ models.sequelize.sync(/*{force: true}*/).then(function () {
         require('./routing')(app, models, jwt);
         require(__dirname + '/dal/ProvisionalPlan')(app, models, jwt);
         require(__dirname + '/dal/Movement')(app, models, jwt);
+        require(__dirname + '/dal/User')(app, models, jwt);
     });
 });
+
+//http.createServer(app).listen(app.get('port'), function () {
+//    console.log('Express server listening on port ' + app.get('port'));
+//    mongoose.connect(dbConfig.mongoDb.protocol + '://' + dbConfig.mongoDb.host + '/' + dbConfig.mongoDb.name );
+//    //require('./routing')(app, models, jwt);
+//    var ProvisionalPlanProvider = require(__dirname + '/model/ProvisionalPlan')(mongoose);
+//    ProvisionalPlanProvider.prototype.findAll(function(data){
+//        var i = data;
+//
+//    });
+//    //require(__dirname + '/dal/ProvisionalPlan')(mongoose);
+//});
+

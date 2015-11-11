@@ -9,6 +9,11 @@
     "define": {
       "charset": "utf8",
       "collate": "utf8_general_ci"
+    },
+    "mongoDb": {
+      "name": "BudgetManager",
+      "host": "localhost",
+      "protocol": "mongodb"
     }
   },
   "production": {

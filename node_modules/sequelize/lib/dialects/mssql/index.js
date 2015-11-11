@@ -45,7 +45,9 @@ MssqlDialect.prototype.supports = _.merge(_.cloneDeep(Abstract.prototype.support
     parser: false,
     type: true,
     using: false,
-  }
+  },
+  NUMERIC: true,
+  tmpTableTrigger: true
 });
 
 MssqlDialect.prototype.Query = Query;

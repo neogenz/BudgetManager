@@ -1,7 +1,7 @@
 'use strict';
 
-__.namespace(app, 'data');
-__.namespace(app.data, 'autocomplete');
+myLib.technical.defineNamespace(app, 'data');
+myLib.technical.defineNamespace(app.data, 'autocomplete');
 
 function MovementMock() {
     this.id = null;
@@ -14,6 +14,18 @@ function MovementMock() {
     this.ProvisionalPlanId = null;
 }
 
+var movementMock = {
+    id: null,
+    name: 'Mouvement d\'argent',
+    amount: 0,
+    type: 'down',
+    repeat: 1,
+    comment: '',
+    active: true,
+    ProvisionalPlanId: null
+};
+
 app.data.autocomplete.Movement = function () {
-    return app.model.factory.runFactory(new MovementMock(), 'Movement');
+    //return app.bean.factory.runFactory(new MovementMock(), 'Movement');
+    return app.bean.factory.createBean('Movement', movementMock);
 };

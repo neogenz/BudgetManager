@@ -4,6 +4,8 @@ var BaseTypes = require('../../data-types')
   , util = require('util')
   , _ = require('lodash');
 
+BaseTypes.ABSTRACT.prototype.dialectTypes = 'https://www.sqlite.org/datatype3.html';
+
 var STRING = function() {
   if (!(this instanceof STRING)) return new STRING();
   BaseTypes.STRING.apply(this, arguments);
@@ -16,6 +18,14 @@ STRING.prototype.toSql = function() {
   } else {
     return BaseTypes.STRING.prototype.toSql.call(this);
   }
+};
+
+BaseTypes.TEXT.prototype.toSql = function() {
+  if (this._length) {
+    this.warn('SQLite does not support TEXT with options. Plain `TEXT` will be used instead.');
+    this._length = undefined;
+  }
+  return 'TEXT';
 };
 
 var CHAR = function() {
@@ -97,11 +107,41 @@ FLOAT.prototype.toSql = function() {
   return NUMBER.prototype.toSql.call(this);
 };
 
+var DOUBLE = function(length, decimals) {
+  var options = typeof length === 'object' && length || {
+    length: length,
+    decimals: decimals
+  };
+  if (!(this instanceof DOUBLE)) return new DOUBLE(options);
+  NUMBER.call(this, options);
+};
+util.inherits(DOUBLE, BaseTypes.DOUBLE);
+DOUBLE.prototype.key = DOUBLE.key = 'DOUBLE PRECISION';
+DOUBLE.prototype.toSql = function() {
+  return NUMBER.prototype.toSql.call(this);
+};
+
+var REAL = function(length, decimals) {
+  var options = typeof length === 'object' && length || {
+    length: length,
+    decimals: decimals
+  };
+  if (!(this instanceof REAL)) return new REAL(options);
+  NUMBER.call(this, options);
+};
+util.inherits(REAL, BaseTypes.REAL);
+REAL.prototype.key = REAL.key = 'REAL';
+REAL.prototype.toSql = function() {
+  return NUMBER.prototype.toSql.call(this);
+};
+
 module.exports = {
   STRING: STRING,
   CHAR: CHAR,
   NUMBER: NUMBER,
   FLOAT: FLOAT,
+  REAL: REAL,
+  'DOUBLE PRECISION': DOUBLE,
   INTEGER: INTEGER,
   BIGINT: BIGINT
 };

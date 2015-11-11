@@ -1,0 +1,43 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>Mr. {{ $root.user.name }}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="col-md-3 col-lg-3 " align="center">
+            <img alt="Event Pic" class="img-circle">
+        </div>
+        <div class=" col-md-9 col-lg-9 ">
+            <table class="table table-user-information">
+                <tbody>
+                <tr>
+                    <td>Email</td>
+                    <td><a href="mailto:{{ $root.user.email }}">{{ $root.user.email }}</a></td>
+                </tr>
+                <tr>
+                    <td>Nom</td>
+                    <td>{{ $root.user.name }}</td>
+                </tr>
+                <tr>
+                    <td>Prénom</td>
+                    <td>{{ $root.user.lastname }}</td>
+                </tr>
+                <tr>
+                    <td>Nom d'utilisateur</td>
+                    <td>{{ $root.user.username }}</td>
+                </tr>
+                </tbody>
+            </table>
+            <!--<a href="{{ path('esimed_user_member_edit', {'id': app.user.id}) }}" class="btn btn-info pull-right">Editer-->
+            <!--le profil-->
+            <!--</a>-->
+        </div>
+    </div>
+    <div class="panel-footer text-right">
+        <a href="{{ path('esimed_user_member_edit', {'id': app.user.id}) }}" class="btn btn-info">Editer
+            le profil
+        </a>
+        <a href="" ng-click="changePassword()" class="btn btn-info ml5">Modifier mon mot de
+            passe
+        </a>
+    </div>
+</div>

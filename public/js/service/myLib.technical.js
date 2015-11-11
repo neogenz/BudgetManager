@@ -15,7 +15,11 @@ window.myLib.technical = window.myLib.technical || {};
         buildDeleteRequestOptToCallThisUrl: _buildDeleteRequestOptToCallThisUrl,
         log: {
             logExceptionWithThrow: _logExceptionWithThrow,
-            logExceptionWithoutThrow: _logExceptionWithoutThrow
+            logExceptionWithoutThrow: _logExceptionWithoutThrow,
+            logError: _logError,
+            logWarning: _logWarning,
+            logInfo: _logInfo,
+            logDebug: _logDebug
         }
     };
 
@@ -115,5 +119,24 @@ window.myLib.technical = window.myLib.technical || {};
 
     function _logExceptionWithoutThrow() {
         throw new Error('Not yet implemented');
+    }
+
+    function _logError(file, method, message) {
+        console.error(file + ' - ' + method + ' - ' + message);
+    }
+
+
+    function _logWarning(file, method, message) {
+        console.warn(file + ' - ' + method + ' - ' + message);
+    }
+
+
+    function _logInfo(file, method, message) {
+        console.info(file + ' - ' + method + ' - ' + message);
+    }
+
+
+    function _logDebug(file, method, message) {
+        console.debug(file + ' - ' + method + ' - ' + message);
     }
 })();

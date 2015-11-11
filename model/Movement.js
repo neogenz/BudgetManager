@@ -1,13 +1,5 @@
 "use strict";
 
-//{ "id": "1",
-//    "name":"test",
-//    "amount":"200",
-//    "type":"up",
-//    "repeat":"1",
-//    "comment":"Mouvement montant de test"
-//}
-
 module.exports = function (sequelize, DataTypes) {
     var Movement = sequelize.define("Movement", {
             name: {
@@ -40,7 +32,7 @@ module.exports = function (sequelize, DataTypes) {
         }, {
             classMethods: {
                 associate: function (models) {
-                    Movement.belongsTo(models.ProvisionalPlan)
+                    Movement.belongsTo(models.ProvisionalPlan, {onDelete: 'cascade'})
                 }
             }
         }

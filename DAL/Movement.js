@@ -2,10 +2,7 @@ module.exports = function (provider, models, jwt) {
 
     var tokenUtils = require("../utils/token")(jwt);
 
-    //@todo Créer les mouvements avec le model et le body en bouclant sur les attributs du model et en cherchant la clé
-    //@todo correspondante dans le body-request
-
-    var createMovement = function (req, res) {
+    var create = function (req, res) {
         var newMovement = {
             name: req.body.name,
             amount: req.body.amount,
@@ -19,22 +16,22 @@ module.exports = function (provider, models, jwt) {
         });
     };
 
-    var getAllMovements = function (req, res) {
+    var findAll = function (req, res) {
         models.Movement.findAll().then(function (movements) {
             res.send(movements);
         });
     };
 
-    var getMovementById = function (req, res) {
+    var findById = function (req, res) {
         var id = req.params.id;
         models.Movement.findOne(id).then(function (movement) {
             res.send(movement);
         });
     };
 
-    var updateMovement = function (req, res) {
+    var update = function (req, res) {
         var id = req.params.id;
-        models.Movement.findOne(id).then(function (movement) {
+        models.Movement.findById(id).then(function (movement) {
             movement.amount = req.body.amount;
             movement.name = req.body.name;
             movement.type = req.body.type;
@@ -47,18 +44,22 @@ module.exports = function (provider, models, jwt) {
         });
     };
 
-    var removeMovement = function (req, res) {
+    var remove = function (req, res) {
         var id = req.params.id;
-        models.Movement.findOne(id).then(function (movement) {
+        models.Movement.findById(id).then(function (movement) {
             movement.destroy().then(function () {
                 res.sendStatus(200);
+            }, function (err) {
+                res.status(500).send('Error on destroy : ' + err);
             });
+        }, function (err) {
+            res.status(500).send('Error on findById : ' + err);
         });
     };
 
-    provider.get("/movements", tokenUtils.ensureAuthorized, getAllMovements);
-    provider.get("/movements/:id", tokenUtils.ensureAuthorized, getMovementById);
-    provider.post("/movements", tokenUtils.ensureAuthorized, createMovement);
-    provider.put("/movements/:id", tokenUtils.ensureAuthorized, updateMovement);
-    provider.delete("/movements/:id", tokenUtils.ensureAuthorized, removeMovement);
+    provider.get("/movements", tokenUtils.ensureAuthorized, findAll);
+    provider.get("/movements/:id", tokenUtils.ensureAuthorized, findById);
+    provider.post("/movements", tokenUtils.ensureAuthorized, create);
+    provider.put("/movements/:id", tokenUtils.ensureAuthorized, update);
+    provider.delete("/movements/:id", tokenUtils.ensureAuthorized, remove);
 };
