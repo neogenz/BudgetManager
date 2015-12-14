@@ -20,8 +20,6 @@ Cette application est destiné à rendre convivale et simple la gestion de son p
 	- Mongoose
 3. Log HTTP
 	- Morgan
-4. Authentification
-	- Passport
 5. Authentification
 	- Passport
 	- JsonWebToken
