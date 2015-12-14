@@ -5,7 +5,7 @@ Cette application est destiné à rendre convivale et simple la gestion de son p
 - Serveur 
 	- NodeJS (express)
 - Base de données
-	- MySQL
+	- MongoDB
 
 ### Frontend
 - AngularJS
@@ -17,13 +17,14 @@ Cette application est destiné à rendre convivale et simple la gestion de son p
 1. Serveur
 	- Express
 2. ORM
-	- Sequelize
+	- Mongoose
 3. Log HTTP
 	- Morgan
 4. Authentification
 	- Passport
 5. Authentification
 	- Passport
+	- JsonWebToken
 
 #### Modules AngularJS utilisés
 1. Routage
