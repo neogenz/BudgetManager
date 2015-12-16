@@ -2,13 +2,15 @@
  * Created by maximedesogus on 26/03/15.
  */
 
-module.exports = function (provider, models, jwt) {
+module.exports = function (provider, mongoose, jwt) {
     var publicDir = __dirname + "/public/";
     var css = publicDir + "css/";
     var js = publicDir + "js/";
     var fonts = publicDir;
 
-    var tokenUtils = require("./utils/token")(jwt);
+    var userProvider = require('./03_DataAcessLayer/UserProvider');
+    //var userProvider = new UserProvider();
+    var authenticationHelpers = require('./01_Commons/AuthenticationHelpers');
 
     provider.get(['/', '/views/*'], function (req, res) {
         if (req.originalUrl === '/') {
@@ -29,76 +31,40 @@ module.exports = function (provider, models, jwt) {
         res.sendFile(fonts + req.path);
     });
 
+    var User = mongoose.model('User');
+
     // Signin ==============================================================
     provider.post('/signin', function (req, res) {
-        models.User.findOne({
-            where: {
-                email: req.body.email
-            }
-        })
-            .then(function (user) {
-            if (!user) {
-                console.error('User not exist.');
-                res.status(404);
-                res.send({
-                    message: 'User not authenticated.'
-                });
-            } else if (!user.validPassword(req.body.password)) {
-                console.error('Invalid password');
-                res.status(403);
-                res.send({
-                    message: 'User not authenticated.'
+        userProvider.signinByEmailAndPassword(req.body.email, req.body.password, function (err, token) {
+            if (err) {
+                console.error(err);
+                res.status(err.statusHttp).send({
+                    message: err.message,
+                    stack: (err.stack ? err.stack : '')
                 });
             } else {
-                try {
-                    var token = jwt.sign(user, process.env.JWT_SECRET, {
-                        expiresInMinutes: 1440 // expires in 24 hours
-                    });
-                    res.send({token: token});
-                } catch (e) {
-                    console.log(e);
-                    res.status = 500;
-                    res.send({
-                        message: e
-                    });
-                }
+                res.send({token: token});
             }
         });
     });
 
     // Signup ==============================================================
     provider.post('/signup', function (req, res) {
-        models.User.findOne({where: {email: req.body.email}}).then(function (user) {
-            if (!user) {
-                var newUser = models.User.build({email: req.body.email, password: req.body.password});
-                newUser.password = newUser.generateHash(req.body.password);
-                newUser.save().then(function (userSaved) {
-                    var token = jwt.sign(userSaved, process.env.JWT_SECRET, {
-                        expiresInMinutes: 1440 // expires in 24 hours
-                    });
-                    res.status = 201;
-                    res.send({
-                        token: token
-                    });
-                }).catch(function (error) {
-                    res.status = 500;
-                    res.send({
-                        message: error
-                    });
+        var newUser = userProvider.create(req.body);
+        userProvider.signup(newUser, function (err, token) {
+            if (err) {
+                console.error(err);
+                res.status((err.statusHttp ? err.statusHttp : 500)).send({
+                    message: err.message,
+                    stack: (err.stack ? err.stack : '')
                 });
             } else {
-                res.status = 500;
-                res.send({
-                    message: 'User already exists'
-                });
+                res.send({token: token});
             }
-        }, function () {
-            res.status = 500;
-            res.send({message: 'An error has occurred, see first the ORM API.'});
         });
     });
 
-    provider.get('/isAuthenticated', tokenUtils.ensureAuthorized, _getUserAuthenticated);
+    provider.get('/isAuthenticated', authenticationHelpers.ensureAuthorized, _getUserAuthenticated);
 
     function _getUserAuthenticated(req, res) {
         res.send(req.user);

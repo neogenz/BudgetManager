@@ -149,13 +149,14 @@
          * @memberOf Controllers.MovementController
          */
         function _openModalToAddOrEdit(provisionalPlan, movementToWork, success_callback) {
+            //var provisionalPlan = provisionalPlan;
             function openModal(success_callback) {
                 var movementModalAddOrEditOpts = {
                     templateUrl: 'views/partials/movement.form', // Url du template HTML
                     controller: 'movement.add.ctrl',
                     resolve: {
                         provisionalPlanTitle: function () {
-                            return $scope.provisionalPlan.name;
+                            return provisionalPlan.name;
                         },
                         movementToWork: function () {
                             return $scope.movementToWork;
@@ -186,7 +187,7 @@
                 });
             }
 
-            $scope.provisionalPlan = provisionalPlan;
+            //$scope.provisionalPlan = provisionalPlan;
             if (_.isUndefined(movementToWork)) {
                 throw new Error('Parameter  movementToWork is undefined.');
             }

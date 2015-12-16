@@ -13,7 +13,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
         //Web API
         function _findAll() {
             var def = $q.defer();
-            var requestOptions = myLib.technical.buildGetRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/provisionalPlans');
+            var requestOptions = myLib.technical.buildGetRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans');
             var promise = $http(requestOptions);
             promise.success(function (data) {
                 if (!data) {
@@ -41,7 +41,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
                 def.reject('Id is null or undefined.');
             }
             else {
-                var requestOptions = myLib.technical.buildGetRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/provisionalPlans/' + id);
+                var requestOptions = myLib.technical.buildGetRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/' + id);
                 var promise = $http(requestOptions);
                 promise.success(function (data) {
                     var factory = app.bean.factory;
@@ -60,7 +60,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
                 def.reject('Id of provisional plan to add is null.');
             }
             else {
-                var requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/provisionalPlans/' + movementToAdd.provisionalPlanId, movementToAdd);
+                var requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/' + movementToAdd.provisionalPlanId, movementToAdd);
                 var promise = $http(requestOptions);
                 promise.success(function () {
                     def.resolve();
@@ -76,7 +76,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
             var bodyReq = provisionalPlan;
             var promise;
             if (provisionalPlan !== null) {
-                var requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/provisionalPlans/', bodyReq);
+                var requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/', bodyReq);
                 promise = $http(requestOptions);
                 promise.success(function () {
                     def.resolve();
@@ -97,7 +97,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
                 def.reject();
                 return def.promise;
             }
-            var requestOptions = myLib.technical.buildDeleteRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/provisionalPlans/' + provisionalPlan.id);
+            var requestOptions = myLib.technical.buildDeleteRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/' + provisionalPlan.id);
             promise = $http(requestOptions);
             promise.success(function () {
                 def.resolve();
@@ -113,7 +113,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
             delete provisionalPlan.movements;
             if (provisionalPlan !== null) {
                 var bodyReq = provisionalPlan;
-                var requestOptions = myLib.technical.buildPutRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/provisionalPlans', bodyReq);
+                var requestOptions = myLib.technical.buildPutRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans', bodyReq);
                 promise = $http(requestOptions);
                 promise.success(function () {
                     def.resolve();

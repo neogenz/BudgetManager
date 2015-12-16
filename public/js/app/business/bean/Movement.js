@@ -127,7 +127,11 @@ myLib.technical.defineNamespace(app, 'bean.Movement');
         provisionalPlan: {value: null, writable: true},
         _schema: {
             value: {
-                id: new app.bean.core.AbstractSchema({type: app.bean.core.type.NUMBER, nullable: true}),
+                id: new app.bean.core.AbstractSchema({
+                    type: app.bean.core.type.STRING,
+                    nullable: true,
+                    persistingName: '_id'
+                }),
                 name: new app.bean.core.AbstractSchema({type: app.bean.core.type.STRING}),
                 amount: new app.bean.core.AbstractSchema({
                     type: app.bean.core.type.NUMBER,

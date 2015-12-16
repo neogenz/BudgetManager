@@ -19,7 +19,7 @@ myLib.technical.defineNamespace(app, 'bean.ProvisionalPlan');
         userId: {value: null, writable: true},
         _schema: {
             value: {
-                id: new app.bean.core.AbstractSchema({type: app.bean.core.type.NUMBER}),
+                id: new app.bean.core.AbstractSchema({type: app.bean.core.type.STRING, persistingName: '_id'}),
                 name: new app.bean.core.AbstractSchema({type: app.bean.core.type.STRING}),
                 baseAmount: new app.bean.core.AbstractSchema({type: app.bean.core.type.NUMBER, defaultValue: 0}),
                 valid: new app.bean.core.AbstractSchema({type: app.bean.core.type.BOOLEAN, defaultValue: true}),
@@ -32,8 +32,7 @@ myLib.technical.defineNamespace(app, 'bean.ProvisionalPlan');
                         beanName: 'Movement',
                         constructor: app.bean.Movement
                     })
-                }),
-                userId: new app.bean.core.AbstractSchema({type: app.bean.core.type.NUMBER, persistingName: 'UserId'})
+                })
             }
         }
     });
