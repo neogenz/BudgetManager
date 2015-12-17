@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h4>
-                    <a ng-click="inverseActiveStateClickListener(movement, $parent.refresh)"
+                    <a ng-click="inverseActiveStateClickListener(provisionalPlan, movement, $parent.refresh)"
                        class="pull-right small-left-separation">
                     <span class="cursor"
                           ng-class="{true: 'fa fa-toggle-on', false: 'fa fa-toggle-off'}[movement.active]">
@@ -12,7 +12,7 @@
                     </a>
                 </h4>
                 <h4>
-                    <a ng-click="deleteClickListener(movement, $parent.refresh)"
+                    <a ng-click="deleteClickListener(provisionalPlan, movement, $parent.refresh)"
                        class="pull-right small-left-separation">
                     <span class="glyphicon glyphicon-trash cursor">
                     </span>

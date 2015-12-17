@@ -52,13 +52,14 @@
          * @desc Inverse active state of movement and call WS to save the change
          * @function _inverseActiveState
          * @param {Object} movement Movement to update this state
-         * * @param {function} success_callback Callback for the success of webserivce call
+         * @param {Object} provisionalPlan Provisional plan parent of the movement to update
+         * @param {function} success_callback Callback for the success of webserivce call
          * @memberOf Controllers.MovementController
          */
-        function _inverseActiveState(movement, success_callback) {
+        function _inverseActiveState(provisionalPlan, movement, success_callback) {
             movement.active = !movement.active;
-            movementWebApi.update(movement).then(function () {
-                success_callback(movement.provisionalPlanId);
+            movementWebApi.update({provisionalPlanId: provisionalPlan.id, movement: movement}).then(function () {
+                success_callback(provisionalPlan.id);
             }, function () {
 
             });
@@ -97,11 +98,12 @@
         /**
          * @desc Open a modal to confirm action of deleting then call de delete webservice if user confirm action
          * @function _openModalToConfirmDelete
+         * @param {Object} provisionalPlan Provisional plan parent of the movement to delete
          * @param {Object} movement Movement to delete
          * @param {function} success_callback Callback for the success of delete webservice call
          * @memberOf Controllers.MovementController
          */
-        function _openModalToConfirmDelete(movement, success_callback) {
+        function _openModalToConfirmDelete(provisionalPlan, movement, success_callback) {
             var confirmActionModalOpts = {
                 templateUrl: 'views/partials/action.confirm', // Url du template HTML
                 controller: 'action.confirm.ctrl',
@@ -117,7 +119,7 @@
             $scope.confirmationMessage = "Êtes vous sur de vouloir supprimer ce mouvement ?";
             var modalInstance = $modal.open(confirmActionModalOpts);
             modalInstance.result.then(function () {
-                _delete(movement, success_callback);
+                _delete({provisionalPlanId: provisionalPlan.id, movement: movement}, success_callback);
             }, function () {
                 console.log("Suppression annulé.");
             });
@@ -127,13 +129,13 @@
         /**
          * @desc Call the delete webservice
          * @function _delete
-         * @param {Object} movement Movement to delete
+         * @param {object} param Object with provisionalPlanId and movement to remove
          * @param {function} success_callback Callback for the success of delete webservice call
          * @memberOf Controllers.MovementController
          */
-        function _delete(movement, success_callback) {
-            movementWebApi.remove(movement).then(function () {
-                success_callback(movement.provisionalPlanId);
+        function _delete(param, success_callback) {
+            movementWebApi.remove(param).then(function () {
+                success_callback(param.provisionalPlanId);
             }, function () {
 
             });
@@ -169,15 +171,18 @@
                     if (myLib.technical.isUndefinedOrNull($scope.movementToWork.id)) {
                         provisionalPlanWebApi.addMovement($scope.movementToWork)
                             .then(function () {
-                                success_callback($scope.movementToWork.provisionalPlanId);
+                                success_callback(provisionalPlan.id);
                             }, function (reason) {
                                 throw new Error(reason);
                             });
                     }
                     else {
-                        movementWebApi.update($scope.movementToWork).then(function () {
+                        movementWebApi.update({
+                            provisionalPlanId: provisionalPlan.id,
+                            movement: $scope.movementToWork
+                        }).then(function () {
                             debugger;
-                            success_callback($scope.movementToWork.provisionalPlanId);
+                            success_callback(provisionalPlan.id);
                         }, function (reason) {
                             throw new Error(reason);
                         });

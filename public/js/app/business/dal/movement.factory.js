@@ -1,12 +1,21 @@
 appBudgetManager.factory('movementWebApi',
     function ($http, $q) {
+
         return {
-            update: update,
-            remove: remove
+            update: _update,
+            remove: _remove
         };
-        function update(movement) {
+
+
+        /**
+         * @name _update
+         * Call the WS to update movement
+         * @param {object} param Object with provisionalPlanId and movement to update
+         * @returns {d.promise|*|promise}
+         */
+        function _update(param) {
             var def = $q.defer();
-            var requestOptions = myLib.technical.buildPutRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/provisionalPlan/' + movement.provisionalPlanId + '/movements/' + movement.id, movement);
+            var requestOptions = myLib.technical.buildPutRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/' + param.provisionalPlanId + '/movements', param.movement);
             var promise = $http(requestOptions);
             promise.success(function () {
                 def.resolve();
@@ -16,9 +25,16 @@ appBudgetManager.factory('movementWebApi',
             return def.promise;
         }
 
-        function remove(movement) {
+
+        /**
+         * @name _remove
+         * Call the WS to remove movement
+         * @param {object} param Object with provisionalPlanId and movement to remove
+         * @returns {d.promise|*|promise}
+         */
+        function _remove(param) {
             var def = $q.defer();
-            var requestOptions = myLib.technical.buildDeleteRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/provisionalPlan/' + movement.provisionalPlanId + '/movements/' + movement.id, movement);
+            var requestOptions = myLib.technical.buildDeleteRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/' + param.provisionalPlanId + '/movements/' + param.movement.id);
             var promise = $http(requestOptions);
             promise.success(function () {
                 def.resolve();

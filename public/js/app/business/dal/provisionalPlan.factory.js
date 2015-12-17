@@ -75,7 +75,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
             var def = $q.defer();
             var bodyReq = provisionalPlan;
             var promise;
-            if (provisionalPlan !== null) {
+            if (!myLib.technical.isUndefinedOrNull(bodyReq)) {
                 var requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/', bodyReq);
                 promise = $http(requestOptions);
                 promise.success(function () {
@@ -85,7 +85,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
                 });
             }
             else {
-                def.reject();
+                def.reject('bodyReq is null or undefined.');
             }
             return def.promise;
         }
@@ -93,7 +93,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
         function _remove(provisionalPlan) {
             var def = $q.defer();
             var promise;
-            if (provisionalPlan.id === undefined || provisionalPlan.id === null || provisionalPlan.id === "") {
+            if (myLib.technical.isUndefinedOrNull(provisionalPlan.id) || provisionalPlan.id === '') {
                 def.reject();
                 return def.promise;
             }
@@ -103,7 +103,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
                 def.resolve();
             }).error(function (reason) {
                 def.reject(reason);
-            })
+            });
             return def.promise;
         }
 
@@ -111,7 +111,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
             var def = $q.defer();
             var promise;
             delete provisionalPlan.movements;
-            if (provisionalPlan !== null) {
+            if (myLib.technical.isUndefinedOrNull(provisionalPlan)) {
                 var bodyReq = provisionalPlan;
                 var requestOptions = myLib.technical.buildPutRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans', bodyReq);
                 promise = $http(requestOptions);

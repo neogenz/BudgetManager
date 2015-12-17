@@ -55,7 +55,7 @@
                     controller: 'provisionalPlan.add.ctrl',
                     resolve: {
                         provisionalPlan: function () {
-                            return app.data.autocomplete.ProvisionalPlan();
+                            return app.bean.factory.createBean('ProvisionalPlan', null);//app.data.autocomplete.ProvisionalPlan();
                         }
                     }
                 };
@@ -93,7 +93,7 @@
          * @memberOf Controllers.ProvisionalPlanController
          */
         function _refresh(id) {
-            if (!_.isUndefined(id) && !_.isNull(id)) {
+            if (!myLib.technical.isUndefinedOrNull(id)) {
                 _refreshById(id);
             } else {
                 _refreshAll();
