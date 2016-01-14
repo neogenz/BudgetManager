@@ -1,5 +1,5 @@
 # BudgetManager
-Cette application est destinée à rendre convivale et simple la gestion de son porte feuille (virtuel ou non).
+Cette application est destinée à rendre conviviale et simple la gestion de son porte feuille (virtuel ou non).
 ## Techonolgies utilisées
 ### Backend
 - Serveur 
