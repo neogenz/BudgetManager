@@ -190,6 +190,14 @@ p, a, h1, h2, h3, h4, h5 {
     .display-xs-block {
         display: block !important;
     }
+
+    .xs-no-ml {
+        margin-left: 0px;
+    }
+
+    .xs-mb-10 {
+        margin-bottom: 10px;
+    }
 }
 
 .ml5 {

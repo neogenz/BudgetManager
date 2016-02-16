@@ -1,15 +1,5 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "budget_manager",
-    "host": "localhost",
-    "dialect": "mysql",
-    "port": "3306",
-    "define": {
-      "charset": "utf8",
-      "collate": "utf8_general_ci"
-    },
     "mongoDb": {
       "name": "BudgetManager",
       "host": "localhost",
@@ -17,11 +7,10 @@
     }
   },
   "production": {
-    "username": "DATABASE_USERNAME",
-    "password": "DATABASE_PASSWORD",
-    "database": "DATABASE_NAME",
-    "host": "PRODUCTION_DATABASE_URL",
-    "dialect": "postgres",
-    "port": "DATABASE_PORT"
+    "mongoDb": {
+      "name": "BudgetManager",
+      "host": "mdesogus.com",
+      "protocol": "mongodb"
+    }
   }
 }

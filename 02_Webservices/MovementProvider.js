@@ -4,7 +4,7 @@ function init(provider) {
 
     //var jwt = require('jsonwebtoken');
     //var tokenUtils = require("../services/token")(jwt);
-    var authenticationHelpers = require('../01_Commons/AuthenticationHelpers');
+    var authenticationHelpers = require('../01_Commons/authenticationHelpers');
 
     var movementProvider = require('../03_DataAcessLayer/MovementProvider');
 

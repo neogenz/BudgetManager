@@ -51,9 +51,15 @@ appBudgetManager.factory('authenticateWebApi', function ($http, $localStorage, $
     //getUserFromToken();
 
     //Web API
-    function _signup(formData) {
+    /**
+     * @name _signup
+     * Signup the user in database.
+     * @param {User} beanUser User to signup
+     * @returns {d.promise|*|promise}
+     */
+    function _signup(beanUser) {
         var def = $q.defer();
-        var requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/signup', formData);
+        var requestOptions = myLib.technical.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/signup', beanUser);
         var promise = $http(requestOptions);
         promise.success(function (data) {
             $localStorage.token = data.token;

@@ -14,6 +14,8 @@ myLib.technical.defineNamespace(app, 'bean.factory');
             return new app.bean.Movement(json);
         } else if (beanName === 'ProvisionalPlan') {
             return new app.bean.ProvisionalPlan(json);
+        } else if (beanName === 'User') {
+            return new app.bean.User(json);
         }
     };
 

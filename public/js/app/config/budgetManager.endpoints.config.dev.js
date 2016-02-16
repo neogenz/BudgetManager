@@ -5,12 +5,16 @@ myLib.technical.defineNamespace(app, 'budgetManager.endpoints');
 
 (function init() {
     app.budgetManager.config.webApi = {
-        domain: 'localhost',
-        port: '5000',
+        subdomain: '',
+        domain: 'localhost', //mdesogus.com
+        port: '3000', //80
         protocol: 'http'
     };
 
     app.budgetManager.endpoints = {
-        nodeEndpoint: app.budgetManager.config.webApi.protocol + '://' + app.budgetManager.config.webApi.domain + ':' + app.budgetManager.config.webApi.port
+        nodeEndpoint: app.budgetManager.config.webApi.protocol + '://' +
+            //app.budgetManager.config.webApi.subdomain + '.' +
+        app.budgetManager.config.webApi.domain + ':' +
+        app.budgetManager.config.webApi.port
     }
 })();

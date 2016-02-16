@@ -21,7 +21,7 @@
         User
             .findById(id)
             .exec(function (err, userFinded) {
-                callback(err, userFinded);
+                callback(err, userFinded.toObject());
             });
     };
 
@@ -42,7 +42,7 @@
                     message: 'User not authenticated'
                 });
             }
-            return callback(err, user);
+            return callback(err, user.toObject());
         });
     };
 
@@ -53,7 +53,7 @@
             }
             try {
                 var token = jwt.sign(userFinded, process.env.JWT_SECRET, {
-                    expiresIn: "3600" // expires in 24 hours
+                    expiresIn: "86400000" // expires in 24 hours
                 });
                 return callback(err, token);
             } catch (err) {
@@ -80,8 +80,8 @@
                         return callback(err);
                     }
 
-                    var token = jwt.sign(userSaved, process.env.JWT_SECRET, {
-                        expiresIn: "3600" // expires in 24 hours
+                    var token = jwt.sign(userSaved.toObject(), process.env.JWT_SECRET, {
+                        expiresIn: "86400000" // expires in 24 hours
                     });
                     return callback(err, token);
 

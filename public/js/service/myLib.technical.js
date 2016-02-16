@@ -77,7 +77,8 @@ window.myLib.technical = window.myLib.technical || {};
             method: 'POST',
             url: url,
             hearders: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': 'localhost'
             },
             data: bodyRequest
         };

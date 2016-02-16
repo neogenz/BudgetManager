@@ -1,10 +1,7 @@
 'use strict';
 
 function init(provider) {
-    //var jwt = require('jsonwebtoken');
-    //var tokenUtils = require("../services/token")(jwt);
-
-    var authenticationHelpers = require('../01_Commons/AuthenticationHelpers');
+    var authenticationHelpers = require('../01_Commons/authenticationHelpers');
 
     var User = require('../04_Models/User');
     var provisionalPlanProvider = require('../03_DataAcessLayer/ProvisionalPlanProvider');

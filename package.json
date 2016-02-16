@@ -11,7 +11,13 @@
     "jsonwebtoken": "latest",
     "mongoose": "^4.2.5",
     "morgan": "latest",
-    "mysql": "latest",
-    "sequelize": "latest"
+    "mysql": "latest"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-shell": "^1.1.2"
   }
 }

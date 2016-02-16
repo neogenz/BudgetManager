@@ -55,7 +55,14 @@
          */
         function _signup(formIsValid) {
             if (_passwordAndConfirmationIsEqual() && formIsValid) {
-                authenticateWebApi.signup($scope.userInput).then(function () {
+                debugger;
+                var user = new app.bean.factory.createBean('User', null);
+                user.email = $scope.userInput.email;
+                user.password = $scope.userInput.password;
+                user.firstName = $scope.userInput.firstName;
+                user.lastName = $scope.userInput.lastName;
+
+                authenticateWebApi.signup(user).then(function () {
                     toastr.success(app.ui.messages.signup.success);
                     $state.go('provisionalPlans');
                 }, function () {
@@ -76,4 +83,5 @@
             return ($scope.userInput.password === $scope.userInput.passwordConfirm);
         }
     }
-})();
+})
+();

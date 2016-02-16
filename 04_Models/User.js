@@ -11,7 +11,7 @@
         password: {type: String, required: true},
         firstName: {type: String, required: true},
         lastName: {type: String, required: true},
-        username: {type: String, required: true, unique: true},
+        username: {type: String, required: false, unique: true},
         updatedAt: Date,
         createdAt: Date,
         provisionalPlans: {type: [ProvisionalPlan.schema], default: []}
