@@ -1,7 +1,7 @@
 # BudgetManager
 Cette application est destinée à rendre conviviale et simple la gestion de son porte feuille (virtuel ou non).
 
-[Démo](budgetmanager.mdesogus.com)
+[Démo](http://budgetmanager.mdesogus.com)
 ## Techonolgies utilisées
 ### Backend
 - Serveur 
