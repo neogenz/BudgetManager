@@ -5,489 +5,114 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b04111e7-b392-4bdd-a441-c27feda74d45" name="Default" comment="- Fix issues&#10;- Add Gruntfile&#10;- Add conf files">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/endpoint.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/app/business/bean/User.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/04_Models/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/.eslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/contRun.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/async/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/async/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/load.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/test/browserify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/test/es6-promise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/test/es6-promise.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/test/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/test/json3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/test/mocha.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/test/mocha.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/test/worker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/binding.gyp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/.deps/Release/kerberos.node.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/.deps/Release/obj.target/kerberos/lib/base64.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/.deps/Release/obj.target/kerberos/lib/kerberos.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/.deps/Release/obj.target/kerberos/lib/kerberos_context.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/.deps/Release/obj.target/kerberos/lib/kerberosgss.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/.deps/Release/obj.target/kerberos/lib/worker.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/kerberos.node" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/obj.target/kerberos/lib/base64.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/obj.target/kerberos/lib/kerberos.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/obj.target/kerberos/lib/kerberos_context.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/obj.target/kerberos/lib/kerberosgss.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/Release/obj.target/kerberos/lib/worker.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/binding.Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/config.gypi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/gyp-mac-tool" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/build/kerberos.target.mk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/builderror.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/auth_processes/mongodb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/base64.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/base64.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/kerberos.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/kerberos.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/kerberos.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/kerberos_context.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/kerberos_context.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/kerberosgss.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/kerberosgss.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/sspi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/base64.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/base64.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/kerberos.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/kerberos.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/kerberos_sspi.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/kerberos_sspi.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/worker.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/worker.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_buffer.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_buffer.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_buffer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_buffer_descriptor.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_buffer_descriptor.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_buffer_descriptor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_context.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_context.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_context.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_credentials.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_credentials.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/win32/wrappers/security_credentials.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/worker.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/lib/worker.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/.dntrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/appveyor.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/.build.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/asyncworker.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/buffers.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/callback.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/converters.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/errors.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/maybe_types.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/methods.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/new.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/node_misc.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/persistent.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/scopes.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/script.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/string_bytes.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/v8_internals.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/doc/v8_misc.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/include_dirs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_callbacks.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_callbacks_12_inl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_callbacks_pre_12_inl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_converters.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_converters_43_inl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_converters_pre_43_inl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_implementation_12_inl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_implementation_pre_12_inl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_maybe_43_inl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_maybe_pre_43_inl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_new.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_object_wrap.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_persistent_12_inl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_persistent_pre_12_inl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_string_bytes.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/nan_weak.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/tools/1to2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/tools/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/node_modules/nan/tools/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/test/kerberos_tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/test/kerberos_win32_test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/test/win32/security_buffer_descriptor_tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/test/win32/security_buffer_tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/kerberos/test/win32/security_credentials_tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/sqlite-shell-osx-x86-3090100.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/sqlite3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/t.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/t1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/boot.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/ca.pem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/client.pem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/client_password.pem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/connect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/WiredTiger" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/WiredTiger.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/WiredTiger.turtle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/WiredTiger.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/WiredTigerLAS.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/_mdb_catalog.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/collection-0-757073248613337118.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/diagnostic.data/metrics.2015-10-07T14-44-37Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/diagnostic.data/metrics.2015-10-07T14-45-15Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/diagnostic.data/metrics.2015-10-07T14-46-31Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/diagnostic.data/metrics.2015-10-07T14-47-25Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/diagnostic.data/metrics.2015-10-07T14-49-07Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/diagnostic.data/metrics.2015-10-07T14-50-41Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/diagnostic.data/metrics.2015-10-07T14-50-53Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/diagnostic.data/metrics.2015-10-07T14-52-31Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/diagnostic.data/metrics.2015-10-07T14-54-53Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/diagnostic.data/metrics.2015-10-07T14-55-09Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/diagnostic.data/metrics.2015-10-07T14-55-38Z-00000" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/index-1-757073248613337118.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/mongod.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/sizeStorer.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/data/storage.bson" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/test_boot/server_password.pem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/muri/strict.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/bench.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/lib/sliced.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/test/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/any.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/assert.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/async.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/bluebird.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/call_get.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/cancel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/captured_trace.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/catch_filter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/direct_resolve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/each.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/errors.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/es5.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/filter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/finally.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/generators.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/join.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/map.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/nodeify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/progress.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/promise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/promise_array.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/promise_resolver.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/promisify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/props.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/queue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/race.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/reduce.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/schedule.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/settle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/some.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/synchronous_inspection.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/thenables.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/timers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/using.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/main/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/dottie/benchmark/get.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/routing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/commons/uiManager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/model/ProvisionalPlan.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/model/User.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/angular/angular-animate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/angular/angular.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap-theme.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap-theme.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootswatch.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/js/npm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootswatch/css/bootswatch.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/jquery-2.2.0.min.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/config/config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/doc/cahier-des-charges.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/angular/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/angular-animate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/app_start.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/ProvisionalPlan.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/User.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/data/autocomplete/movement.autocomplete.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/data/autocomplete/provisionalPlan.autocomplete.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/data/ui.manager.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/routing.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/vendor/jquery-1.11.1.min.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap-theme.css" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap-theme.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/custom.css" afterPath="$PROJECT_DIR$/public/assets/css/custom.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/loader/loading-bar.css" afterPath="$PROJECT_DIR$/public/assets/libs/angular/modules/loading-bar/loading-bar.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/angular-toastr.min.js" afterPath="$PROJECT_DIR$/public/assets/libs/angular/angular-toastr.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/loading-bar.js" afterPath="$PROJECT_DIR$/public/assets/libs/angular/modules/loading-bar/loading-bar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/ngStorage.js" afterPath="$PROJECT_DIR$/public/assets/libs/angular/modules/ngStorage.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/ui-bootstrap-tpls-0.12.1.min.js" afterPath="$PROJECT_DIR$/public/assets/libs/angular/ui-bootstrap-tpls-0.12.1.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/ui-router.min.js" afterPath="$PROJECT_DIR$/public/assets/libs/angular/ui-router.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/appBudgetManager.js" afterPath="$PROJECT_DIR$/public/app/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/Movement.js" afterPath="$PROJECT_DIR$/public/assets/js/model/Movement.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/Schema.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/Schema.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/factory.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/factory.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/dal/authenticate.factory.js" afterPath="$PROJECT_DIR$/public/app/components/authentication/authenticateFactory.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/dal/movement.factory.js" afterPath="$PROJECT_DIR$/public/app/components/movement/movementFactory.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/dal/provisionalPlan.factory.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/service/provisionalPlan.calculus.service.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanServices.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/config/budgetManager.config.js" afterPath="$PROJECT_DIR$/public/assets/js/config/appConfig.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/config/budgetManager.endpoints.config.dev.js" afterPath="$PROJECT_DIR$/public/assets/js/config/endpointConfig.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/action.confirm.ctrl.js" afterPath="$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/home.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/home/homeController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/login.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/authentication/controllers/signinController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/logout.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/authentication/controllers/signoutController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/movement.add.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/movement/controllers/movementAddController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/movement.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/movement/controllers/movementListController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/movement.details.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/movement/controllers/movementDetailsController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/provisionalPlan.add.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanAddController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/provisionalPlan.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanListController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/provisionalPlan.details.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/provisionalPlan.details.stats.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsStatsController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/signup.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/authentication/controllers/signupController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/user.profile.changePassword.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/user/controllers/userProfileChangePasswordController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/user.profile.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/user/controllers/userProfileController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/service/myLib.technical.js" afterPath="$PROJECT_DIR$/public/assets/js/commons/commonHelpers.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/vendor/underscore.min.js" afterPath="$PROJECT_DIR$/public/assets/libs/underscore.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/home.html" afterPath="$PROJECT_DIR$/public/app/components/home/homeView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/login.html" afterPath="$PROJECT_DIR$/public/app/components/authentication/views/signinView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/action.confirm.html" afterPath="$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/movement.details.html" afterPath="$PROJECT_DIR$/public/app/components/movement/views/movementDetailsView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/movement.form.html" afterPath="$PROJECT_DIR$/public/app/components/movement/views/movementFormView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/movement.html" afterPath="$PROJECT_DIR$/public/app/components/movement/views/movementView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/provisionalPlan.details.html" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/provisionalPlan.details.stats.html" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsStatsView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/provisionalPlan.form.html" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanFormView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/provisionalPlan.preview.html" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanPreviewView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/user.profil.changePassword.html" afterPath="$PROJECT_DIR$/public/app/components/user/views/userProfilChangePasswordView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/provisionalPlan.list.html" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanListView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/signup.html" afterPath="$PROJECT_DIR$/public/app/components/authentication/views/signupView.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/user.profile.changePassword.partial.html" afterPath="$PROJECT_DIR$/public/app/components/user/views/userProfileChangePasswordPartial.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/user.profile.html" afterPath="$PROJECT_DIR$/public/app/components/user/views/userProfileView.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_Commons/authenticationHelpers.js" afterPath="$PROJECT_DIR$/01_Commons/authenticationHelpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02_Webservices/MovementProvider.js" afterPath="$PROJECT_DIR$/02_Webservices/MovementProvider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02_Webservices/ProvisionalPlanProvider.js" afterPath="$PROJECT_DIR$/02_Webservices/ProvisionalPlanProvider.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js" afterPath="$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/04_Models/User.js" afterPath="$PROJECT_DIR$/04_Models/User.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.json" afterPath="$PROJECT_DIR$/config/database.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/mongoose/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/CONTRIBUTING.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/History.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/History.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/README.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/aggregate/aggregate.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/aggregate/aggregate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/doc-methods.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/doc-methods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/express/connection-sharing/modelA.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/express/connection-sharing/modelA.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/express/connection-sharing/routes.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/express/connection-sharing/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/geospatial/geoJSONSchema.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/geospatial/geoJSONSchema.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/geospatial/geoJSONexample.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/geospatial/geoJSONexample.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/geospatial/geospatial.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/geospatial/geospatial.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/geospatial/person.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/geospatial/person.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/globalschemas/gs_example.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/globalschemas/gs_example.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/globalschemas/person.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/globalschemas/person.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/lean/lean.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/lean/lean.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/lean/person.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/lean/person.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/mapreduce/mapreduce.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/mapreduce/mapreduce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/mapreduce/person.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/mapreduce/person.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-across-three-collections.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-across-three-collections.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-basic.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-basic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-of-existing-doc.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-of-existing-doc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-of-multiple-existing-docs.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-of-multiple-existing-docs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-options.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-options.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-plain-objects.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/population/population-plain-objects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/promises/promise.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/promises/promise.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/querybuilder/querybuilder.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/querybuilder/querybuilder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/replicasets/replica-sets.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/replicasets/replica-sets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/schema/schema.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/schema/schema.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/schema/storing-schemas-as-json/index.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/schema/storing-schemas-as-json/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/statics/person.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/statics/person.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/examples/statics/statics.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/examples/statics/statics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/ES6Promise.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/ES6Promise.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/aggregate.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/aggregate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/browser.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/browserDocument.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/browserDocument.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/cast.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/cast.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/collection.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/collection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/connection.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/connection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/document.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/document.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/document_provider.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/document_provider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/error.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/error.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/error/browserMissingSchema.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/error/browserMissingSchema.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/error/cast.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/error/cast.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/error/messages.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/error/messages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/error/validation.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/error/validation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/error/validator.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/error/validator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/model.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/query.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/query.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/querystream.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/querystream.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/array.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/array.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/boolean.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/boolean.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/buffer.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/buffer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/date.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/date.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/documentarray.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/documentarray.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/embedded.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/embedded.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/mixed.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/mixed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/number.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/number.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/objectid.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/objectid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/string.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema/string.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schematype.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schematype.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/services/updateValidators.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/services/updateValidators.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/statemachine.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/statemachine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/array.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/array.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/buffer.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/buffer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/documentarray.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/documentarray.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/embedded.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/embedded.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/subdocument.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/subdocument.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/async/README.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/async/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/async/lib/async.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/async/lib/async.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/async/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/async/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/HISTORY" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/HISTORY" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/lib/bson/index.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/lib/bson/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/lib/bson/objectid.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/lib/bson/objectid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/lib/bson/parser/deserializer.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/lib/bson/parser/deserializer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/lib/bson/parser/serializer.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/lib/bson/parser/serializer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/bson/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/README.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/conf.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/conf.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/index.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/bulk/common.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/bulk/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/bulk/ordered.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/bulk/ordered.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/bulk/unordered.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/bulk/unordered.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/collection.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/collection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/command_cursor.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/command_cursor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/cursor.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/cursor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/db.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/db.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/gridfs/grid_store.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/gridfs/grid_store.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/mongos.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/mongos.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/replset.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/replset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/server.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/url_parser.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/lib/url_parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/README.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/es6-promise.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/es6-promise.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/es6-promise.min.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/dist/es6-promise.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/lib/es6-promise/-internal.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/lib/es6-promise/-internal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/lib/es6-promise/asap.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/lib/es6-promise/asap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/lib/es6-promise/promise.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/lib/es6-promise/promise.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/es6-promise/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/README.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/gssapi.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/gssapi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/mongocr.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/mongocr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/plain.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/plain.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/scram.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/scram.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/sspi.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/sspi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/x509.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/auth/x509.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/connection/commands.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/connection/commands.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/connection/connection.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/connection/connection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/connection/pool.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/connection/pool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/connection/utils.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/connection/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/cursor.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/cursor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/topologies/mongos.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/topologies/mongos.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/topologies/replset.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/topologies/replset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/topologies/replset_state.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/topologies/replset_state.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/topologies/server.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/topologies/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/wireprotocol/2_4_support.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/wireprotocol/2_4_support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/wireprotocol/2_6_support.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/wireprotocol/2_6_support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/wireprotocol/3_2_support.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/lib/wireprotocol/3_2_support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is/lib/util.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is/lib/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/History.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/History.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/Makefile" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/test/index.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpath/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpromise/History.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpromise/History.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpromise/lib/promise.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpromise/lib/promise.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpromise/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpromise/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpromise/test/promise.test.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mpromise/test/promise.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mquery/node_modules/debug/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mquery/node_modules/debug/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/ms/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/ms/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/muri/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/muri/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/muri/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/muri/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/muri/test/index.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/muri/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/History.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/History.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/README.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/index.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/sliced/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/static.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/static.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/website.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/website.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/Changes.md" afterPath="$PROJECT_DIR$/node_modules/mysql/Changes.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/Readme.md" afterPath="$PROJECT_DIR$/node_modules/mysql/Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/Connection.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/Connection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/ConnectionConfig.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/ConnectionConfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/Pool.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/Pool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/PoolCluster.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/PoolCluster.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/PoolConnection.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/PoolConnection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Auth.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/PacketWriter.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/PacketWriter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Parser.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Protocol.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Protocol.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/SqlString.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/SqlString.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/errors.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/errors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/server_status.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/server_status.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/ssl_profiles.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/ssl_profiles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/types.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/constants/types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/FieldPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/FieldPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/RowDataPacket.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/packets/RowDataPacket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/ChangeUser.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/ChangeUser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Handshake.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Handshake.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Sequence.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Sequence.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/README.md" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/bignumber.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/bignumber.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/bignumber.js.map" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/bignumber.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/bignumber.min.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/bignumber.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/bower.json" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/doc/API.html" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/doc/API.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/package.json" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/bignumber.js/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/lib/util.js" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/lib/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/package.json" afterPath="$PROJECT_DIR$/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mysql/package.json" afterPath="$PROJECT_DIR$/node_modules/mysql/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/associations/belongs-to-many.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/associations/belongs-to-many.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/associations/belongs-to.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/associations/belongs-to.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/associations/has-many.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/associations/has-many.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/associations/has-one.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/associations/has-one.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/associations/mixin.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/associations/mixin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/data-types.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/data-types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/abstract/connection-manager.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/abstract/connection-manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/abstract/index.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/abstract/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/abstract/query-generator.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/abstract/query-generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/abstract/query.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/abstract/query.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mssql/connection-manager.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mssql/connection-manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mssql/data-types.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mssql/data-types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mssql/index.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mssql/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mssql/query-generator.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mssql/query-generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mssql/query.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mssql/query.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mysql/connection-manager.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mysql/connection-manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mysql/data-types.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mysql/data-types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mysql/index.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mysql/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mysql/query-generator.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mysql/query-generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mysql/query.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mysql/query.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/connection-manager.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/connection-manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/data-types.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/data-types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/index.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/query-generator.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/query-generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/query.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/query.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/range.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/postgres/range.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/sqlite/connection-manager.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/sqlite/connection-manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/sqlite/data-types.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/sqlite/data-types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/sqlite/index.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/sqlite/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/sqlite/query-generator.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/sqlite/query-generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/sqlite/query.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/dialects/sqlite/query.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/hooks.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/hooks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/instance-validator.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/instance-validator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/instance.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/instance.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/model.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/query-interface.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/query-interface.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/sequelize.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/sequelize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/sql-string.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/sql-string.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/transaction.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/transaction.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/README.md" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/changelog.md" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/changelog.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/browser/bluebird.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/js/browser/bluebird.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/package.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/bluebird/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/dottie/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/dottie/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/dottie/README.md" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/dottie/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/dottie/dottie.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/dottie/dottie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/dottie/package.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/dottie/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/dottie/test/get.test.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/dottie/test/get.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/generic-pool/README.md" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/generic-pool/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/generic-pool/lib/generic-pool.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/generic-pool/lib/generic-pool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/generic-pool/package.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/generic-pool/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/History.md" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/History.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/Readme.md" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/bower.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/component.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/component.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/inflection.min.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/inflection.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/lib/inflection.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/lib/inflection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/package.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/inflection/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/lodash/package.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/lodash/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/moment/package.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/moment/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/.npmignore" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/README.md" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/bower.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/component.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/component.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/package.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/test/test.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/test/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/uuid.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/node-uuid/uuid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/toposort-class/package.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/toposort-class/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/README.md" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/package.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/test/sanitizers.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/test/sanitizers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/test/validators.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/test/validators.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/validator.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/validator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/validator.min.js" afterPath="$PROJECT_DIR$/node_modules/sequelize/node_modules/validator/validator.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sequelize/package.json" afterPath="$PROJECT_DIR$/node_modules/sequelize/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/custom.css" afterPath="$PROJECT_DIR$/public/css/custom.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/business/bean/factory.js" afterPath="$PROJECT_DIR$/public/js/app/business/bean/factory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/business/dal/authenticate.factory.js" afterPath="$PROJECT_DIR$/public/js/app/business/dal/authenticate.factory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/config/budgetManager.endpoints.config.dev.js" afterPath="$PROJECT_DIR$/public/js/app/config/budgetManager.endpoints.config.dev.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/controller/signup.ctrl.js" afterPath="$PROJECT_DIR$/public/js/app/controller/signup.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/service/myLib.technical.js" afterPath="$PROJECT_DIR$/public/js/service/myLib.technical.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/home.html" afterPath="$PROJECT_DIR$/public/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/login.html" afterPath="$PROJECT_DIR$/public/views/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/partials/provisionalPlan.form.html" afterPath="$PROJECT_DIR$/public/views/partials/provisionalPlan.form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/signup.html" afterPath="$PROJECT_DIR$/public/views/signup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routing.js" afterPath="$PROJECT_DIR$/routing.js" />
     </list>
     <ignored path="BudgetManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -515,78 +140,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MovementProvider.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/MovementProvider.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="119" column="12" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/routing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="95" column="2" selection-start-line="95" selection-start-column="2" selection-end-line="95" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UserProvider.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Movement.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/04_Models/Movement.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5689655">
+              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MovementProvider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/MovementProvider.js">
+        <entry file="file://$PROJECT_DIR$/02_Webservices/MovementProvider.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="128" column="15" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProvisionalPlanProvider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02_Webservices/ProvisionalPlanProvider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProvisionalPlanProvider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/ProvisionalPlanProvider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="88" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
-              <folding>
-                <element signature="e#631#950#0" expanded="false" />
-                <element signature="e#1042#1376#0" expanded="false" />
-                <element signature="e#1843#2441#0" expanded="false" />
-                <element signature="e#2751#3118#0" expanded="false" />
-                <element signature="e#2810#3110#0" expanded="false" />
-                <element signature="e#3523#3948#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authenticationHelpers.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/01_Commons/authenticationHelpers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7344633">
-              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Movement.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/04_Models/Movement.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -605,18 +203,38 @@
       <file leaf-file-name="routing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+            <state vertical-scroll-proportion="-4.924528">
+              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovementProvider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02_Webservices/MovementProvider.js">
+      <file leaf-file-name="provisionalPlanDetailsController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+              <caret line="146" column="11" selection-start-line="146" selection-start-column="11" selection-end-line="146" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="provisionalPlanAddController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanAddController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="movementDetailsController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/components/movement/controllers/movementDetailsController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -642,46 +260,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/js/app/controller/user.profile.changePassword.ctrl.js" />
-        <option value="$PROJECT_DIR$/config/database.js" />
-        <option value="$PROJECT_DIR$/model/index.js" />
-        <option value="$PROJECT_DIR$/dal/Movement.js" />
-        <option value="$PROJECT_DIR$/dal/User.js" />
-        <option value="$PROJECT_DIR$/dal/ProvisionalPlan.js" />
-        <option value="$PROJECT_DIR$/04_Models/test.js" />
-        <option value="$PROJECT_DIR$/model/ProvisionalPlan.js" />
-        <option value="$PROJECT_DIR$/model/Movement.js" />
-        <option value="$PROJECT_DIR$/model/User.js" />
-        <option value="$PROJECT_DIR$/04_Models/ProvisionalPlan.js" />
-        <option value="$PROJECT_DIR$/03_DataAcessLayer/ProvisionalPlanProvider.js" />
-        <option value="$PROJECT_DIR$/03_DataAcessLayer/MovementProvider.js" />
-        <option value="$PROJECT_DIR$/01_Commons/AuthenticationHelpers.js" />
-        <option value="$PROJECT_DIR$/routing.js" />
-        <option value="$PROJECT_DIR$/public/js/app/business/bean/Movement.js" />
-        <option value="$PROJECT_DIR$/services/token.js" />
-        <option value="$PROJECT_DIR$/public/js/app/business/dal/movement.factory.js" />
-        <option value="$PROJECT_DIR$/public/views/partials/provisionalPlan.details.html" />
-        <option value="$PROJECT_DIR$/public/js/app/controller/movement.ctrl.js" />
-        <option value="$PROJECT_DIR$/public/views/partials/movement.html" />
-        <option value="$PROJECT_DIR$/04_Models/Movement.js" />
-        <option value="$PROJECT_DIR$/public/js/app/controller/provisionalPlan.ctrl.js" />
-        <option value="$PROJECT_DIR$/public/js/app/business/dal/provisionalPlan.factory.js" />
-        <option value="$PROJECT_DIR$/02_Webservices/MovementProvider.js" />
-        <option value="$PROJECT_DIR$/public/js/app/business/bean/Schema.js" />
-        <option value="$PROJECT_DIR$/public/js/app/business/bean/ProvisionalPlan.js" />
-        <option value="$PROJECT_DIR$/public/js/app/business/dal/authenticate.factory.js" />
-        <option value="$PROJECT_DIR$/public/js/app/business/bean/factory.js" />
-        <option value="$PROJECT_DIR$/public/js/app/controller/signup.ctrl.js" />
-        <option value="$PROJECT_DIR$/04_Models/User.js" />
-        <option value="$PROJECT_DIR$/public/js/app/business/bean/User.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/public/views/home.html" />
-        <option value="$PROJECT_DIR$/public/css/custom.css" />
-        <option value="$PROJECT_DIR$/public/views/signup.html" />
-        <option value="$PROJECT_DIR$/public/views/login.html" />
-        <option value="$PROJECT_DIR$/public/views/partials/provisionalPlan.form.html" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/personalSiteRouting.js" />
         <option value="$PROJECT_DIR$/public/js/service/myLib.technical.js" />
         <option value="$PROJECT_DIR$/config/endpoint.js" />
@@ -690,9 +268,49 @@
         <option value="$PROJECT_DIR$/config/database.json" />
         <option value="$PROJECT_DIR$/public/js/app/config/budgetManager.endpoints.config.dev.js" />
         <option value="$PROJECT_DIR$/01_Commons/authenticationHelpers.js" />
-        <option value="$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js" />
         <option value="$PROJECT_DIR$/02_Webservices/ProvisionalPlanProvider.js" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/public/js/app/business/bean/ProvisionalPlan.js" />
+        <option value="$PROJECT_DIR$/public/assets/libs/bootswatch/css/bootswatch.js" />
+        <option value="$PROJECT_DIR$/public/assets/libs/bootswatch/css/bootswatch.css" />
+        <option value="$PROJECT_DIR$/public/app/components/authentication/controllers/signinController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/authentication/controllers/signoutController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/movement/controllers/movementDetailsController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanAddController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsStatsController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/user/views/userProfileChangePasswordPartial.html" />
+        <option value="$PROJECT_DIR$/public/assets/libs/angular/angular-animate.min.js" />
+        <option value="$PROJECT_DIR$/public/app/routing.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanServices.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanListView.html" />
+        <option value="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootswatch.css" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsView.html" />
+        <option value="$PROJECT_DIR$/public/assets/libs/font-awesome/css/font-awesome.min.css" />
+        <option value="$PROJECT_DIR$/public/assets/js/commons/uiManager.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js" />
+        <option value="$PROJECT_DIR$/public/app/app.js" />
+        <option value="$PROJECT_DIR$/public/app/components/authentication/authenticateFactory.js" />
+        <option value="$PROJECT_DIR$/public/app/components/movement/movementFactory.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanListController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js" />
+        <option value="$PROJECT_DIR$/public/app/components/user/controllers/userProfileController.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/config/appConfig.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/config/endpointConfig.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/ProvisionalPlan.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/commons/commonHelpers.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/Movement.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/User.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/core/factory.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/core/Schema.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/bootstrap.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/commons/uiMessages.js" />
+        <option value="$PROJECT_DIR$/public/app/components/movement/controllers/movementAddController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/authentication/controllers/signupController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/movement/views/movementFormView.html" />
+        <option value="$PROJECT_DIR$/public/app/components/movement/controllers/movementListController.js" />
+        <option value="$PROJECT_DIR$/routing.js" />
+        <option value="$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js" />
       </list>
     </option>
   </component>
@@ -793,6 +411,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -839,14 +459,84 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BudgetManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BudgetManager-mongoDb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BudgetManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BudgetManager-mongoDb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BudgetManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BudgetManager-mongoDb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="03_DataAcessLayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BudgetManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BudgetManager-mongoDb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="02_Webservices" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -888,19 +578,19 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/js/angular/vendor" />
-      <recent name="$PROJECT_DIR$/public/css/bootstrap" />
-      <recent name="$PROJECT_DIR$/public/css/loader" />
-      <recent name="$PROJECT_DIR$/public/js/vendor" />
-      <recent name="$PROJECT_DIR$/public/js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/js/app" />
-      <recent name="$PROJECT_DIR$/public/js/app/business/services" />
-      <recent name="$PROJECT_DIR$/public/js/angular/vendor" />
-      <recent name="$PROJECT_DIR$/public/js/app/business" />
-      <recent name="$PROJECT_DIR$/public/js/03_DAL" />
+      <recent name="$PROJECT_DIR$/public/assets/js/config" />
+      <recent name="$PROJECT_DIR$/public/app/components/movement/controllers" />
+      <recent name="$PROJECT_DIR$/public/app/components/movement/views" />
+      <recent name="$PROJECT_DIR$/public/assets/js" />
+      <recent name="$PROJECT_DIR$/public/assets/libs/angular/modules/loading-bar" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/js/model/core" />
+      <recent name="$PROJECT_DIR$/public/assets/js/model" />
+      <recent name="$PROJECT_DIR$/public/app/components/provisionalPlan" />
+      <recent name="$PROJECT_DIR$/public/app/components/movement" />
+      <recent name="$PROJECT_DIR$/public/app/components/authentication" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.server.js">
@@ -1101,7 +791,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450331690351</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="- Fix issues&#10;- Add Gruntfile&#10;- Add conf files">
+      <created>1455657566638</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1455657566638</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1115,27 +811,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16420014" sideWeight="0.49239543" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32398316" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24524313" sideWeight="0.49239543" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32331732" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23890063" sideWeight="0.50760454" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3221154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3221154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32168674" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24876674" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30528846" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30408654" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26144835" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33894232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33894232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18629807" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3221154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3003195" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1254,11 +950,6 @@
           <option name="timeStamp" value="129" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/03_DataAcessLayer/ProvisionalPlanProvider.js</url>
-          <line>157</line>
-          <option name="timeStamp" value="203" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/02_Webservices/MovementProvider.js</url>
           <line>32</line>
           <option name="timeStamp" value="210" />
@@ -1307,7 +998,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="252" />
+      <option name="time" value="259" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -1323,306 +1014,343 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/config/config.json">
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanPreviewView.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/partials/provisionalPlan.details.html">
+    <entry file="file://$PROJECT_DIR$/public/app/components/user/views/userProfileView.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.5">
-          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/provisionalPlan.list.html">
+    <entry file="file://$PROJECT_DIR$/public/app/components/user/views/userProfilChangePasswordView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/user/views/userProfileChangePasswordPartial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.woff2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6321839">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/libs/angular/angular-animate.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9425287">
+          <caret line="4120" column="27" selection-start-line="4120" selection-start-column="27" selection-end-line="4120" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/libs/angular/angular.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanServices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanListView.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.625">
-          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+          <caret line="25" column="98" selection-start-line="25" selection-start-column="98" selection-end-line="25" selection-end-column="98" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/controller/provisionalPlan.details.stats.ctrl.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/libs/bootswatch/css/bootswatch.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4488189">
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        <state vertical-scroll-proportion="-2.9411764">
+          <caret line="10" column="555" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="140992" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/controller/provisionalPlan.details.ctrl.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootswatch.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.37795275">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.25">
+          <caret line="10" column="140992" selection-start-line="10" selection-start-column="140992" selection-end-line="10" selection-end-column="140992" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/partials/movement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09394572">
-          <caret line="6" column="82" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/business/dal/movement.factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4735234">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/controller/provisionalPlan.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2126865">
-          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/business/dal/provisionalPlan.factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18656716">
-          <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/controller/movement.add.ctrl.js">
+    <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/controller/movement.ctrl.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/libs/font-awesome/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.88235295">
+          <caret line="3" column="245" selection-start-line="3" selection-start-column="245" selection-end-line="3" selection-end-column="245" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="171" column="67" selection-start-line="171" selection-start-column="67" selection-end-line="171" selection-end-column="67" />
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/business/bean/Schema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54075235">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/business/bean/Movement.js">
+    <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/ProvisionalPlanProvider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="126" column="26" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
+          <caret line="157" column="16" selection-start-line="157" selection-start-column="16" selection-end-line="157" selection-end-column="16" />
+          <folding>
+            <element signature="e#631#950#0" expanded="false" />
+            <element signature="e#1042#1376#0" expanded="false" />
+            <element signature="e#1843#2441#0" expanded="false" />
+            <element signature="e#2751#3118#0" expanded="false" />
+            <element signature="e#2810#3110#0" expanded="false" />
+            <element signature="e#3523#3948#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/business/bean/ProvisionalPlan.js">
+    <entry file="file://$PROJECT_DIR$/public/app/components/authentication/controllers/signoutController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="27" selection-end-column="19" />
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/controller/user.profile.changePassword.ctrl.js">
+    <entry file="file://$PROJECT_DIR$/public/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/user.profile.changePassword.partial.html">
+    <entry file="file://$PROJECT_DIR$/public/app/components/authentication/authenticateFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="120" column="25" selection-start-line="120" selection-start-column="25" selection-end-line="120" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/business/bean/factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3333335">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/controller/signup.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9669811">
-          <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Models/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.754717">
-          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/business/bean/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5518868">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/home.html">
+    <entry file="file://$PROJECT_DIR$/public/app/components/movement/movementFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="81" />
+          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/custom.css">
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="165" column="5" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="18" />
+          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/signup.html">
+    <entry file="file://$PROJECT_DIR$/public/app/components/user/controllers/userProfileController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/grunt/node_modules/colors/example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29296875">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/config/appConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/config/endpointConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/authentication/controllers/signupController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/commons/uiManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        <state vertical-scroll-proportion="-15.375">
+          <caret line="81" column="47" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/login.html">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/ProvisionalPlan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/partials/action.confirm.html">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/commons/commonHelpers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/partials/movement.details.html">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/Schema.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/partials/provisionalPlan.preview.html">
+    <entry file="file://$PROJECT_DIR$/public/app/components/movement/views/movementFormView.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-19.375">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/partials/provisionalPlan.form.html">
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.625">
+          <caret line="20" column="62" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/examples/population/population-across-three-collections.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7089552">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/movement/controllers/movementAddController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+    <entry file="file://$PROJECT_DIR$/public/app/components/movement/controllers/movementListController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50790066">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="202" column="25" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
+          <folding>
+            <element signature="e#6261#8110#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/vhost/index.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/Movement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33182845">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="122" column="22" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/business/dal/authenticate.factory.js">
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanListController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.503386">
-          <caret line="74" column="63" selection-start-line="74" selection-start-column="63" selection-end-line="74" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/service/myLib.technical.js">
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5349887">
-          <caret line="80" column="57" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="146" column="11" selection-start-line="146" selection-start-column="11" selection-end-line="146" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.255079">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../personal-site/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40723982">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46650717">
-          <caret line="13" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/config/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/config/budgetManager.config.js">
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanAddController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/endpoint.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030120483">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3313253">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/config/budgetManager.endpoints.config.dev.js">
+    <entry file="file://$PROJECT_DIR$/public/app/components/movement/controllers/movementDetailsController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/routing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="2" selection-start-line="95" selection-start-column="2" selection-end-line="95" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Models/Movement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        <state vertical-scroll-proportion="-4.924528">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1638,30 +1366,7 @@
     <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/ProvisionalPlanProvider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="88" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
-          <folding>
-            <element signature="e#631#950#0" expanded="false" />
-            <element signature="e#1042#1376#0" expanded="false" />
-            <element signature="e#1843#2441#0" expanded="false" />
-            <element signature="e#2751#3118#0" expanded="false" />
-            <element signature="e#2810#3110#0" expanded="false" />
-            <element signature="e#3523#3948#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/MovementProvider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="128" column="15" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="15" />
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1669,31 +1374,23 @@
     <entry file="file://$PROJECT_DIR$/02_Webservices/MovementProvider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02_Webservices/ProvisionalPlanProvider.js">
+    <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/MovementProvider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="119" column="12" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/04_Models/Movement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01_Commons/authenticationHelpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7344633">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.5689655">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
           <folding />
         </state>
       </provider>

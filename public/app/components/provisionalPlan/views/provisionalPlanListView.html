@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-sm-12 text-center">
+        <h1 ng-show="provisionalPlans.length === 0">Aucun
+            <small>plan prévisionnel</small>
+        </h1>
+
+        <h1 ng-show="provisionalPlans.length === 1">Dernier
+            <small>plan prévisionnel</small>
+        </h1>
+
+        <h1 ng-show="provisionalPlans.length > 1">{{provisionalPlans.length}} derniers
+            <small>plans prévisionnels</small>
+        </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 text-center medium-bordered">
+        <button class="btn btn-lg btn-info btn-lg-responsive" ng-click="openModalToAddProvisionalPlan()">Nouveau plan de
+            prévoyance
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div ng-repeat="provisionalPlan in provisionalPlans | orderBy:'-createdAt' ">
+            <div ng-include="'app/components/provisionalPlan/views/provisionalPlanPreviewView.html'"></div>
+        </div>
+    </div>
+</div>

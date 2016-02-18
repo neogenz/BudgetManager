@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="font-awesome.min.css">
-    <link rel="stylesheet" href="loader/loading-bar.css">
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootswatch.min.css">
+    <link rel="stylesheet" href="assets/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/libs/angular/modules/loading-bar/loading-bar.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
 <body ng-app="appBudgetManager">
@@ -59,49 +59,47 @@
 <div class="container">
     <div ui-view></div>
 </div>
-<script src="vendor/jquery-1.11.1.min.js"></script>
-<script src="vendor/bootstrap.min.js"></script>
-<script src="angular/angular.min.js"></script>
-<script src="angular/vendor/angular-animate.min.js"></script>
-<script src="angular/vendor/ui-router.min.js"></script>
-<script src="angular/vendor/ui-bootstrap-tpls-0.12.1.min.js"></script>
-<script src="angular/vendor/loading-bar.js"></script>
-<script src="angular/vendor/ngStorage.js"></script>
-<script src="angular/vendor/angular-toastr.min.js"></script>
-<script src="vendor/underscore.min.js"></script>
-<script src="service/myLib.technical.js"></script>
-<script src="app/app_start.js"></script>
-<script src="app/config/budgetManager.config.js"></script>
-<script src="app/config/budgetManager.endpoints.config.dev.js"></script>
-<script src="app/business/bean/Schema.js"></script>
-<script src="app/business/bean/factory.js"></script>
-<script src="app/business/bean/Movement.js"></script>
-<script src="app/business/bean/ProvisionalPlan.js"></script>
-<script src="app/business/bean/User.js"></script>
-<script src="app/data/autocomplete/provisionalPlan.autocomplete.js"></script>
-<script src="app/data/autocomplete/movement.autocomplete.js"></script>
-<script src="app/data/ui.manager.js"></script>
-<script src="app/appBudgetManager.js"></script>
+<script src="assets/libs/jquery-2.2.0.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/libs/angular/angular.min.js"></script>
+<script src="assets/libs/angular/angular-animate.min.js"></script>
+<script src="assets/libs/angular/ui-router.min.js"></script>
+<script src="assets/libs/angular/ui-bootstrap-tpls-0.12.1.min.js"></script>
+<script src="assets/libs/angular/modules/loading-bar/loading-bar.js"></script>
+<script src="assets/libs/angular/modules/ngStorage.js"></script>
+<script src="assets/libs/angular/angular-toastr.min.js"></script>
+<script src="assets/libs/underscore.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/commons/commonHelpers.js"></script>
+<script src="assets/js/config/appConfig.js"></script>
+<script src="assets/js/config/endpointConfig.js"></script>
+<script src="assets/js/model/core/Schema.js"></script>
+<script src="assets/js/model/core/factory.js"></script>
+<script src="assets/js/model/Movement.js"></script>
+<script src="assets/js/model/ProvisionalPlan.js"></script>
+<script src="assets/js/model/User.js"></script>
+<!--<script src="app/data/autocomplete/provisionalPlan.autocomplete.js"></script>-->
+<!--<script src="app/data/autocomplete/movement.autocomplete.js"></script>-->
+<script src="assets/js/commons/uiManager.js"></script>
+<script src="app/app.js"></script>
 <script src="app/routing.js"></script>
-<script src="app/business/dal/authenticate.factory.js"></script>
-<script src="app/business/dal/provisionalPlan.factory.js"></script>
-<script src="app/business/dal/movement.factory.js"></script>
-<!--<script src="app/business/service/scopeOperations.js"></script>-->
-<script src="app/business/service/provisionalPlan.calculus.service.js"></script>
-<script src="app/controller/home.ctrl.js"></script>
-<script src="app/controller/logout.ctrl.js"></script>
-<script src="app/controller/signup.ctrl.js"></script>
-<script src="app/controller/login.ctrl.js"></script>
-<script src="app/controller/action.confirm.ctrl.js"></script>
-<script src="app/controller/movement.ctrl.js"></script>
-<script src="app/controller/movement.add.ctrl.js"></script>
-<script src="app/controller/provisionalPlan.add.ctrl.js"></script>
-<script src="app/controller/movement.details.ctrl.js"></script>
-<script src="app/controller/provisionalPlan.details.ctrl.js"></script>
-<script src="app/controller/provisionalPlan.details.stats.ctrl.js"></script>
-<script src="app/controller/provisionalPlan.ctrl.js"></script>
-<script src="app/controller/user.profile.ctrl.js"></script>
-<script src="app/controller/user.profile.changePassword.ctrl.js"></script>
+<script src="app/components/authentication/authenticateFactory.js"></script>
+<script src="app/components/provisionalPlan/provisionalPlanFactory.js"></script>
+<script src="app/components/provisionalPlan/provisionalPlanServices.js"></script>
+<script src="app/components/movement/movementFactory.js"></script>
+<script src="app/components/home/homeController.js"></script>
+<script src="app/components/authentication/controllers/signoutController.js"></script>
+<script src="app/components/authentication/controllers/signupController.js"></script>
+<script src="app/components/authentication/controllers/signinController.js"></script>
+<script src="app/shared/confirmAction/actionConfirmController.js"></script>
+<script src="app/components/movement/controllers/movementListController.js"></script>
+<script src="app/components/movement/controllers/movementAddController.js"></script>
+<script src="app/components/movement/controllers/movementDetailsController.js"></script>
+<script src="app/components/provisionalPlan/controllers/provisionalPlanAddController.js"></script>
+<script src="app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js"></script>
+<script src="app/components/provisionalPlan/controllers/provisionalPlanListController.js"></script>
+<script src="app/components/user/controllers/userProfileController.js"></script>
+<script src="app/components/user/controllers/userProfileChangePasswordController.js"></script>
 
 </body>
 </html>
