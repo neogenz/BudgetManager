@@ -27,21 +27,21 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider) {
             .state('home', {
                 url: '/',
                 templateUrl: 'app/components/home/homeView.html',
-                controller: 'home.ctrl'
+                controller: 'HomeController'
             })
             .state('login', {
                 url: '/login',
-                controller: 'login.ctrl',
+                controller: 'SigninController',
                 templateUrl: 'app/components/authentication/views/signinView.html'
             })
             .state('signup', {
                 url: '/signup',
-                controller: 'signup.ctrl',
+                controller: 'SignupController',
                 templateUrl: 'app/components/authentication/views/signupView.html'
             })
             .state('userProfile', {
                 url: '/myAccount',
-                controller: 'user.profile.ctrl',
+                controller: 'userProfileController',
                 templateUrl: 'app/components/user/views/userProfileView.html',
                 resolve: {
                     user: isAuthenticated
@@ -49,7 +49,7 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider) {
             }).state('provisionalPlans', {
             url: '/provisionalPlans',
             templateUrl: 'app/components/provisionalPlan/views/provisionalPlanListView.html',
-            controller: 'provisionalPlan.ctrl',
+            controller: 'provisionalPlanListController',
             resolve: {
                 provisionalPlans: function ($stateParams, provisionalPlanWebApi) {
                     try {
@@ -63,7 +63,7 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider) {
         }).state('provisionalPlanDetails', {
             url: 'provisionalPlans/:id',
             templateUrl: 'app/components/provisionalPlan/views/provisionalPlanDetailsView.html',
-            controller: 'provisionalPlan.details.ctrl',
+            controller: 'provisionalPlanDetailsController',
             resolve: {
                 provisionalPlan: function ($stateParams, provisionalPlanWebApi) {
                     try {
@@ -78,7 +78,7 @@ appBudgetManager.config(function ($stateProvider, $urlRouterProvider) {
         }).state('provisionalPlanDetailsStats', {
             url: 'provisionalPlans/:id/stats',
             templateUrl: 'app/components/provisionalPlan/views/provisionalPlanDetailsStatsView.html',
-            controller: 'provisionalPlan.details.stats.ctrl',
+            controller: 'provisionalPlanDetailsStatsController',
             resolve: {
                 provisionalPlan: function ($stateParams, provisionalPlanWebApi) {
                     try {

@@ -7,7 +7,7 @@
 
     angular
         .module('appBudgetManager')
-        .controller('logout.ctrl', LogoutController);
+        .controller('SignoutController', LogoutController);
 
     LogoutController.$inject = ['$rootScope', '$scope', '$state', 'authenticateWebApi'];
 

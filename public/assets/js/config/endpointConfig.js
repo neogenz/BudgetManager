@@ -5,8 +5,8 @@ app.helpers.defineNamespace(app, 'budgetManager.endpoints');
 
 (function init() {
     app.budgetManager.config.webApi = {
-        subdomain: '',
-        domain: 'localhost', //mdesogus.com
+        subdomain: 'budgetmanager',
+        domain: 'localhost',
         port: '3000', //80
         protocol: 'http'
     };

@@ -5,7 +5,7 @@
 (function () {
     angular
         .module('appBudgetManager')
-        .controller('action.confirm.ctrl', ActionConfirmController);
+        .controller('actionConfirmController', ActionConfirmController);
 
     ActionConfirmController.$inject = ['$scope', '$modalInstance', 'confirmationMessage'];
 

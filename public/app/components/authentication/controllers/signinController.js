@@ -7,7 +7,7 @@
 
     angular
         .module('appBudgetManager')
-        .controller('login.ctrl', LoginController);
+        .controller('SigninController', LoginController);
 
     LoginController.$inject = ['$rootScope', '$scope', '$state', 'authenticateWebApi'];
 
@@ -52,6 +52,7 @@
          * @memberOf Controllers.LoginController
          */
         function _signin() {
+            $scope.loginForm.email = $scope.loginForm.email.toLowerCase();
             authenticateWebApi.signin($scope.loginForm).then(function () {
                 $state.go('provisionalPlans');
             }, function (err) {

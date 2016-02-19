@@ -1,6 +1,7 @@
-'use strict';
+
 //app.helpers.defineNamespace(app, 'bean.core');
 (function initSchema() {
+    'use strict';
     var AbstractSchema = function (initObject) {
         if (!app.helpers.isUndefinedOrNull(initObject)) {
             for (var key in initObject) {

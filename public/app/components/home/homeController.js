@@ -5,7 +5,7 @@
 (function () {
     angular
         .module('appBudgetManager')
-        .controller('home.ctrl', HomeController);
+        .controller('HomeController', HomeController);
 
     HomeController.$inject = ['$localStorage', '$state'];
 

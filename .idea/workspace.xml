@@ -4,113 +4,31 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b04111e7-b392-4bdd-a441-c27feda74d45" name="Default" comment="- Fix issues&#10;- Add Gruntfile&#10;- Add conf files">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/routing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/commons/uiManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/model/ProvisionalPlan.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/model/User.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/angular/angular-animate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/angular/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootswatch.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/bootswatch/css/bootswatch.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/libs/jquery-2.2.0.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/config/config.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/doc/cahier-des-charges.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/angular/angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/angular-animate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/app_start.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/ProvisionalPlan.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/User.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/data/autocomplete/movement.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/data/autocomplete/provisionalPlan.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/data/ui.manager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/routing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/vendor/jquery-1.11.1.min.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap-theme.css" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/custom.css" afterPath="$PROJECT_DIR$/public/assets/css/custom.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/loader/loading-bar.css" afterPath="$PROJECT_DIR$/public/assets/libs/angular/modules/loading-bar/loading-bar.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/angular-toastr.min.js" afterPath="$PROJECT_DIR$/public/assets/libs/angular/angular-toastr.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/loading-bar.js" afterPath="$PROJECT_DIR$/public/assets/libs/angular/modules/loading-bar/loading-bar.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/ngStorage.js" afterPath="$PROJECT_DIR$/public/assets/libs/angular/modules/ngStorage.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/ui-bootstrap-tpls-0.12.1.min.js" afterPath="$PROJECT_DIR$/public/assets/libs/angular/ui-bootstrap-tpls-0.12.1.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/vendor/ui-router.min.js" afterPath="$PROJECT_DIR$/public/assets/libs/angular/ui-router.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/appBudgetManager.js" afterPath="$PROJECT_DIR$/public/app/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/Movement.js" afterPath="$PROJECT_DIR$/public/assets/js/model/Movement.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/Schema.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/Schema.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/bean/factory.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/factory.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/dal/authenticate.factory.js" afterPath="$PROJECT_DIR$/public/app/components/authentication/authenticateFactory.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/dal/movement.factory.js" afterPath="$PROJECT_DIR$/public/app/components/movement/movementFactory.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/dal/provisionalPlan.factory.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/business/service/provisionalPlan.calculus.service.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanServices.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/config/budgetManager.config.js" afterPath="$PROJECT_DIR$/public/assets/js/config/appConfig.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/config/budgetManager.endpoints.config.dev.js" afterPath="$PROJECT_DIR$/public/assets/js/config/endpointConfig.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/action.confirm.ctrl.js" afterPath="$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/home.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/home/homeController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/login.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/authentication/controllers/signinController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/logout.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/authentication/controllers/signoutController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/movement.add.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/movement/controllers/movementAddController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/movement.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/movement/controllers/movementListController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/movement.details.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/movement/controllers/movementDetailsController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/provisionalPlan.add.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanAddController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/provisionalPlan.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanListController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/provisionalPlan.details.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/provisionalPlan.details.stats.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsStatsController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/signup.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/authentication/controllers/signupController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/user.profile.changePassword.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/user/controllers/userProfileChangePasswordController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/app/controller/user.profile.ctrl.js" afterPath="$PROJECT_DIR$/public/app/components/user/controllers/userProfileController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/service/myLib.technical.js" afterPath="$PROJECT_DIR$/public/assets/js/commons/commonHelpers.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/vendor/underscore.min.js" afterPath="$PROJECT_DIR$/public/assets/libs/underscore.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/home.html" afterPath="$PROJECT_DIR$/public/app/components/home/homeView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/login.html" afterPath="$PROJECT_DIR$/public/app/components/authentication/views/signinView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/action.confirm.html" afterPath="$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/movement.details.html" afterPath="$PROJECT_DIR$/public/app/components/movement/views/movementDetailsView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/movement.form.html" afterPath="$PROJECT_DIR$/public/app/components/movement/views/movementFormView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/movement.html" afterPath="$PROJECT_DIR$/public/app/components/movement/views/movementView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/provisionalPlan.details.html" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/provisionalPlan.details.stats.html" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsStatsView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/provisionalPlan.form.html" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanFormView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/provisionalPlan.preview.html" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanPreviewView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/partials/user.profil.changePassword.html" afterPath="$PROJECT_DIR$/public/app/components/user/views/userProfilChangePasswordView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/provisionalPlan.list.html" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanListView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/signup.html" afterPath="$PROJECT_DIR$/public/app/components/authentication/views/signupView.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/user.profile.changePassword.partial.html" afterPath="$PROJECT_DIR$/public/app/components/user/views/userProfileChangePasswordPartial.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/user.profile.html" afterPath="$PROJECT_DIR$/public/app/components/user/views/userProfileView.html" />
+    <list default="true" id="b04111e7-b392-4bdd-a441-c27feda74d45" name="Default" comment="- Fix issues on creation of movement&#10;- Removing calling to toObject in user find methods.&#10;- Refactorisation">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assets/js/model/core/Schema.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assets/js/model/core/factory.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js" afterPath="$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/authentication/controllers/signinController.js" afterPath="$PROJECT_DIR$/public/app/components/authentication/controllers/signinController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/authentication/controllers/signoutController.js" afterPath="$PROJECT_DIR$/public/app/components/authentication/controllers/signoutController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/authentication/controllers/signupController.js" afterPath="$PROJECT_DIR$/public/app/components/authentication/controllers/signupController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/home/homeController.js" afterPath="$PROJECT_DIR$/public/app/components/home/homeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/movement/controllers/movementAddController.js" afterPath="$PROJECT_DIR$/public/app/components/movement/controllers/movementAddController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/movement/controllers/movementDetailsController.js" afterPath="$PROJECT_DIR$/public/app/components/movement/controllers/movementDetailsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/movement/controllers/movementListController.js" afterPath="$PROJECT_DIR$/public/app/components/movement/controllers/movementListController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/movement/views/movementView.html" afterPath="$PROJECT_DIR$/public/app/components/movement/views/movementView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanAddController.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanAddController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsStatsController.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsStatsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanListController.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanListController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsView.html" afterPath="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/user/controllers/userProfileChangePasswordController.js" afterPath="$PROJECT_DIR$/public/app/components/user/controllers/userProfileChangePasswordController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/user/controllers/userProfileController.js" afterPath="$PROJECT_DIR$/public/app/components/user/controllers/userProfileController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/routing.js" afterPath="$PROJECT_DIR$/public/app/routing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmController.js" afterPath="$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/config/endpointConfig.js" afterPath="$PROJECT_DIR$/public/assets/js/config/endpointConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/Movement.js" afterPath="$PROJECT_DIR$/public/assets/js/model/Movement.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routing.js" afterPath="$PROJECT_DIR$/routing.js" />
     </list>
@@ -144,97 +62,27 @@
         <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/MovementProvider.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="119" column="12" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
+              <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/routing.js">
+      <file leaf-file-name="AbstractFactory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="95" column="2" selection-start-line="95" selection-start-column="2" selection-end-line="95" selection-end-column="2" />
+            <state vertical-scroll-proportion="-4.811321">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserProvider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Movement.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/04_Models/Movement.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5689655">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovementProvider.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MovementProvider.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/02_Webservices/MovementProvider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.028735632">
               <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProvisionalPlan.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/04_Models/ProvisionalPlan.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routing.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.924528">
-              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="provisionalPlanDetailsController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="146" column="11" selection-start-line="146" selection-start-column="11" selection-end-line="146" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="provisionalPlanAddController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanAddController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="movementDetailsController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/components/movement/controllers/movementDetailsController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -260,57 +108,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/personalSiteRouting.js" />
-        <option value="$PROJECT_DIR$/public/js/service/myLib.technical.js" />
-        <option value="$PROJECT_DIR$/config/endpoint.js" />
-        <option value="$PROJECT_DIR$/config/endpoint.json" />
-        <option value="$PROJECT_DIR$/../personal-site/server.js" />
-        <option value="$PROJECT_DIR$/config/database.json" />
-        <option value="$PROJECT_DIR$/public/js/app/config/budgetManager.endpoints.config.dev.js" />
-        <option value="$PROJECT_DIR$/01_Commons/authenticationHelpers.js" />
         <option value="$PROJECT_DIR$/02_Webservices/ProvisionalPlanProvider.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/js/app/business/bean/ProvisionalPlan.js" />
         <option value="$PROJECT_DIR$/public/assets/libs/bootswatch/css/bootswatch.js" />
         <option value="$PROJECT_DIR$/public/assets/libs/bootswatch/css/bootswatch.css" />
-        <option value="$PROJECT_DIR$/public/app/components/authentication/controllers/signinController.js" />
-        <option value="$PROJECT_DIR$/public/app/components/authentication/controllers/signoutController.js" />
-        <option value="$PROJECT_DIR$/public/app/components/movement/controllers/movementDetailsController.js" />
-        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanAddController.js" />
-        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsStatsController.js" />
         <option value="$PROJECT_DIR$/public/app/components/user/views/userProfileChangePasswordPartial.html" />
         <option value="$PROJECT_DIR$/public/assets/libs/angular/angular-animate.min.js" />
-        <option value="$PROJECT_DIR$/public/app/routing.js" />
         <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanServices.js" />
         <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanListView.html" />
         <option value="$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootswatch.css" />
-        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsView.html" />
         <option value="$PROJECT_DIR$/public/assets/libs/font-awesome/css/font-awesome.min.css" />
         <option value="$PROJECT_DIR$/public/assets/js/commons/uiManager.js" />
-        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js" />
         <option value="$PROJECT_DIR$/public/app/app.js" />
         <option value="$PROJECT_DIR$/public/app/components/authentication/authenticateFactory.js" />
         <option value="$PROJECT_DIR$/public/app/components/movement/movementFactory.js" />
-        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanListController.js" />
-        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js" />
-        <option value="$PROJECT_DIR$/public/app/components/user/controllers/userProfileController.js" />
         <option value="$PROJECT_DIR$/public/assets/js/config/appConfig.js" />
-        <option value="$PROJECT_DIR$/public/assets/js/config/endpointConfig.js" />
         <option value="$PROJECT_DIR$/public/assets/js/model/ProvisionalPlan.js" />
         <option value="$PROJECT_DIR$/public/assets/js/commons/commonHelpers.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/assets/js/model/Movement.js" />
         <option value="$PROJECT_DIR$/public/assets/js/model/User.js" />
-        <option value="$PROJECT_DIR$/public/assets/js/model/core/factory.js" />
         <option value="$PROJECT_DIR$/public/assets/js/model/core/Schema.js" />
         <option value="$PROJECT_DIR$/public/assets/js/bootstrap.js" />
         <option value="$PROJECT_DIR$/public/assets/js/commons/uiMessages.js" />
-        <option value="$PROJECT_DIR$/public/app/components/movement/controllers/movementAddController.js" />
-        <option value="$PROJECT_DIR$/public/app/components/authentication/controllers/signupController.js" />
         <option value="$PROJECT_DIR$/public/app/components/movement/views/movementFormView.html" />
-        <option value="$PROJECT_DIR$/public/app/components/movement/controllers/movementListController.js" />
-        <option value="$PROJECT_DIR$/routing.js" />
         <option value="$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/routing.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/config/endpointConfig.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanAddController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsStatsController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanListController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/home/homeController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/authentication/controllers/signinController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/authentication/controllers/signoutController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/movement/controllers/movementAddController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/movement/controllers/movementDetailsController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/movement/views/movementView.html" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsView.html" />
+        <option value="$PROJECT_DIR$/public/app/components/user/controllers/userProfileChangePasswordController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/user/controllers/userProfileController.js" />
+        <option value="$PROJECT_DIR$/public/app/routing.js" />
+        <option value="$PROJECT_DIR$/public/app/components/movement/controllers/movementListController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js" />
+        <option value="$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/core/factory.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/app/components/authentication/controllers/signupController.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js" />
       </list>
     </option>
   </component>
@@ -411,8 +259,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -462,10 +308,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -506,18 +348,12 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BudgetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BudgetManager-mongoDb" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="03_DataAcessLayer" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -531,12 +367,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="02_Webservices" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BudgetManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BudgetManager-mongoDb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="04_Models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -797,7 +665,25 @@
       <option name="project" value="LOCAL" />
       <updated>1455657566638</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="- Fix issues on creation of movement&#10;- Removing calling to toObject in user find methods.&#10;- Refactorisation">
+      <created>1455798106842</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1455798106842</updated>
+    </task>
+    <task id="LOCAL-00021" summary="- Change demo link">
+      <created>1455798183321</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1455798183321</updated>
+    </task>
+    <task id="LOCAL-00022" summary="- Change demo link">
+      <created>1455798215763</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1455798215763</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -882,7 +768,9 @@
     <MESSAGE value="- Suppression du répertoire services/ et le fichier token.js à l'intérieur, remplacé par 01_Commons" />
     <MESSAGE value="- Résolution de bugs lié à l'impact du passage du back en Mongoose." />
     <MESSAGE value="- Fix issues&#10;- Add Gruntfile&#10;- Add conf files" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fix issues&#10;- Add Gruntfile&#10;- Add conf files" />
+    <MESSAGE value="- Fix issues on creation of movement&#10;- Removing calling to toObject in user find methods.&#10;- Refactorisation" />
+    <MESSAGE value="- Change demo link" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Change demo link" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -965,11 +853,6 @@
           <option name="timeStamp" value="212" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/02_Webservices/MovementProvider.js</url>
-          <line>46</line>
-          <option name="timeStamp" value="219" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js</url>
           <line>44</line>
           <option name="timeStamp" value="245" />
@@ -994,11 +877,36 @@
           <line>29</line>
           <option name="timeStamp" value="251" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js</url>
+          <line>68</line>
+          <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js</url>
+          <line>69</line>
+          <option name="timeStamp" value="260" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routing.js</url>
+          <line>53</line>
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js</url>
+          <line>77</line>
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routing.js</url>
+          <line>55</line>
+          <option name="timeStamp" value="265" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="259" />
+      <option name="time" value="266" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -1014,83 +922,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanPreviewView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/user/views/userProfileView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/user/views/userProfilChangePasswordView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/user/views/userProfileChangePasswordPartial.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/libs/font-awesome/fonts/fontawesome-webfont.woff2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6321839">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/libs/angular/angular-animate.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9425287">
-          <caret line="4120" column="27" selection-start-line="4120" selection-start-column="27" selection-end-line="4120" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/libs/angular/angular.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanServices.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanListView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625">
-          <caret line="25" column="98" selection-start-line="25" selection-start-column="98" selection-end-line="25" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/libs/bootswatch/css/bootswatch.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9411764">
-          <caret line="10" column="555" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="140992" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/libs/bootstrap/css/bootswatch.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25">
@@ -1098,24 +929,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/libs/font-awesome/css/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.88235295">
           <caret line="3" column="245" selection-start-line="3" selection-start-column="245" selection-end-line="3" selection-end-column="245" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1134,46 +951,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/authentication/controllers/signoutController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/authentication/authenticateFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="120" column="25" selection-start-line="120" selection-start-column="25" selection-end-line="120" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/components/movement/movementFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/user/controllers/userProfileController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1184,28 +965,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/config/appConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/config/endpointConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/model/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/factory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
@@ -1219,24 +979,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/authentication/controllers/signupController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/commons/uiManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.375">
-          <caret line="81" column="47" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1254,24 +1000,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/Schema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/components/movement/views/movementFormView.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.375">
           <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625">
-          <caret line="20" column="62" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1282,43 +1014,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/movement/controllers/movementAddController.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/movement/controllers/movementListController.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/config/appConfig.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="202" column="25" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
-          <folding>
-            <element signature="e#6261#8110#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/model/Movement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="22" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanListController.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/config/endpointConfig.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js">
+    <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="146" column="11" selection-start-line="146" selection-start-column="11" selection-end-line="146" selection-end-column="11" />
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.054446463">
+          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5644283">
+          <caret line="62" column="16" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/authentication/views/signupView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.028462999">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Models/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18330309">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1326,7 +1079,63 @@
     <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanAddController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsStatsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanListController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/home/homeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/authentication/controllers/signinController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/authentication/controllers/signoutController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/authentication/authenticateFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="25" selection-start-line="120" selection-start-column="25" selection-end-line="120" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/movement/controllers/movementAddController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1334,7 +1143,71 @@
     <entry file="file://$PROJECT_DIR$/public/app/components/movement/controllers/movementDetailsController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/movement/views/movementView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/views/provisionalPlanDetailsView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.7916665">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/user/controllers/userProfileChangePasswordController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/user/controllers/userProfileController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/movement/controllers/movementListController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="29" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/controllers/provisionalPlanDetailsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="116" column="33" selection-start-line="116" selection-start-column="33" selection-end-line="116" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/shared/confirmAction/actionConfirmController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1342,15 +1215,7 @@
     <entry file="file://$PROJECT_DIR$/public/app/routing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="2" selection-start-line="95" selection-start-column="2" selection-end-line="95" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.924528">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1363,18 +1228,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js">
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.74712646">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02_Webservices/MovementProvider.js">
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.51724136">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Models/Movement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79118776">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/UserProvider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0862069">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/Movement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.028735632">
+          <caret line="122" column="22" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/authentication/controllers/signupController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4402985">
+          <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23507462">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.811321">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1382,15 +1311,15 @@
     <entry file="file://$PROJECT_DIR$/03_DataAcessLayer/MovementProvider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="119" column="12" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/04_Models/Movement.js">
+    <entry file="file://$PROJECT_DIR$/02_Webservices/MovementProvider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5689655">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.028735632">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding />
         </state>
       </provider>

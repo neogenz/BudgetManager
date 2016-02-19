@@ -175,6 +175,6 @@
     });
     app.beans.Movement = Movement;
     //var beanFactory = new AbstractBeanFactory();
-    //var beanEtude = beanFactory.createBean('Etude', {name: 'beanEtude', id:45, creator: 'maxime'});
+    //var beanEtude = beanFactory.getBean('Etude', {name: 'beanEtude', id:45, creator: 'maxime'});
 
 })();

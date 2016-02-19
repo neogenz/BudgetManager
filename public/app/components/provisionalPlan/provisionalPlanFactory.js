@@ -12,10 +12,12 @@ appBudgetManager.factory('provisionalPlanWebApi',
 
         //Web API
         function _findAll() {
-            var def = $q.defer();
+            //var def = $q.defer();
             var requestOptions = app.helpers.buildGetRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans');
             var promise = $http(requestOptions);
-            promise.success(function (data) {
+            return promise.then(function (response) {
+                debugger;
+                var data = response.data;
                 if (!data) {
                     throw new Error('data');
                 }
@@ -25,14 +27,12 @@ appBudgetManager.factory('provisionalPlanWebApi',
                 }
                 var provisionalPlans = [];
                 for (var i = 0; i < data.length; i++) {
-                    provisionalPlans.push(factory.createBean('ProvisionalPlan', data[i]));
+                    provisionalPlans.push(factory.getBean('ProvisionalPlan', data[i]));
                 }
-
-                def.resolve(provisionalPlans);
-            }).error(function () {
-                def.reject('Echec de récupération des plans prévisionnels.');
+                return provisionalPlans;
+                //def.resolve(provisionalPlans);
             });
-            return def.promise;
+            //return def.promise;
         }
 
         function _findById(id) {
@@ -45,7 +45,7 @@ appBudgetManager.factory('provisionalPlanWebApi',
                 var promise = $http(requestOptions);
                 promise.success(function (data) {
                     var factory = app.beans.factory;
-                    var provisionalPlans = factory.createBean('ProvisionalPlan', data);
+                    var provisionalPlans = factory.getBean('ProvisionalPlan', data);
                     def.resolve(provisionalPlans);
                 }).error(function () {
                     def.reject('DiscussionThread with id ' + id + ' is null.');
@@ -109,19 +109,16 @@ appBudgetManager.factory('provisionalPlanWebApi',
 
         function _update(provisionalPlan) {
             var def = $q.defer();
-            var promise;
             delete provisionalPlan.movements;
-            if (app.helpers.isUndefinedOrNull(provisionalPlan)) {
+            if (!app.helpers.isUndefinedOrNull(provisionalPlan)) {
                 var bodyReq = provisionalPlan;
                 var requestOptions = app.helpers.buildPutRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans', bodyReq);
-                promise = $http(requestOptions);
-                promise.success(function () {
-                    def.resolve();
-                }).error(function () {
-                    def.reject();
-                });
+                return $http(requestOptions);
+            } else {
+                def.reject();
+                return def.promise;
             }
-            return def.promise;
+
         }
 
     }

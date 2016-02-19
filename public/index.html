@@ -47,7 +47,7 @@
                     </a>
                 </li>
                 <li ng-show="$root.user" class="pull-right">
-                    <a ng-controller="logout.ctrl" ng-click="logout()">
+                    <a ng-controller="SignoutController" ng-click="logout()">
                         <span class="fa fa-sign-out link-color cursor"></span>
                     </a>
                 </li>
@@ -73,8 +73,9 @@
 <script src="assets/js/commons/commonHelpers.js"></script>
 <script src="assets/js/config/appConfig.js"></script>
 <script src="assets/js/config/endpointConfig.js"></script>
-<script src="assets/js/model/core/Schema.js"></script>
-<script src="assets/js/model/core/factory.js"></script>
+<script src="assets/js/model/core/AbstractBean.js"></script>
+<script src="assets/js/model/core/AbstractSchema.js"></script>
+<script src="assets/js/model/core/AbstractFactory.js"></script>
 <script src="assets/js/model/Movement.js"></script>
 <script src="assets/js/model/ProvisionalPlan.js"></script>
 <script src="assets/js/model/User.js"></script>

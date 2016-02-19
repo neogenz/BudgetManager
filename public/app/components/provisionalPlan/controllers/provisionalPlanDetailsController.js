@@ -7,7 +7,7 @@
 
     angular
         .module('appBudgetManager')
-        .controller('provisionalPlan.details.ctrl', ProvisionalPlanDetailsController);
+        .controller('provisionalPlanDetailsController', ProvisionalPlanDetailsController);
 
     ProvisionalPlanDetailsController.$inject = ['$scope', '$modal', 'provisionalPlanWebApi', 'provisionalPlanCalculus', 'provisionalPlan', '$state'];
 
@@ -64,7 +64,7 @@
             function buildProvisionalPlanEditModalOpts(provisionalPlan) {
                 return {
                     templateUrl: 'app/components/provisionalPlan/views/provisionalPlanFormView.html', // Url du template HTML
-                    controller: 'provisionalPlan.add.ctrl',
+                    controller: 'provisionalPlanAddController',
                     resolve: {
                         provisionalPlan: function () {
                             return _.clone(provisionalPlan);
@@ -114,7 +114,7 @@
             function buildConfirmActionModalOpts(confirmationMessage) {
                 return {
                     templateUrl: 'app/shared/confirmAction/actionConfirmView.html', // Url du template HTML
-                    controller: 'action.confirm.ctrl',
+                    controller: 'actionConfirmController',
                     resolve: {
                         confirmationMessage: function () {
                             return confirmationMessage;

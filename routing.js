@@ -10,9 +10,9 @@ module.exports = function (provider, mongoose, jwt) {
 
     var userProvider = require('./03_DataAcessLayer/UserProvider');
     //var userProvider = new UserProvider();
-    var authenticationHelpers = require('./01_Commons/AuthenticationHelpers');
+    var authenticationHelpers = require('./01_Commons/authenticationHelpers');
 
-    provider.get(['/', '*/app/components/*.html'/*, '*.html'*/], function (req, res) {
+    provider.get(['/', '*/app/components/*.html', '*/app/shared/*.html'/*, '*.html'*/], function (req, res) {
         if (req.originalUrl === '/') {
             req.originalUrl = 'index.html';
         }

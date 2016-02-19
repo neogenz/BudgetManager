@@ -5,7 +5,7 @@
 (function () {
     angular
         .module('appBudgetManager')
-        .controller('user.profile.ctrl', UserProfileController);
+        .controller('userProfileController', UserProfileController);
 
     UserProfileController.$inject = ['$rootScope', '$scope', '$state', 'authenticateWebApi', 'toastr', '$modal'];
 
@@ -56,7 +56,7 @@
         function _changePassword(formIsValid) {
             var confirmActionModalOpts = {
                 templateUrl: 'views/partials/user.profil.changePassword', // Url du template HTML
-                controller: 'user.profil.changePassword.ctrl'
+                controller: 'userProfileChangePasswordController'
                 /*resolve: {
                  confirmationMessage: function () {
                  return $scope.confirmationMessage;
@@ -69,10 +69,10 @@
             }, function (result) {
                 if (result.canceled) {
                     toastr.warning('Changement de mot de passe annulé.');
-                    app.helpers.log.logDebug('user.profile.ctrl.js', '_changePassword()', 'Changement de mot de passe échoué : ' + result.message);
+                    app.helpers.log.logDebug('userProfileController.js', '_changePassword()', 'Changement de mot de passe échoué : ' + result.message);
                 } else {
                     toastr.error('Changement de mot de passe échoué.');
-                    app.helpers.log.logError('user.profile.ctrl.js', '_changePassword()', 'Changement de mot de passe échoué : ' + result.message);
+                    app.helpers.log.logError('userProfileController.js', '_changePassword()', 'Changement de mot de passe échoué : ' + result.message);
                 }
 
             });

@@ -5,7 +5,7 @@
 (function () {
     angular
         .module('appBudgetManager')
-        .controller('user.profil.changePassword.ctrl', UserProfileChangePasswordController);
+        .controller('userProfileChangePasswordController', UserProfileChangePasswordController);
 
     UserProfileChangePasswordController.$inject = ['$rootScope', '$scope', 'authenticateWebApi', 'toastr', '$modalInstance'];
 

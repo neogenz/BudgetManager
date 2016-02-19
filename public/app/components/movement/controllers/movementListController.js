@@ -8,7 +8,7 @@
 
     angular
         .module('appBudgetManager')
-        .controller('movement.ctrl', MovementController);
+        .controller('movementListController', MovementController);
 
     MovementController.$inject = ['$scope', '$modal', 'movementWebApi', 'provisionalPlanWebApi'];
 
@@ -78,7 +78,7 @@
         function _openMovementDetailsModal(movementToSee) {
             var movementModalDetailsOpts = {
                 templateUrl: 'app/components/movement/views/movementDetailsView.html', // Url du template HTML
-                controller: 'movement.details.ctrl',
+                controller: 'movementDetailsController',
                 resolve: {
                     movement: function () {
                         return $scope.movementToSee;
@@ -109,7 +109,7 @@
         function _openModalToConfirmDelete(provisionalPlan, movement, success_callback) {
             var confirmActionModalOpts = {
                 templateUrl: 'app/shared/confirmAction/actionConfirmView.html', // Url du template HTML
-                controller: 'action.confirm.ctrl',
+                controller: 'actionConfirmController',
                 resolve: {
                     confirmationMessage: function () {
                         return $scope.confirmationMessage;
@@ -158,7 +158,7 @@
             function openModal(success_callback) {
                 var movementModalAddOrEditOpts = {
                     templateUrl: 'app/components/movement/views/movementFormView.html', // Url du template HTML
-                    controller: 'movement.add.ctrl',
+                    controller: 'movementAddController',
                     resolve: {
                         provisionalPlanTitle: function () {
                             return provisionalPlan.name;
@@ -202,7 +202,7 @@
             if (_.isNull(movementToWork)) {
                 debugger;
                 //Build new movement by default
-                $scope.movementToWork = app.beans.factory.createBean('Movement', null); //app.data.autocomplete.Movement();
+                $scope.movementToWork = app.beans.factory.getBean('Movement', null); //app.data.autocomplete.Movement();
                 $scope.movementToWork.active = true;
                 $scope.movementToWork.name = 'Mouvement d\'argent';
                 //$scope.movementToWork.name = 'Mouvement d\'argent';

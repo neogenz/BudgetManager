@@ -5,7 +5,7 @@
 (function () {
     angular
         .module('appBudgetManager')
-        .controller('movement.details.ctrl', MovementDetailsController);
+        .controller('movementDetailsController', MovementDetailsController);
 
     MovementDetailsController.$inject = ['$scope', '$modalInstance', 'movement'];
 

@@ -7,7 +7,7 @@
 
     angular
         .module('appBudgetManager')
-        .controller('movement.add.ctrl', MovementAddController);
+        .controller('movementAddController', MovementAddController);
 
     MovementAddController.$inject = ['$scope', '$modalInstance', 'provisionalPlanTitle', 'movementToWork'];
 

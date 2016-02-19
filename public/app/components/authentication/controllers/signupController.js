@@ -5,7 +5,7 @@
 (function () {
     angular
         .module('appBudgetManager')
-        .controller('signup.ctrl', SignupController);
+        .controller('SignupController', SignupController);
 
     SignupController.$inject = ['$rootScope', '$scope', '$state', 'authenticateWebApi', 'toastr'];
 
@@ -32,7 +32,8 @@
                 password: '',
                 passwordConfirm: '',
                 lastName: '',
-                firstName: ''
+                firstName: '',
+                username: ''
             };
         }
 
@@ -56,11 +57,12 @@
         function _signup(formIsValid) {
             if (_passwordAndConfirmationIsEqual() && formIsValid) {
                 debugger;
-                var user = new app.beans.factory.createBean('User', null);
-                user.email = $scope.userInput.email;
+                var user = new app.beans.factory.getBean('User', null);
+                user.email = $scope.userInput.email.toLowerCase();
                 user.password = $scope.userInput.password;
                 user.firstName = $scope.userInput.firstName;
                 user.lastName = $scope.userInput.lastName;
+                user.username = user.email;
 
                 authenticateWebApi.signup(user).then(function () {
                     toastr.success(app.uiManager.messages.signup.success);

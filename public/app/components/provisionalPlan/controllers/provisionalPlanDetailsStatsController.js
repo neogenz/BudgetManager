@@ -5,7 +5,7 @@
 (function () {
     angular
         .module('appBudgetManager')
-        .controller('provisionalPlan.details.stats.ctrl', ProvisionalPlanDetailsStatsController);
+        .controller('provisionalPlanDetailsStatsController', ProvisionalPlanDetailsStatsController);
 
     ProvisionalPlanDetailsStatsController.$inject = ['$scope', 'provisionalPlan', 'provisionalPlanCalculus'];
 

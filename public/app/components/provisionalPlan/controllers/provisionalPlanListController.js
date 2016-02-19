@@ -5,7 +5,7 @@
 (function () {
     angular
         .module('appBudgetManager')
-        .controller('provisionalPlan.ctrl', ProvisionalPlanController);
+        .controller('provisionalPlanListController', ProvisionalPlanController);
 
     ProvisionalPlanController.$inject = ['$scope', '$modal', 'provisionalPlans', 'provisionalPlanCalculus', 'provisionalPlanWebApi'];
 
@@ -52,10 +52,10 @@
             function buildProvisionalPlanModalOpts() {
                 return {
                     templateUrl: 'app/components/provisionalPlan/views/provisionalPlanFormView.html', // Url du template HTML
-                    controller: 'provisionalPlan.add.ctrl',
+                    controller: 'provisionalPlanAddController',
                     resolve: {
                         provisionalPlan: function () {
-                            return app.beans.factory.createBean('ProvisionalPlan', null);//app.data.autocomplete.ProvisionalPlan();
+                            return app.beans.factory.getBean('ProvisionalPlan', null);//app.data.autocomplete.ProvisionalPlan();
                         }
                     }
                 };
