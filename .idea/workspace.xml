@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b04111e7-b392-4bdd-a441-c27feda74d45" name="Default" comment="- Refactorisation of model core&#10;- Adding jsdoc&#10;- Changing on app.tools namespace by neogenz.utilities, app.httpUtilities, etc ...">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.jshintrc" afterPath="$PROJECT_DIR$/.jshintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/commons/commonHelpers.js" afterPath="$PROJECT_DIR$/public/assets/js/commons/commonHelpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/Movement.js" afterPath="$PROJECT_DIR$/public/assets/js/model/Movement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/ProvisionalPlan.js" afterPath="$PROJECT_DIR$/public/assets/js/model/ProvisionalPlan.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/User.js" afterPath="$PROJECT_DIR$/public/assets/js/model/User.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js" />
     </list>
     <ignored path="BudgetManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -792,7 +783,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461044576226</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="- Refactorisation of model core&#10;- Adding jsdoc&#10;- Changing on app.tools namespace by neogenz.utilities, app.httpUtilities, etc ...">
+      <created>1461099419117</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1461099419117</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
