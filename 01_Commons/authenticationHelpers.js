@@ -10,7 +10,7 @@
     AuthenticationsHelpers.prototype.ensureAuthorized = function (req, res, next) {
         var bearerToken;
         var bearerHeader = req.headers["authorization"];
-        if (typeof bearerHeader !== 'undefined') {
+        if (bearerHeader !== undefined) {
             var bearer = bearerHeader.split(" ");
             bearerToken = bearer[1];
             jwt.verify(bearerToken, process.env.JWT_SECRET, function (err, decoded) {

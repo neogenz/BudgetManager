@@ -1,12 +1,14 @@
-'use strict';
+(function () {
+    'use strict';
 
-var app = {};
+    window.app = {};
 
 //Définition des namespaces racines
-app.helpers = {};
-app.beans = {};
-app.config = {};
-app.uiManager = {
-    messages: {},
-    formMode: {}
-};
+    //neogenz.utilities = {};
+    app.beans = {};
+    app.config = {};
+    app.uiManager = {
+        messages: {},
+        formMode: {}
+    };
+})();

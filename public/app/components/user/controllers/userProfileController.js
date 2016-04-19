@@ -1,8 +1,10 @@
 /**
- * @desc Controllers of BudgetManagerV2
+ * @desc Controllers of BudgetManager
  * @namespace Controllers
  */
 (function () {
+    'use strict';
+
     angular
         .module('appBudgetManager')
         .controller('userProfileController', UserProfileController);
@@ -53,7 +55,7 @@
          * @param {bool} formIsValid Passed from view, is a valid form angular boolean
          * @memberOf Controllers.UserProfileController
          */
-        function _changePassword(formIsValid) {
+        function _changePassword() {
             var confirmActionModalOpts = {
                 templateUrl: 'views/partials/user.profil.changePassword', // Url du template HTML
                 controller: 'userProfileChangePasswordController'
@@ -69,10 +71,15 @@
             }, function (result) {
                 if (result.canceled) {
                     toastr.warning('Changement de mot de passe annulé.');
-                    app.helpers.log.logDebug('userProfileController.js', '_changePassword()', 'Changement de mot de passe échoué : ' + result.message);
+                    neogenz.utilities.log.logDebug(
+                        'userProfileController.js',
+                        '_changePassword()',
+                        'Changement de mot de passe échoué : ' + result.message);
                 } else {
                     toastr.error('Changement de mot de passe échoué.');
-                    app.helpers.log.logError('userProfileController.js', '_changePassword()', 'Changement de mot de passe échoué : ' + result.message);
+                    neogenz.utilities.log.logError('userProfileController.js',
+                        '_changePassword()',
+                        'Changement de mot de passe échoué : ' + result.message);
                 }
 
             });
@@ -87,7 +94,7 @@
          * @memberOf Controllers.UserProfileController
          */
         function _displaySuccessMessage(successMessage) {
-            if (app.helpers.isUndefinedOrNull(successMessage)) {
+            if (neogenz.utilities.isUndefinedOrNull(successMessage)) {
                 throw new Error('successMessage to display in null or undefined.');
             }
             toastr.success(successMessage);

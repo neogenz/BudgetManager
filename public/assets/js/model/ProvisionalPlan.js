@@ -1,12 +1,9 @@
-'use strict';
-
-//app.helpers.defineNamespace(app, 'bean.ProvisionalPlan');
-
 (function init() {
+    'use strict';
 
-    var ProvisionalPlan = function (json) {
+    function ProvisionalPlan(json) {
         app.beans.AbstractBean.call(this, json);
-    };
+    }
 
 
     //@todo Place an guid in Id of provisionalPlan

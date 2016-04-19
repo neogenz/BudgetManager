@@ -1,5 +1,12 @@
-appBudgetManager.factory('movementWebApi',
-    function ($http, $q) {
+(function () {
+    'use strict';
+    angular
+        .module('appBudgetManager')
+        .factory('movementWebApi', MovementWebAPI);
+
+    MovementWebAPI.$inject = ['$http', '$q'];
+
+    function MovementWebAPI($http, $q) {
 
         return {
             update: _update,
@@ -15,7 +22,8 @@ appBudgetManager.factory('movementWebApi',
          */
         function _update(param) {
             var def = $q.defer();
-            var requestOptions = app.helpers.buildPutRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/' + param.provisionalPlanId + '/movements', param.movement);
+            var requestOptions = neogenz.httpUtilities.buildPutRequestOptToCallThisUrl(
+                '/me/provisionalPlans/' + param.provisionalPlanId + '/movements', param.movement);
             var promise = $http(requestOptions);
             promise.success(function () {
                 def.resolve();
@@ -34,7 +42,8 @@ appBudgetManager.factory('movementWebApi',
          */
         function _remove(param) {
             var def = $q.defer();
-            var requestOptions = app.helpers.buildDeleteRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/' + param.provisionalPlanId + '/movements/' + param.movement.id);
+            var requestOptions = neogenz.httpUtilities.buildDeleteRequestOptToCallThisUrl(
+                '/me/provisionalPlans/' + param.provisionalPlanId + '/movements/' + param.movement.id);
             var promise = $http(requestOptions);
             promise.success(function () {
                 def.resolve();
@@ -44,4 +53,4 @@ appBudgetManager.factory('movementWebApi',
             return def.promise;
         }
     }
-);
+})();

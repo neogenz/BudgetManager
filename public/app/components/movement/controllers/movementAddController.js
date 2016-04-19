@@ -1,5 +1,5 @@
 /**
- * @desc Controllers of BudgetManagerV2
+ * @desc Controllers of BudgetManager
  * @namespace Controllers
  */
 (function () {
@@ -63,7 +63,7 @@
          * @memberOf Controllers.MovementAddController
          */
         function _cancel() {
-            $modalInstance.dismiss("Ajout du plan prévisionel annulé");
+            $modalInstance.dismiss('Ajout du plan prévisionel annulé');
         }
     }
 })();

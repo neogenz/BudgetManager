@@ -1,8 +1,10 @@
 /**
- * @desc Controllers of BudgetManagerV2
+ * @desc Controllers of BudgetManager
  * @namespace Controllers
  */
 (function () {
+    'use strict';
+
     angular
         .module('appBudgetManager')
         .controller('actionConfirmController', ActionConfirmController);

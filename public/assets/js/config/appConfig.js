@@ -1,10 +1,10 @@
-'use strict';
-
-app.helpers.defineNamespace(app, 'budgetManager.config');
-
 (function init() {
+    'use strict';
+
+    neogenz.utilities.defineNamespace(app, 'budgetManager.config');
+
     app.budgetManager.config = {
         mock: false,
         debug: true
-    }
+    };
 })();

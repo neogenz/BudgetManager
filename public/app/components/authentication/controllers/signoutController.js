@@ -1,5 +1,5 @@
 /**
- * @desc Controllers of BudgetManagerV2
+ * @desc Controllers of BudgetManager
  * @namespace Controllers
  */
 (function () {

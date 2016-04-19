@@ -3,7 +3,6 @@
  */
 module.exports = function (grunt) {
 
-    // Configuration de Grunt
     grunt.initConfig({
         shell: {
             run: {
@@ -19,12 +18,20 @@ module.exports = function (grunt) {
                 ].join('&&')
 
             }
+        },
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc'
+            },
+            back: ['src/foo.js', 'src/bar.js'],
+            front: ['public/**/*.js', '!public/assets/libs/**/*.js']
         }
     });
 
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    // Définition des tâches Grunt
-    grunt.registerTask('default', ['shell:run']);
+    grunt.registerTask('runMongo', ['shell:run']);
+    grunt.registerTask('checkCode', ['jshint:front']);
 
 };

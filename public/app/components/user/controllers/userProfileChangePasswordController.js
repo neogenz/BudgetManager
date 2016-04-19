@@ -1,13 +1,17 @@
 /**
- * @desc Controllers of BudgetManagerV2
+ * @desc Controllers of BudgetManager
  * @namespace Controllers
  */
 (function () {
+    'use strict';
+
     angular
         .module('appBudgetManager')
         .controller('userProfileChangePasswordController', UserProfileChangePasswordController);
 
-    UserProfileChangePasswordController.$inject = ['$rootScope', '$scope', 'authenticateWebApi', 'toastr', '$modalInstance'];
+    UserProfileChangePasswordController.$inject = [
+        '$rootScope', '$scope', 'authenticateWebApi', 'toastr', '$modalInstance'
+    ];
 
     /**
      * @desc Controllers of ProvisionalPlans

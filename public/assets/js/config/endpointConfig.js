@@ -1,9 +1,9 @@
-'use strict';
-
-app.helpers.defineNamespace(app, 'budgetManager.config');
-app.helpers.defineNamespace(app, 'budgetManager.endpoints');
-
 (function init() {
+    'use strict';
+
+    neogenz.utilities.defineNamespace(app, 'budgetManager.config');
+    neogenz.utilities.defineNamespace(app, 'budgetManager.endpoints');
+
     app.budgetManager.config.webApi = {
         subdomain: 'budgetmanager',
         domain: 'localhost',
@@ -16,5 +16,5 @@ app.helpers.defineNamespace(app, 'budgetManager.endpoints');
             //app.budgetManager.config.webApi.subdomain + '.' +
         app.budgetManager.config.webApi.domain + ':' +
         app.budgetManager.config.webApi.port
-    }
+    };
 })();

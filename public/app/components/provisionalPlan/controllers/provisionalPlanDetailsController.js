@@ -1,5 +1,5 @@
 /**
- * @desc Controllers of BudgetManagerV2
+ * @desc Controllers of BudgetManager
  * @namespace Controllers
  */
 (function () {
@@ -9,7 +9,9 @@
         .module('appBudgetManager')
         .controller('provisionalPlanDetailsController', ProvisionalPlanDetailsController);
 
-    ProvisionalPlanDetailsController.$inject = ['$scope', '$modal', 'provisionalPlanWebApi', 'provisionalPlanCalculus', 'provisionalPlan', '$state'];
+    ProvisionalPlanDetailsController.$inject = [
+        '$scope', '$modal', 'provisionalPlanWebApi', 'provisionalPlanCalculus', 'provisionalPlan', '$state'
+    ];
 
     /**
      * @desc Controllers of ProvisionalPlans
@@ -30,7 +32,7 @@
          */
         function defineScope() {
             $scope.provisionalPlan = provisionalPlan;
-            $scope.confirmationMessage = "Êtes vous sur de vouloir supprimer ce plan prévisionnel ?";
+            $scope.confirmationMessage = 'Êtes vous sur de vouloir supprimer ce plan prévisionnel ?';
         }
 
 
@@ -63,7 +65,8 @@
 
             function buildProvisionalPlanEditModalOpts(provisionalPlan) {
                 return {
-                    templateUrl: 'app/components/provisionalPlan/views/provisionalPlanFormView.html', // Url du template HTML
+                    // Url du template HTML
+                    templateUrl: 'app/components/provisionalPlan/views/provisionalPlanFormView.html',
                     controller: 'provisionalPlanAddController',
                     resolve: {
                         provisionalPlan: function () {
@@ -123,11 +126,13 @@
                 };
             }
 
-            var modalInstance = $modal.open(buildConfirmActionModalOpts("Êtes vous sur de vouloir supprimer ce plan prévisionnel ?"));
+            var modalInstance = $modal.open(
+                buildConfirmActionModalOpts('Êtes vous sur de vouloir supprimer ce plan prévisionnel ?')
+            );
             modalInstance.result.then(function () {
                 _remove(provisionalPlan);
             }, function () {
-                console.log("Suppression annulé.");
+                console.log('Suppression annulé.');
             });
         }
 
@@ -198,5 +203,5 @@
                 }
             );
         }
-    };
+    }
 })();

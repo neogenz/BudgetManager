@@ -1,8 +1,10 @@
 /**
- * @desc Controllers of BudgetManagerV2
+ * @desc Controllers of BudgetManager
  * @namespace Controllers
  */
 (function () {
+    'use strict';
+
     angular
         .module('appBudgetManager')
         .controller('SignupController', SignupController);
@@ -49,14 +51,14 @@
 
 
         /**
-         * @desc Get the information of form and call webservice to try signup user and redirect them to provisional plans list page
+         * @desc Get the information of form and call webservice to try signup user
+         * and redirect them to provisional plans list page
          * @function _signup
          * @param {bool} formIsValid Passed from view, is a valid form angular boolean
          * @memberOf Controllers.SignupController
          */
         function _signup(formIsValid) {
             if (_passwordAndConfirmationIsEqual() && formIsValid) {
-                debugger;
                 var user = new app.beans.factory.getBean('User', null);
                 user.email = $scope.userInput.email.toLowerCase();
                 user.password = $scope.userInput.password;
@@ -69,7 +71,7 @@
                     $state.go('provisionalPlans');
                 }, function () {
                     $rootScope.error = 'Failed to signup';
-                })
+                });
             } else if (!_passwordAndConfirmationIsEqual()) {
                 $scope.signupForm.passwordConfirm.$invalid = true;
             }
@@ -85,5 +87,4 @@
             return ($scope.userInput.password === $scope.userInput.passwordConfirm);
         }
     }
-})
-();
+})();

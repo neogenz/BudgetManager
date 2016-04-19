@@ -1,8 +1,10 @@
 /**
- * @desc Controllers of BudgetManagerV2
+ * @desc Controllers of BudgetManager
  * @namespace Controllers
  */
 (function () {
+    'use strict';
+
     angular
         .module('appBudgetManager')
         .controller('provisionalPlanAddController', ProvisionalPlanAddController);
@@ -28,7 +30,7 @@
          */
         function defineScope() {
             $scope.provisionalPlan = provisionalPlan;
-            $scope.mode = (provisionalPlan.id == null ? app.uiManager.formMode.create : app.uiManager.formMode.edit)
+            $scope.mode = (provisionalPlan.id == null ? app.uiManager.formMode.create : app.uiManager.formMode.edit);
             $scope.modes = app.uiManager.formMode;
         }
 
@@ -60,7 +62,7 @@
          * @memberOf Controllers.ProvisionalPlanAddController
          */
         function _cancel() {
-            $modalInstance.dismiss("Ajout du plan prévisionel annulé");
+            $modalInstance.dismiss('Ajout du plan prévisionel annulé');
         }
 
     }

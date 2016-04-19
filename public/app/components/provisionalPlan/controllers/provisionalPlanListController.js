@@ -1,13 +1,17 @@
 /**
- * @desc Controllers of BudgetManagerV2
+ * @desc Controllers of BudgetManager
  * @namespace Controllers
  */
 (function () {
+    'use strict';
+
     angular
         .module('appBudgetManager')
         .controller('provisionalPlanListController', ProvisionalPlanController);
 
-    ProvisionalPlanController.$inject = ['$scope', '$modal', 'provisionalPlans', 'provisionalPlanCalculus', 'provisionalPlanWebApi'];
+    ProvisionalPlanController.$inject = [
+        '$scope', '$modal', 'provisionalPlans', 'provisionalPlanCalculus', 'provisionalPlanWebApi'
+    ];
 
     /**
      * @desc Controllers of ProvisionalPlans
@@ -51,11 +55,11 @@
         function _openModalToAddProvisionalPlan() {
             function buildProvisionalPlanModalOpts() {
                 return {
-                    templateUrl: 'app/components/provisionalPlan/views/provisionalPlanFormView.html', // Url du template HTML
+                    templateUrl: 'app/components/provisionalPlan/views/provisionalPlanFormView.html',
                     controller: 'provisionalPlanAddController',
                     resolve: {
                         provisionalPlan: function () {
-                            return app.beans.factory.getBean('ProvisionalPlan', null);//app.data.autocomplete.ProvisionalPlan();
+                            return app.beans.factory.getBean('ProvisionalPlan', null);
                         }
                     }
                 };
@@ -93,7 +97,7 @@
          * @memberOf Controllers.ProvisionalPlanController
          */
         function _refresh(id) {
-            if (!app.helpers.isUndefinedOrNull(id)) {
+            if (!neogenz.utilities.isUndefinedOrNull(id)) {
                 _refreshById(id);
             } else {
                 _refreshAll();

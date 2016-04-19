@@ -1,5 +1,11 @@
-appBudgetManager.factory('provisionalPlanWebApi',
-    function ($http, $q) {
+(function () {
+    'use strict';
+    angular
+        .module('appBudgetManager')
+        .factory('provisionalPlanWebApi', ProvisionalPlanWebAPI);
+
+    ProvisionalPlanWebAPI.$inject = ['$http', '$q'];
+    function ProvisionalPlanWebAPI($http, $q) {
 
         return {
             findAll: _findAll,
@@ -13,10 +19,10 @@ appBudgetManager.factory('provisionalPlanWebApi',
         //Web API
         function _findAll() {
             //var def = $q.defer();
-            var requestOptions = app.helpers.buildGetRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans');
+            var requestOptions = neogenz.httpUtilities.buildGetRequestOptToCallThisUrl(
+                '/me/provisionalPlans');
             var promise = $http(requestOptions);
             return promise.then(function (response) {
-                debugger;
                 var data = response.data;
                 if (!data) {
                     throw new Error('data');
@@ -41,7 +47,8 @@ appBudgetManager.factory('provisionalPlanWebApi',
                 def.reject('Id is null or undefined.');
             }
             else {
-                var requestOptions = app.helpers.buildGetRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/' + id);
+                var requestOptions = neogenz.httpUtilities.buildGetRequestOptToCallThisUrl(
+                    '/me/provisionalPlans/' + id);
                 var promise = $http(requestOptions);
                 promise.success(function (data) {
                     var factory = app.beans.factory;
@@ -60,7 +67,9 @@ appBudgetManager.factory('provisionalPlanWebApi',
                 def.reject('Id of provisional plan to add is null.');
             }
             else {
-                var requestOptions = app.helpers.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/' + movementToAdd.provisionalPlanId, movementToAdd);
+                var requestOptions = neogenz.httpUtilities.buildPostRequestOptToCallThisUrl(
+                    '/me/provisionalPlans/' + movementToAdd.provisionalPlanId,
+                    movementToAdd);
                 var promise = $http(requestOptions);
                 promise.success(function () {
                     def.resolve();
@@ -75,8 +84,8 @@ appBudgetManager.factory('provisionalPlanWebApi',
             var def = $q.defer();
             var bodyReq = provisionalPlan;
             var promise;
-            if (!app.helpers.isUndefinedOrNull(bodyReq)) {
-                var requestOptions = app.helpers.buildPostRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/', bodyReq);
+            if (!neogenz.utilities.isUndefinedOrNull(bodyReq)) {
+                var requestOptions = neogenz.httpUtilities.buildPostRequestOptToCallThisUrl('/me/provisionalPlans/', bodyReq);
                 promise = $http(requestOptions);
                 promise.success(function () {
                     def.resolve();
@@ -93,11 +102,11 @@ appBudgetManager.factory('provisionalPlanWebApi',
         function _remove(provisionalPlan) {
             var def = $q.defer();
             var promise;
-            if (app.helpers.isUndefinedOrNull(provisionalPlan.id) || provisionalPlan.id === '') {
+            if (neogenz.utilities.isUndefinedOrNull(provisionalPlan.id) || provisionalPlan.id === '') {
                 def.reject();
                 return def.promise;
             }
-            var requestOptions = app.helpers.buildDeleteRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans/' + provisionalPlan.id);
+            var requestOptions = neogenz.httpUtilities.buildDeleteRequestOptToCallThisUrl('/me/provisionalPlans/' + provisionalPlan.id);
             promise = $http(requestOptions);
             promise.success(function () {
                 def.resolve();
@@ -110,9 +119,9 @@ appBudgetManager.factory('provisionalPlanWebApi',
         function _update(provisionalPlan) {
             var def = $q.defer();
             delete provisionalPlan.movements;
-            if (!app.helpers.isUndefinedOrNull(provisionalPlan)) {
+            if (!neogenz.utilities.isUndefinedOrNull(provisionalPlan)) {
                 var bodyReq = provisionalPlan;
-                var requestOptions = app.helpers.buildPutRequestOptToCallThisUrl(app.budgetManager.endpoints['nodeEndpoint'] + '/me/provisionalPlans', bodyReq);
+                var requestOptions = neogenz.httpUtilities.buildPutRequestOptToCallThisUrl('/me/provisionalPlans', bodyReq);
                 return $http(requestOptions);
             } else {
                 def.reject();
@@ -122,4 +131,6 @@ appBudgetManager.factory('provisionalPlanWebApi',
         }
 
     }
-);
+
+})();
+

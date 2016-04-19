@@ -1,13 +1,9 @@
-'use strict';
-
-//app.helpers.defineNamespace(app, 'bean.User');
-
 (function init() {
+    'use strict';
 
-    var User = function (json) {
-        debugger;
+    function User(json) {
         app.beans.AbstractBean.call(this, json);
-    };
+    }
 
     User.prototype = Object.create(app.beans.AbstractBean.prototype, {
         constructor: app.beans.AbstractBean,

@@ -1,6 +1,6 @@
 
 /**
- * @desc Controllers of BudgetManagerV2
+ * @desc Controllers of BudgetManager
  * @namespace Controllers
  */
 (function () {
@@ -34,7 +34,7 @@
 
             $scope.movementToWork = null;
 
-            $scope.confirmationMessage = "Êtes vous sur de vouloir supprimer ce mouvement ?";
+            $scope.confirmationMessage = 'Êtes vous sur de vouloir supprimer ce mouvement ?';
         }
 
 
@@ -56,13 +56,13 @@
          * @function _inverseActiveState
          * @param {Object} movement Movement to update this state
          * @param {Object} provisionalPlan Provisional plan parent of the movement to update
-         * @param {function} success_callback Callback for the success of webserivce call
+         * @param {function} successCallback Callback for the success of webserivce call
          * @memberOf Controllers.MovementController
          */
-        function _inverseActiveState(provisionalPlan, movement, success_callback) {
+        function _inverseActiveState(provisionalPlan, movement, successCallback) {
             movement.active = !movement.active;
             movementWebApi.update({provisionalPlanId: provisionalPlan.id, movement: movement}).then(function () {
-                success_callback(provisionalPlan.id);
+                successCallback(provisionalPlan.id);
             }, function () {
 
             });
@@ -86,7 +86,7 @@
                 }
             };
             if (_.isNull(movementToSee)) {
-                console.error("The movement to see is null.");
+                console.error('The movement to see is null.');
             } else {
                 $scope.movementToSee = movementToSee;
             }
@@ -103,10 +103,10 @@
          * @function _openModalToConfirmDelete
          * @param {Object} provisionalPlan Provisional plan parent of the movement to delete
          * @param {Object} movement Movement to delete
-         * @param {function} success_callback Callback for the success of delete webservice call
+         * @param {function} successCallback Callback for the success of delete webservice call
          * @memberOf Controllers.MovementController
          */
-        function _openModalToConfirmDelete(provisionalPlan, movement, success_callback) {
+        function _openModalToConfirmDelete(provisionalPlan, movement, successCallback) {
             var confirmActionModalOpts = {
                 templateUrl: 'app/shared/confirmAction/actionConfirmView.html', // Url du template HTML
                 controller: 'actionConfirmController',
@@ -119,12 +119,12 @@
             if (_.isUndefined(movement) || _.isNull(movement)) {
                 throw new Error('The parameter movement is undefined or null.');
             }
-            $scope.confirmationMessage = "Êtes vous sur de vouloir supprimer ce mouvement ?";
+            $scope.confirmationMessage = 'Êtes vous sur de vouloir supprimer ce mouvement ?';
             var modalInstance = $modal.open(confirmActionModalOpts);
             modalInstance.result.then(function () {
-                _delete({provisionalPlanId: provisionalPlan.id, movement: movement}, success_callback);
+                _delete({provisionalPlanId: provisionalPlan.id, movement: movement}, successCallback);
             }, function () {
-                console.log("Suppression annulé.");
+                console.log('Suppression annulé.');
             });
         }
 
@@ -133,12 +133,12 @@
          * @desc Call the delete webservice
          * @function _delete
          * @param {object} param Object with provisionalPlanId and movement to remove
-         * @param {function} success_callback Callback for the success of delete webservice call
+         * @param {function} successCallback Callback for the success of delete webservice call
          * @memberOf Controllers.MovementController
          */
-        function _delete(param, success_callback) {
+        function _delete(param, successCallback) {
             movementWebApi.remove(param).then(function () {
-                success_callback(param.provisionalPlanId);
+                successCallback(param.provisionalPlanId);
             }, function () {
 
             });
@@ -150,12 +150,12 @@
          * @function _openModalToAddOrEdit
          * @param {Object} provisionalPlan Provisional plan to work
          * @param {Object} movementToWork Movement to add or edit
-         * @param {function} success_callback Callback of save webservice call
+         * @param {function} successCallback Callback of save webservice call
          * @memberOf Controllers.MovementController
          */
-        function _openModalToAddOrEdit(provisionalPlan, movementToWork, success_callback) {
+        function _openModalToAddOrEdit(provisionalPlan, movementToWork, successCallback) {
             //var provisionalPlan = provisionalPlan;
-            function openModal(success_callback) {
+            function openModal(successCallback) {
                 var movementModalAddOrEditOpts = {
                     templateUrl: 'app/components/movement/views/movementFormView.html', // Url du template HTML
                     controller: 'movementAddController',
@@ -171,10 +171,10 @@
                 var modalInstance = $modal.open(movementModalAddOrEditOpts);
                 modalInstance.result.then(function (movement) {
                     $scope.movementToWork = movement;
-                    if (app.helpers.isUndefinedOrNull($scope.movementToWork.id)) {
+                    if (neogenz.utilities.isUndefinedOrNull($scope.movementToWork.id)) {
                         provisionalPlanWebApi.addMovement($scope.movementToWork)
                             .then(function () {
-                                success_callback(provisionalPlan.id);
+                                successCallback(provisionalPlan.id);
                             }, function (reason) {
                                 throw new Error(reason);
                             });
@@ -184,8 +184,7 @@
                             provisionalPlanId: provisionalPlan.id,
                             movement: $scope.movementToWork
                         }).then(function () {
-                            debugger;
-                            success_callback(provisionalPlan.id);
+                            successCallback(provisionalPlan.id);
                         }, function (reason) {
                             throw new Error(reason);
                         });
@@ -200,21 +199,21 @@
                 throw new Error('Parameter  movementToWork is undefined.');
             }
             if (_.isNull(movementToWork)) {
-                debugger;
                 //Build new movement by default
                 $scope.movementToWork = app.beans.factory.getBean('Movement', null); //app.data.autocomplete.Movement();
                 $scope.movementToWork.active = true;
                 $scope.movementToWork.name = 'Mouvement d\'argent';
                 //$scope.movementToWork.name = 'Mouvement d\'argent';
                 if (_.isUndefined(provisionalPlan)) {
-                    throw new Error('Can\'t assign an provisionalPlan.id value to movement to add because the parameter provisionalPlan is null');
+                    throw new Error('Can\'t assign an provisionalPlan.id value to movement to add because ' +
+                        'the parameter provisionalPlan is null');
                 }
                 //Assign to this movement the provisionalPlanId to add
                 $scope.movementToWork.provisionalPlanId = provisionalPlan.id;
             } else {
                 $scope.movementToWork = movementToWork;
             }
-            openModal(success_callback);
+            openModal(successCallback);
         }
     }
 })();

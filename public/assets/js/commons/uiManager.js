@@ -1,7 +1,7 @@
 'use strict';
 
-//app.helpers.defineNamespace(app, 'ui.manager.modal');
-//app.helpers.defineNamespace(app, 'ui.messages');
+//neogenz.utilities.defineNamespace(app, 'ui.manager.modal');
+//neogenz.utilities.defineNamespace(app, 'ui.messages');
 
 
 (function init() {

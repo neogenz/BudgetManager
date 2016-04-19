@@ -1,11 +1,10 @@
-
-//app.helpers.defineNamespace(app, 'bean.core');
 (function initSchema() {
     'use strict';
-    var AbstractSchema = function (initObject) {
-        if (!app.helpers.isUndefinedOrNull(initObject)) {
+
+    function AbstractSchema(initObject) {
+        if (!neogenz.utilities.isUndefinedOrNull(initObject)) {
             for (var key in initObject) {
-                if (!app.helpers.isUndefined(this[key])) {
+                if (!neogenz.utilities.isUndefined(this[key])) {
                     this[key] = initObject[key];
                 }
             }
@@ -36,7 +35,7 @@
      * @memberOf AbstractSchema.prototype
      */
     AbstractSchema.prototype._checkTypeIntegrityBySchema = function (schema, value, propertyName) {
-        if (app.helpers.isUndefinedOrNull(schema)) {
+        if (neogenz.utilities.isUndefinedOrNull(schema)) {
             throw new Error('The schema is null or undefined');
         }
         if (!schema.type.checkIntegrity(value)) {
@@ -48,26 +47,28 @@
     /**
      * @function _getJsonKey
      * @desc    Get the key where property in json is defined or null is she is undefined.
-     *              If she is undefined, we notify state of instance.
+     *          If she is undefined, we notify state of instance.
      * @param {AbstractSchema} schema Schema model to used to test
      * @param {Object} json json to get the good key
-     * @param {string} key Key to test json
+     * @param {string} keyToFindInJson Key to test json
      * @memberOf AbstractSchema.prototype
      */
-    AbstractSchema.prototype._getJsonKey = function (schema, json, key) {
+    AbstractSchema.prototype._getJsonKey = function (schema, json, keyToFindInJson) {
         var jsonKey = null;
-        if (app.helpers.isUndefined(json[key])) {
-            console.warn('This porperty : ' + key + ' is not defined in json. See with persisting name.');
+        if (neogenz.utilities.isUndefined(json[keyToFindInJson])) {
+            console.warn('This porperty : ' + keyToFindInJson +
+                ' is not defined in json. See with persisting name' +
+                ' if he is specified.');
             //see in persistingName
             var persistingName = schema.persistingName;
-            if (app.helpers.isUndefined(json[persistingName])) {
+            if (neogenz.utilities.isUndefined(json[persistingName])) {
                 this._propertyIsPresentInJson = false;
                 jsonKey = null;
             } else {
                 jsonKey = schema.persistingName;
             }
         } else {
-            jsonKey = key;
+            jsonKey = keyToFindInJson;
         }
         return jsonKey;
     };
@@ -85,45 +86,75 @@
 
     /**
      * @function _checkTypeIntegrityBySchema
-     * @desc Check the integrity of json from a class-schema (object containing more AbstractSchema members)
-     * @param {Object} schema Schema object containing more AbstractSchema members
-     * @param {Object} json Json to test integrity
+     * @desc Check the integrity of json from a class-schema
+     *       (object containing more AbstractSchema members).
+     * @param {Object} schema Schema object containing more
+     *        AbstractSchema members.
+     * @param {Object} json Json to test integrity.
      * @memberOf AbstractSchema.prototype
      */
     AbstractSchema.prototype.checkIntegrity = function (schema, json) {
         var jsonKey, currentSchemaMember, currentJsonMember;
-        if (app.helpers.isUndefinedOrNull(schema)) {
+        if (neogenz.utilities.isUndefinedOrNull(schema)) {
             throw new Error('Schema to test must be defined and not null.');
         }
-        for (var key in schema) {
 
+        for (var key in schema) {
             this._resetControlState();
             currentSchemaMember = schema[key];
             jsonKey = AbstractSchema.prototype._getJsonKey(currentSchemaMember, json, key);
             currentJsonMember = json[jsonKey];
-            if (currentSchemaMember.mandatory && !this._propertyIsPresentInJson) {
-
-                throw new Error('The property ' + key + ' is mandatory in schema but undefined in json.');
-
-            } else if (this._propertyIsPresentInJson) {
-
-                if (_.isNull(currentJsonMember) && !currentSchemaMember.nullable) {
-
-                    throw new Error('The property ' + key + ' can\'t be null.');
-
-                } else if (!_.isNull(currentJsonMember)) {
-
-                    AbstractSchema.prototype._checkTypeIntegrityBySchema(currentSchemaMember, currentJsonMember, key);
-                }
-
+            _validMandatoryConstraint(
+                this._propertyIsPresentInJson,
+                currentSchemaMember.mandatory,
+                key
+            );
+            _validNullableConstraint(
+                currentJsonMember,
+                currentSchemaMember.nullable,
+                key
+            );
+            if (!_.isUndefined(currentJsonMember) && _.isNull(currentJsonMember)) {
+                AbstractSchema.prototype._checkTypeIntegrityBySchema(currentSchemaMember, currentJsonMember, key);
             }
-
         }
     };
 
 
-    app.beans.AbstractSchema = AbstractSchema;
+    /**
+     * @function _validNullableConstraint
+     * @desc Test if the value is null and the nullability constraint. Throw
+     *       an Error if it's not respected.
+     * @param {object} value Value to test.
+     * @param {boolean} isNullable Value is nullable.
+     * @param {string} propertyKeyTested Key of object property tested.
+     * @memberOf AbstractSchema closure
+     */
+    function _validNullableConstraint(value, isNullable, propertyKeyTested) {
+        if (_.isNull(value) && !isNullable) {
+            throw new Error('The property ' + propertyKeyTested +
+                ' can\'t be null.');
+        }
+    }
 
+    /**
+     * @function _validNullableConstraint
+     * @desc Test if the value is undefined and if the mandatory constraint is
+     *       present. Throw an Error if she's not respected.
+     * @param {boolean} isPresent Value is present.
+     * @param {boolean} isMandatory Value is mandatory.
+     * @param {string} propertyKeyTested Key of object property tested.
+     * @memberOf AbstractSchema closure
+     */
+    function _validMandatoryConstraint(isPresent, isMandatory, propertyKeyTested) {
+        if (!isPresent && isMandatory) {
+            throw new Error('The property ' + key +
+                ' is mandatory in schema but undefined in json.');
+        }
+    }
+
+
+    app.beans.AbstractSchema = AbstractSchema;
 
     app.beans.type = {
         STRING: {

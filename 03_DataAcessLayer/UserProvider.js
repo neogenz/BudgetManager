@@ -33,13 +33,13 @@
             if (!user) {
                 return callback({
                     statusHttp: 404,
-                    message: 'User not found'
+                    message: 'User not found.'
                 });
             }
             if (!user.validPassword(password)) {
                 return callback({
                     statusHttp: 404,
-                    message: 'User not authenticated'
+                    message: 'User not authenticated.'
                 });
             }
             return callback(err, user/*user.toObject()*/);
