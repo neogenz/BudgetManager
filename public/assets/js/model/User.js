@@ -1,9 +1,13 @@
-(function init() {
+(function init(exports, factory) {
     'use strict';
+
+    exports.User = User;
+
 
     function User(json) {
         app.beans.AbstractBean.call(this, json);
     }
+
 
     User.prototype = Object.create(app.beans.AbstractBean.prototype, {
         constructor: app.beans.AbstractBean,
@@ -49,5 +53,5 @@
         }
     });
 
-    app.beans.User = User;
-})();
+    factory.registerBean('User', app.beans.User);
+})(app.beans, app.beans.factory);

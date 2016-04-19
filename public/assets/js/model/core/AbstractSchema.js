@@ -1,6 +1,13 @@
-(function initSchema() {
+(function initSchema(exports) {
     'use strict';
 
+    exports.AbstractSchema = AbstractSchema;
+
+
+    /**
+     * @class AbstractSchema
+     */
+    /*jshint forin: false */
     function AbstractSchema(initObject) {
         if (!neogenz.utilities.isUndefinedOrNull(initObject)) {
             for (var key in initObject) {
@@ -9,7 +16,7 @@
                 }
             }
         }
-    };
+    }
 
 
     AbstractSchema.prototype = Object.create(AbstractSchema.prototype, {
@@ -30,7 +37,7 @@
      * @function _checkTypeIntegrityBySchema
      * @desc Check the integrity of value by the schema configuration
      * @param {AbstractSchema} schema Schema model to used to test
-     * @param {var} value Value to test from schema
+     * @param {object} value Value to test from schema
      * @param {string} propertyName Name of property tested on schema, to log if an error is occurred
      * @memberOf AbstractSchema.prototype
      */
@@ -148,15 +155,12 @@
      */
     function _validMandatoryConstraint(isPresent, isMandatory, propertyKeyTested) {
         if (!isPresent && isMandatory) {
-            throw new Error('The property ' + key +
+            throw new Error('The property ' + propertyKeyTested +
                 ' is mandatory in schema but undefined in json.');
         }
     }
 
-
-    app.beans.AbstractSchema = AbstractSchema;
-
-    app.beans.type = {
+    exports.type = {
         STRING: {
             toString: function () {
                 return 'string';
@@ -214,5 +218,5 @@
                 return _.isBoolean(value);
             }
         }
-    }
-})();
+    };
+})(app.beans);

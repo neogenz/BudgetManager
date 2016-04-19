@@ -1,21 +1,45 @@
-//neogenz.utilities.defineNamespace(app, 'bean.factory');
-
-(function init() {
+(function init(exports) {
     'use strict';
-    app.beans.factory = new AbstractBeanFactory();
-    //app.beans.AbstractBean = AbstractBean;
+    //Revealing module pattern
+    exports.factory = (function () {
 
-    function AbstractBeanFactory() {
-    }
+        // Storage for our bean types
+        var _beanTypes = {};
 
-    AbstractBeanFactory.prototype.getBean = function (beanName, json) {
-        if (beanName === 'Movement') {
-            return new app.beans.Movement(json);
-        } else if (beanName === 'ProvisionalPlan') {
-            return new app.beans.ProvisionalPlan(json);
-        } else if (beanName === 'User') {
-            return new app.beans.User(json);
+        /**
+         * @name _getBean
+         * Get the bean by type in the closed object and return if he's exist.
+         * @param {string} type Bean name.
+         * @param {Object} initializationObject Object passed to bean constructor.
+         */
+        function _getBean(type, initializationObject) {
+            var Bean = _beanTypes[type];
+
+            return (Bean ? new app.beans[type](initializationObject) : null);
         }
-    };
-})
-();
+
+
+        /**
+         * @name _registerBean
+         * Register constructor function in scoped object with bean name like key.
+         * @param {string} type Bean name.
+         * @param {Object} Bean Constructor-function-object which is stocked.
+         */
+        function _registerBean(type, Bean) {
+            var proto = Bean.prototype;
+
+            // only register classes that fulfill the bean contract
+            if (proto._schema) {
+                _beanTypes[type] = Bean;
+            }
+
+            return app.beans.factory;
+        }
+
+
+        return {
+            getBean: _getBean,
+            registerBean: _registerBean
+        };
+    })();
+})(app.beans);

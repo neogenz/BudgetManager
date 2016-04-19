@@ -1,5 +1,6 @@
 (function init() {
     'use strict';
+
     window.neogenz = {};
     window.neogenz = {
         beans: {}
@@ -47,8 +48,9 @@
      * @class _HttpUtilities
      * Class used to build http call options objects.
      */
+    /* jshint validthis: true */
     function _HttpUtilities() {
-        //@todo Remlacer par fichier de conf
+        //@todo Remplacer par fichier de conf
         this.baseUrl = 'http://localhost'; //app.budgetManager.endpoints['nodeEndpoint']
         this.portNumber = 3000;
     }
@@ -64,11 +66,11 @@
      * @name _defineNamespace
      * Create an objects structure attached to a namespace
      * @param {object} app parent ex: app, core....
-     * @param {string} ns_string to parse
+     * @param {string} nsString to parse
      */
-    function _defineNamespace(app, ns_string) {
+    function _defineNamespace(app, nsString) {
         try {
-            var parts = ns_string.split('.'),
+            var parts = nsString.split('.'),
                 parent = app;
             if (parts[0 === parent]) {
                 parts = parts.slice(1);

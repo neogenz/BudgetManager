@@ -1,5 +1,7 @@
-(function init() {
+(function init(exports, factory) {
     'use strict';
+
+    exports.ProvisionalPlan = ProvisionalPlan;
 
     function ProvisionalPlan(json) {
         app.beans.AbstractBean.call(this, json);
@@ -39,5 +41,6 @@
         }
     });
 
-    app.beans.ProvisionalPlan = ProvisionalPlan;
-})();
+
+    factory.registerBean('ProvisionalPlan', app.beans.ProvisionalPlan);
+})(app.beans, app.beans.factory);

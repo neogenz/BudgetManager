@@ -1,11 +1,8 @@
-(function init() {
+(function init(exports, factory) {
     'use strict';
 
     function Movement(json) {
         app.beans.AbstractBean.call(this, json);
-        //if(!neogenz.utilities.isUndefinedOrNull(this.provisionalPlan)){
-        //    this.provisionalPlanId = this.provisionalPlan.id;
-        //}
     }
     
     Movement.prototype = Object.create(app.beans.AbstractBean.prototype, {
@@ -66,8 +63,7 @@
             }
         }
     });
-    app.beans.Movement = Movement;
-    //var beanFactory = new AbstractBeanFactory();
-    //var beanEtude = beanFactory.getBean('Etude', {name: 'beanEtude', id:45, creator: 'maxime'});
+    exports.Movement = Movement;
+    factory.registerBean('Movement', app.beans.Movement);
 
-})();
+})(app.beans, app.beans.factory);

@@ -24,7 +24,7 @@ module.exports = function (grunt) {
                 jshintrc: '.jshintrc'
             },
             back: ['src/foo.js', 'src/bar.js'],
-            front: ['public/**/*.js', '!public/assets/libs/**/*.js']
+            front: ['public/assets/**/*.js', '!public/assets/libs/**/*.js']
         }
     });
 
