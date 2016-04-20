@@ -19,8 +19,6 @@
         };
     })();
 
-    debugger;
-
     app.budgetManager.endpoints = {
         nodeEndpoint: app.budgetManager.config.webApi.protocol + '://' +
             //app.budgetManager.config.webApi.subdomain + '.' +

@@ -1,68 +1,65 @@
 (function init(exports, factory) {
     'use strict';
 
+    neogenz.utilities.extendsChildFromParent(Movement, app.beans.AbstractBean);
+
     function Movement(json) {
         app.beans.AbstractBean.call(this, json);
+        this.id = null;
+        this.name = null;
+        this.type = null;
+        this.repeat = null;
+        this.comment = null;
+        this.active = null;
+        this.provisionalPlan = null;
+        this._schema = {
+            id: new app.beans.AbstractSchema({
+                type: app.beans.type.STRING,
+                nullable: true,
+                persistingName: '_id'
+            }),
+            name: new app.beans.AbstractSchema({type: app.beans.type.STRING}),
+            amount: new app.beans.AbstractSchema({
+                type: app.beans.type.NUMBER,
+                nullable: false,
+                defaultValue: 0
+            }),
+            type: new app.beans.AbstractSchema({
+                type: app.beans.type.STRING,
+                nullable: false,
+                defaultValue: 'down'
+            }),
+            repeat: new app.beans.AbstractSchema({
+                type: app.beans.type.NUMBER,
+                nullable: false,
+                defaultValue: 1
+            }),
+            comment: new app.beans.AbstractSchema({
+                type: app.beans.type.STRING,
+                mandatory: false,
+                nullable: true
+            }),
+            active: new app.beans.AbstractSchema({
+                type: app.beans.type.BOOLEAN,
+                nullable: false,
+                persist: true
+            }),
+            provisionalPlanId: new app.beans.AbstractSchema({
+                type: app.beans.type.NUMBER,
+                mandatory: false,
+                nullable: true,
+                persistingName: 'ProvisionalPlanId'
+            }),
+            provisionalPlan: new app.beans.AbstractSchema({
+                type: app.beans.type.OBJECT,
+                mandatory: false,
+                constructor: app.beans.ProvisionalPlan,
+                beanName: 'ProvisionalPlan'
+            })
+        };
+        this.init(json);
     }
-    
-    Movement.prototype = Object.create(app.beans.AbstractBean.prototype, {
-        constructor: app.beans.AbstractBean,
-        id: {value: null, writable: true},
-        name: {value: null, writable: true},
-        type: {value: null, writable: true},
-        repeat: {value: null, writable: true},
-        comment: {value: null, writable: true},
-        active: {value: null, writable: true},
-        provisionalPlanId: {value: null, writable: true},
-        provisionalPlan: {value: null, writable: true},
-        _schema: {
-            value: {
-                id: new app.beans.AbstractSchema({
-                    type: app.beans.type.STRING,
-                    nullable: true,
-                    persistingName: '_id'
-                }),
-                name: new app.beans.AbstractSchema({type: app.beans.type.STRING}),
-                amount: new app.beans.AbstractSchema({
-                    type: app.beans.type.NUMBER,
-                    nullable: false,
-                    defaultValue: 0
-                }),
-                type: new app.beans.AbstractSchema({
-                    type: app.beans.type.STRING,
-                    nullable: false,
-                    defaultValue: 'down'
-                }),
-                repeat: new app.beans.AbstractSchema({
-                    type: app.beans.type.NUMBER,
-                    nullable: false,
-                    defaultValue: 1
-                }),
-                comment: new app.beans.AbstractSchema({
-                    type: app.beans.type.STRING,
-                    mandatory: false,
-                    nullable: true
-                }),
-                active: new app.beans.AbstractSchema({
-                    type: app.beans.type.BOOLEAN,
-                    nullable: false,
-                    persist: true
-                }),
-                provisionalPlanId: new app.beans.AbstractSchema({
-                    type: app.beans.type.NUMBER,
-                    mandatory: false,
-                    nullable: true,
-                    persistingName: 'ProvisionalPlanId'
-                }),
-                provisionalPlan: new app.beans.AbstractSchema({
-                    type: app.beans.type.OBJECT,
-                    mandatory: false,
-                    constructor: app.beans.ProvisionalPlan,
-                    beanName: 'ProvisionalPlan'
-                })
-            }
-        }
-    });
+
     exports.Movement = Movement;
     factory.registerBean('Movement', app.beans.Movement);
 

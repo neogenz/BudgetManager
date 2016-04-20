@@ -3,12 +3,20 @@
 
     exports.AbstractSchema = AbstractSchema;
 
-
     /**
      * @class AbstractSchema
      */
     /*jshint forin: false */
     function AbstractSchema(initObject) {
+        this.type = null;
+        this.beanName = null;
+        this.mandatory = true;
+        this.persisted = true;
+        this.nullable = false;
+        this.defaultValue = null;
+        this.contentObject = null;
+        this.persistingName = null;
+        this._propertyIsPresentInJson = true;
         if (!neogenz.utilities.isUndefinedOrNull(initObject)) {
             for (var key in initObject) {
                 if (!neogenz.utilities.isUndefined(this[key])) {
@@ -17,20 +25,6 @@
             }
         }
     }
-
-
-    AbstractSchema.prototype = Object.create(AbstractSchema.prototype, {
-        constructor: {value: AbstractSchema, writable: true},
-        type: {value: null, writable: true},
-        beanName: {value: null, writable: true},
-        mandatory: {value: true, writable: true},
-        persisted: {value: true, writable: true},
-        nullable: {value: false, writable: true},
-        defaultValue: {value: null, writable: true},
-        contentObject: {value: null, writable: true},
-        persistingName: {value: null, writable: true},
-        _propertyIsPresentInJson: {value: true, writable: true}
-    });
 
 
     /**
@@ -69,7 +63,7 @@
             //see in persistingName
             var persistingName = schema.persistingName;
             if (neogenz.utilities.isUndefined(json[persistingName])) {
-                this._propertyIsPresentInJson = false;
+                schema._propertyIsPresentInJson = false;
                 jsonKey = null;
             } else {
                 jsonKey = schema.persistingName;
@@ -95,34 +89,35 @@
      * @function _checkTypeIntegrityBySchema
      * @desc Check the integrity of json from a class-schema
      *       (object containing more AbstractSchema members).
-     * @param {Object} schema Schema object containing more
+     * @param {Object} schemaContainer Schema object containing more
      *        AbstractSchema members.
      * @param {Object} json Json to test integrity.
      * @memberOf AbstractSchema.prototype
      */
-    AbstractSchema.prototype.checkIntegrity = function (schema, json) {
+    AbstractSchema.prototype.checkIntegrity = function (schemaContainer, json) {
         var jsonKey, currentSchemaMember, currentJsonMember;
-        if (neogenz.utilities.isUndefinedOrNull(schema)) {
-            throw new Error('Schema to test must be defined and not null.');
+        if (neogenz.utilities.isUndefinedOrNull(schemaContainer)) {
+            throw new Error('schemaContainer to test must be defined and not null.');
         }
-
-        for (var key in schema) {
-            this._resetControlState();
-            currentSchemaMember = schema[key];
-            jsonKey = AbstractSchema.prototype._getJsonKey(currentSchemaMember, json, key);
-            currentJsonMember = json[jsonKey];
-            _validMandatoryConstraint(
-                this._propertyIsPresentInJson,
-                currentSchemaMember.mandatory,
-                key
-            );
-            _validNullableConstraint(
-                currentJsonMember,
-                currentSchemaMember.nullable,
-                key
-            );
-            if (!_.isUndefined(currentJsonMember) && _.isNull(currentJsonMember)) {
-                AbstractSchema.prototype._checkTypeIntegrityBySchema(currentSchemaMember, currentJsonMember, key);
+        for (var key in schemaContainer) {
+            if (schemaContainer.hasOwnProperty(key)) {
+                AbstractSchema.prototype._resetControlState.call(schemaContainer[key]);
+                currentSchemaMember = schemaContainer[key];
+                jsonKey = AbstractSchema.prototype._getJsonKey(currentSchemaMember, json, key);
+                currentJsonMember = json[jsonKey];
+                _validMandatoryConstraint(
+                    schemaContainer[key],
+                    currentSchemaMember.mandatory,
+                    key
+                );
+                _validNullableConstraint(
+                    currentJsonMember,
+                    currentSchemaMember.nullable,
+                    key
+                );
+                if (!_.isUndefined(currentJsonMember) && _.isNull(currentJsonMember)) {
+                    AbstractSchema.prototype._checkTypeIntegrityBySchema(currentSchemaMember, currentJsonMember, key);
+                }
             }
         }
     };

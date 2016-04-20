@@ -4,7 +4,8 @@
             defineNamespace: _defineNamespace,
             hasThisProperty: _hasThisProperty,
             isUndefinedOrNull: _isUndefinedOrNull,
-            isUndefined: _isUndefined
+            isUndefined: _isUndefined,
+            extendsChildFromParent: _extendsChildFromParent
         };
     })();
 
@@ -73,5 +74,18 @@
     function _isUndefined(value) {
         return (value === undefined);
     }
+
+
+    /**
+     * @name _extendsChildFromParent
+     * Create a prototypal inheritance by two object.
+     * @param {object} child Object that will have the prototype extended.
+     * @param {object} parent The protoype of this object that will used to extend the child object.
+     */
+    function _extendsChildFromParent(child, parent) {
+        child.prototype = Object.create(parent.prototype, {
+            constructor: {value: child, writable: true, enumerable: false}
+        });
+    };
 
 })(neogenz);

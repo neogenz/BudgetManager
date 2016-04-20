@@ -29,8 +29,12 @@
             var proto = Bean.prototype;
 
             // only register classes that fulfill the bean contract
-            if (proto._schema) {
+            if (typeof proto.init === 'function') {
                 _beanTypes[type] = Bean;
+            } else {
+                neogenz.logger.logError('AbstractFactory.js',
+                    '_registerBean()',
+                    'The bean ' + type + ' do not respect the contract.');
             }
 
             return app.beans.factory;

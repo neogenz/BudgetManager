@@ -1,29 +1,39 @@
 (function init(exports) {
     'use strict';
 
-
-    exports.AbstractBean = AbstractBean;
-
-
     /**
      * @class AbstractBean
      * Class inherited by all models class.
      */
-    function AbstractBean(json) {
-        if (!neogenz.utilities.isUndefinedOrNull(json)) {
-            this.initWith(json);
-        } else {
-            this.initWithDefaultValue();
-        }
+    function AbstractBean() {
+        this._schema = null;
     }
 
     AbstractBean.prototype.checkField = _checkField;
+
+    AbstractBean.prototype.init = _init;
 
     AbstractBean.prototype.initWith = _initWith;
 
     AbstractBean.prototype.initWithDefaultValue = _initWithDefaultValue;
 
     AbstractBean.prototype.getValidKeyOfProperty = _getValidKeyOfProperty;
+
+
+    /**
+     * @name _init
+     * Init the current bean in construction. Call the init with default value method or with an initialization
+     * object.
+     * @param {object|undefined|null} objectToInit Object to init the current bean.
+     */
+    function _init(objectToInit) {
+        /* jshint validthis: true */
+        if (!neogenz.utilities.isUndefinedOrNull(objectToInit)) {
+            this.initWith(objectToInit);
+        } else {
+            this.initWithDefaultValue();
+        }
+    }
 
 
     /**
@@ -145,4 +155,6 @@
         }
         return _arrayOfBeans;
     }
+
+    exports.AbstractBean = AbstractBean;
 })(app.beans);
