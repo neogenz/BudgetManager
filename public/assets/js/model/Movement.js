@@ -37,7 +37,7 @@
             comment: new app.beans.AbstractSchema({
                 type: app.beans.type.STRING,
                 mandatory: false,
-                nullable: true
+                nullable: false
             }),
             active: new app.beans.AbstractSchema({
                 type: app.beans.type.BOOLEAN,

@@ -14,8 +14,14 @@
          */
         function _getBean(type, initializationObject) {
             var Bean = _beanTypes[type];
+            var beanCreated = null;
 
-            return (Bean ? new app.beans[type](initializationObject) : null);
+            try {
+                return (Bean ? new app.beans[type](initializationObject) : null);
+            } catch (err) {
+                neogenz.logger.logError('AbstractFactory.js', '_getBean() of type ' + type, err.message);
+                throw err;
+            }
         }
 
 

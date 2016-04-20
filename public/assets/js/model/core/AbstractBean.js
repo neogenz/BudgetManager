@@ -150,8 +150,14 @@
      */
     function _getArrayBeanByBeanNameAndInitObject(beanName, collectionOfInitObjects) {
         var _arrayOfBeans = [];
+        var beanCreated = null;
         for (var i = 0; i < collectionOfInitObjects.length; i++) {
-            _arrayOfBeans.push(app.beans.factory.getBean(beanName, collectionOfInitObjects[i]));
+            try {
+                beanCreated = app.beans.factory.getBean(beanName, collectionOfInitObjects[i]);
+                _arrayOfBeans.push(beanCreated);
+            } catch (err) {
+                continue;
+            }
         }
         return _arrayOfBeans;
     }

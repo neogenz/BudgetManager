@@ -4,9 +4,11 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b04111e7-b392-4bdd-a441-c27feda74d45" name="Default" comment="- Refactorisation of model core : &#10;    - Change the way to create object (prototype = Object.create by constructor function)&#10;    - Used the new inheritance method implements in utilities&#10;    - Add a pertinent control in factory.getBean&#10;    - schema._propertyIsPresentInJson use now the current schema instance property and not the prototype shared property">
+    <list default="true" id="b04111e7-b392-4bdd-a441-c27feda74d45" name="Default" comment="Fix AbstractSchema.prototype.checkIntegrity little issue">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/Movement.js" afterPath="$PROJECT_DIR$/public/assets/js/model/Movement.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js" />
     </list>
     <ignored path="BudgetManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,27 +60,7 @@
         <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="endpointConfig.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/js/config/endpointConfig.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/js/bootstrap.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <caret line="158" column="25" selection-start-line="158" selection-start-column="25" selection-end-line="158" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -94,21 +76,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractSchema.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AbstractSchema.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.056074765">
-              <caret line="96" column="4" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="110" column="23" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractFactory.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AbstractFactory.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.46728972">
+              <caret line="21" column="90" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/routing.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="provisionalPlanFactory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -118,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/public/assets/js/model/Movement.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="30" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="30" />
+              <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -198,13 +200,13 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/assets/js/commons/HttpUtilities.js" />
         <option value="$PROJECT_DIR$/public/assets/js/config/endpointConfig.js" />
-        <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js" />
         <option value="$PROJECT_DIR$/public/assets/js/commons/Utilities.js" />
-        <option value="$PROJECT_DIR$/public/assets/js/model/Movement.js" />
         <option value="$PROJECT_DIR$/public/assets/js/model/ProvisionalPlan.js" />
         <option value="$PROJECT_DIR$/public/assets/js/model/User.js" />
-        <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" />
         <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/Movement.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js" />
       </list>
     </option>
   </component>
@@ -824,7 +826,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461189007259</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Fix AbstractSchema.prototype.checkIntegrity little issue">
+      <created>1461189434178</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1461189434178</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -916,7 +924,8 @@
     <MESSAGE value="- Refactorisation of model core&#10;- Adding jsdoc&#10;- Changing on app.tools namespace by neogenz.utilities, app.httpUtilities, etc ..." />
     <MESSAGE value="- Refactorisation of commonHelpers.js in more modules" />
     <MESSAGE value="- Refactorisation of model core : &#10;    - Change the way to create object (prototype = Object.create by constructor function)&#10;    - Used the new inheritance method implements in utilities&#10;    - Add a pertinent control in factory.getBean&#10;    - schema._propertyIsPresentInJson use now the current schema instance property and not the prototype shared property" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Refactorisation of model core : &#10;    - Change the way to create object (prototype = Object.create by constructor function)&#10;    - Used the new inheritance method implements in utilities&#10;    - Add a pertinent control in factory.getBean&#10;    - schema._propertyIsPresentInJson use now the current schema instance property and not the prototype shared property" />
+    <MESSAGE value="Fix AbstractSchema.prototype.checkIntegrity little issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix AbstractSchema.prototype.checkIntegrity little issue" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1206,13 +1215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/routing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01_Commons/authenticationHelpers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1269,13 +1271,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -1408,22 +1403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/commons/HttpUtilities.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1432,18 +1411,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/model/Movement.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="30" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="30" />
+          <caret line="110" column="23" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/Movement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.056074765">
-          <caret line="96" column="4" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/routing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/provisionalPlan/provisionalPlanFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="158" column="25" selection-start-line="158" selection-start-column="25" selection-end-line="158" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46728972">
+          <caret line="21" column="90" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
           <folding />
         </state>
       </provider>
