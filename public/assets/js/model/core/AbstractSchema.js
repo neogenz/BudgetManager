@@ -115,7 +115,7 @@
                     currentSchemaMember.nullable,
                     key
                 );
-                if (!_.isUndefined(currentJsonMember) && _.isNull(currentJsonMember)) {
+                if (!_.isUndefined(currentJsonMember) && !_.isNull(currentJsonMember)) {
                     AbstractSchema.prototype._checkTypeIntegrityBySchema(currentSchemaMember, currentJsonMember, key);
                 }
             }

@@ -4,16 +4,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b04111e7-b392-4bdd-a441-c27feda74d45" name="Default" comment="- Refactorisation of commonHelpers.js in more modules">
+    <list default="true" id="b04111e7-b392-4bdd-a441-c27feda74d45" name="Default" comment="- Refactorisation of model core : &#10;    - Change the way to create object (prototype = Object.create by constructor function)&#10;    - Used the new inheritance method implements in utilities&#10;    - Add a pertinent control in factory.getBean&#10;    - schema._propertyIsPresentInJson use now the current schema instance property and not the prototype shared property">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/commons/HttpUtilities.js" afterPath="$PROJECT_DIR$/public/assets/js/commons/HttpUtilities.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/commons/Utilities.js" afterPath="$PROJECT_DIR$/public/assets/js/commons/Utilities.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/config/endpointConfig.js" afterPath="$PROJECT_DIR$/public/assets/js/config/endpointConfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/Movement.js" afterPath="$PROJECT_DIR$/public/assets/js/model/Movement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/ProvisionalPlan.js" afterPath="$PROJECT_DIR$/public/assets/js/model/ProvisionalPlan.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/User.js" afterPath="$PROJECT_DIR$/public/assets/js/model/User.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js" afterPath="$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js" />
     </list>
     <ignored path="BudgetManager.iws" />
@@ -46,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/public/assets/js/commons/Utilities.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+              <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -62,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractBean.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AbstractBean.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2793296">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
@@ -102,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractSchema.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AbstractSchema.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.056074765">
+              <caret line="96" column="4" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -126,10 +118,8 @@
         <entry file="file://$PROJECT_DIR$/public/assets/js/model/Movement.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-              <folding>
-                <element signature="e#434#2289#0" expanded="false" />
-              </folding>
+              <caret line="39" column="30" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -209,11 +199,11 @@
         <option value="$PROJECT_DIR$/public/assets/js/commons/HttpUtilities.js" />
         <option value="$PROJECT_DIR$/public/assets/js/config/endpointConfig.js" />
         <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js" />
-        <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" />
         <option value="$PROJECT_DIR$/public/assets/js/commons/Utilities.js" />
         <option value="$PROJECT_DIR$/public/assets/js/model/Movement.js" />
         <option value="$PROJECT_DIR$/public/assets/js/model/ProvisionalPlan.js" />
         <option value="$PROJECT_DIR$/public/assets/js/model/User.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js" />
         <option value="$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js" />
       </list>
     </option>
@@ -828,7 +818,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461151417330</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="- Refactorisation of model core : &#10;    - Change the way to create object (prototype = Object.create by constructor function)&#10;    - Used the new inheritance method implements in utilities&#10;    - Add a pertinent control in factory.getBean&#10;    - schema._propertyIsPresentInJson use now the current schema instance property and not the prototype shared property">
+      <created>1461189007258</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1461189007259</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -844,11 +840,12 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24524313" sideWeight="0.69734514" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24524313" sideWeight="0.69627" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3221154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24524313" sideWeight="0.30265486" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24524313" sideWeight="0.30373" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32091346" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32168674" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3253012" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31971154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24876674" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -857,7 +854,6 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33894232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18629807" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -919,7 +915,8 @@
     <MESSAGE value="- New version on utilities API&#10;- Adding of jshint validation via grunt&#10;- New version of model core" />
     <MESSAGE value="- Refactorisation of model core&#10;- Adding jsdoc&#10;- Changing on app.tools namespace by neogenz.utilities, app.httpUtilities, etc ..." />
     <MESSAGE value="- Refactorisation of commonHelpers.js in more modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Refactorisation of commonHelpers.js in more modules" />
+    <MESSAGE value="- Refactorisation of model core : &#10;    - Change the way to create object (prototype = Object.create by constructor function)&#10;    - Used the new inheritance method implements in utilities&#10;    - Add a pertinent control in factory.getBean&#10;    - schema._propertyIsPresentInJson use now the current schema instance property and not the prototype shared property" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Refactorisation of model core : &#10;    - Change the way to create object (prototype = Object.create by constructor function)&#10;    - Used the new inheritance method implements in utilities&#10;    - Add a pertinent control in factory.getBean&#10;    - schema._propertyIsPresentInJson use now the current schema instance property and not the prototype shared property" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1371,14 +1368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/commons/HttpUtilities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1398,18 +1387,8 @@
     <entry file="file://$PROJECT_DIR$/public/assets/js/commons/Utilities.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+          <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/model/Movement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-          <folding>
-            <element signature="e#434#2289#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1429,14 +1408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1447,8 +1418,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractBean.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2793296">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/commons/HttpUtilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/Movement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/model/core/AbstractSchema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.056074765">
+          <caret line="96" column="4" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="43" />
           <folding />
         </state>
       </provider>
