@@ -2,6 +2,7 @@
     'use strict';
 
     window.app = {};
+    window.neogenz = {};
 
 //Définition des namespaces racines
     //neogenz.utilities = {};

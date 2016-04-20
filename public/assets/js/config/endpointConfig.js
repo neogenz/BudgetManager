@@ -4,12 +4,22 @@
     neogenz.utilities.defineNamespace(app, 'budgetManager.config');
     neogenz.utilities.defineNamespace(app, 'budgetManager.endpoints');
 
-    app.budgetManager.config.webApi = {
-        subdomain: 'budgetmanager',
-        domain: 'localhost',
-        port: '3000', //80
-        protocol: 'http'
-    };
+    app.budgetManager.config.webApi = (function () {
+        var _subdomain = 'budgetmanager',
+            _domain = 'localhost',
+            _port = '3000', //80
+            _protocol = 'http',
+            _baseUrl = _protocol + '://' + _domain;
+        return {
+            subdomain: _subdomain,
+            domain: _domain,
+            port: _port, //80
+            protocol: _protocol,
+            baseUrl: _baseUrl
+        };
+    })();
+
+    debugger;
 
     app.budgetManager.endpoints = {
         nodeEndpoint: app.budgetManager.config.webApi.protocol + '://' +

@@ -18,6 +18,7 @@ angular
 angular
     .module('appBudgetManager')
     .run(function ($localStorage, $state, $rootScope) {
+
     });
 
 angular
