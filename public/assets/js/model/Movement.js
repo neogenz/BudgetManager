@@ -57,7 +57,7 @@
                 beanName: 'ProvisionalPlan'
             })
         };
-        this.init(json);
+        //this.init(json);
     }
 
     exports.Movement = Movement;

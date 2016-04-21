@@ -21,8 +21,8 @@
             valid: new app.beans.AbstractSchema({type: app.beans.type.BOOLEAN, defaultValue: true}),
             movements: new app.beans.AbstractSchema({
                 type: app.beans.type.ARRAY_OBJECT,
-                mandatory: false,
                 persistingName: 'Movements',
+                defaultValue: [],
                 contentObject: new app.beans.AbstractSchema({
                     type: app.beans.type.OBJECT,
                     beanName: 'Movement',
@@ -31,7 +31,7 @@
             })
         };
 
-        this.init(json);
+        //this.init(json);
     }
 
 
