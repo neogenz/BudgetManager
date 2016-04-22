@@ -29,8 +29,8 @@
          * @memberOf Controllers.MovementAddController
          */
         function defineScope() {
-            $scope.modes = app.uiManager.formMode;
-            $scope.mode = (_.isNull(movementToWork.id) ? app.uiManager.formMode.create : app.uiManager.formMode.edit);
+            $scope.modes = budgetManager.uiManager.formMode;
+            $scope.mode = (_.isNull(movementToWork.id) ? budgetManager.uiManager.formMode.create : budgetManager.uiManager.formMode.edit);
             $scope.provisionalPlanTitle = provisionalPlanTitle;
             $scope.movement = _.clone(movementToWork);
         }

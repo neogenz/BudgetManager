@@ -214,4 +214,4 @@
             }
         }
     };
-})(app.beans);
+})(neogenz.beans);

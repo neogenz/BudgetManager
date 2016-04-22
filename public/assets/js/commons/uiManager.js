@@ -5,13 +5,13 @@
 
 
 (function init() {
-    app.uiManager.formMode = {
+    budgetManager.uiManager.formMode = {
         edit: 0,
         add: 1,
         create: 2
     };
 
-    app.uiManager.messages = {
+    budgetManager.uiManager.messages = {
         signup: {
             passwordNotEquals: 'Les mots de passes ne corresponde pas.',
             success: 'Inscription effectué avec succès.',

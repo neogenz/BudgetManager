@@ -45,7 +45,7 @@
      */
     /* jshint validthis: true */
     function _checkField(json) {
-        app.beans.AbstractSchema.prototype.checkIntegrity(this._schema, json);
+        neogenz.beans.AbstractSchema.prototype.checkIntegrity(this._schema, json);
     }
 
 
@@ -67,13 +67,13 @@
             if (_isAPrimaryType(objectToInit[objectKey])) {
                 this[schemaKey] = objectToInit[objectKey];
             } else if (_isAComplexeType(objectToInit[objectKey])) {
-                if (this._schema[schemaKey].type === app.beans.type.ARRAY_OBJECT) {
+                if (this._schema[schemaKey].type === neogenz.beans.type.ARRAY_OBJECT) {
                     this[schemaKey] = _getArrayBeanByBeanNameAndInitObject(
                         this._schema[schemaKey].contentObject.beanName,
                         objectToInit[objectKey]
                     );
                 } else {
-                    this[schemaKey] = app.beans.factory.getBean(
+                    this[schemaKey] = neogenz.beans.factory.getBean(
                         this._schema[schemaKey].beanName,
                         objectToInit[objectKey]
                     );
@@ -153,7 +153,7 @@
         var beanCreated = null;
         for (var i = 0; i < collectionOfInitObjects.length; i++) {
             try {
-                beanCreated = app.beans.factory.getBean(beanName, collectionOfInitObjects[i]);
+                beanCreated = neogenz.beans.factory.getBean(beanName, collectionOfInitObjects[i]);
                 _arrayOfBeans.push(beanCreated);
             } catch (err) {
                 continue;
@@ -163,4 +163,4 @@
     }
 
     exports.AbstractBean = AbstractBean;
-})(app.beans);
+})(neogenz.beans);

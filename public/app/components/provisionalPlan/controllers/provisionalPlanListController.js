@@ -59,7 +59,7 @@
                     controller: 'provisionalPlanAddController',
                     resolve: {
                         provisionalPlan: function () {
-                            return app.beans.factory.getBean('ProvisionalPlan', null);
+                            return neogenz.beans.factory.getBean('ProvisionalPlan', null);
                         }
                     }
                 };

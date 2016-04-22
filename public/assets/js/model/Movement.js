@@ -1,10 +1,10 @@
 (function init(exports, factory) {
     'use strict';
 
-    neogenz.utilities.extendsChildFromParent(Movement, app.beans.AbstractBean);
+    neogenz.utilities.extendsChildFromParent(Movement, neogenz.beans.AbstractBean);
 
     function Movement(json) {
-        app.beans.AbstractBean.call(this, json);
+        neogenz.beans.AbstractBean.call(this, json);
         this.id = null;
         this.name = null;
         this.type = null;
@@ -13,47 +13,47 @@
         this.active = null;
         this.provisionalPlan = null;
         this._schema = {
-            id: new app.beans.AbstractSchema({
-                type: app.beans.type.STRING,
+            id: new neogenz.beans.AbstractSchema({
+                type: neogenz.beans.type.STRING,
                 nullable: true,
                 persistingName: '_id'
             }),
-            name: new app.beans.AbstractSchema({type: app.beans.type.STRING}),
-            amount: new app.beans.AbstractSchema({
-                type: app.beans.type.NUMBER,
+            name: new neogenz.beans.AbstractSchema({type: neogenz.beans.type.STRING}),
+            amount: new neogenz.beans.AbstractSchema({
+                type: neogenz.beans.type.NUMBER,
                 nullable: false,
                 defaultValue: 0
             }),
-            type: new app.beans.AbstractSchema({
-                type: app.beans.type.STRING,
+            type: new neogenz.beans.AbstractSchema({
+                type: neogenz.beans.type.STRING,
                 nullable: false,
                 defaultValue: 'down'
             }),
-            repeat: new app.beans.AbstractSchema({
-                type: app.beans.type.NUMBER,
+            repeat: new neogenz.beans.AbstractSchema({
+                type: neogenz.beans.type.NUMBER,
                 nullable: false,
                 defaultValue: 1
             }),
-            comment: new app.beans.AbstractSchema({
-                type: app.beans.type.STRING,
+            comment: new neogenz.beans.AbstractSchema({
+                type: neogenz.beans.type.STRING,
                 mandatory: false,
                 nullable: true
             }),
-            active: new app.beans.AbstractSchema({
-                type: app.beans.type.BOOLEAN,
+            active: new neogenz.beans.AbstractSchema({
+                type: neogenz.beans.type.BOOLEAN,
                 nullable: false,
                 persist: true
             }),
-            provisionalPlanId: new app.beans.AbstractSchema({
-                type: app.beans.type.NUMBER,
+            provisionalPlanId: new neogenz.beans.AbstractSchema({
+                type: neogenz.beans.type.NUMBER,
                 mandatory: false,
                 nullable: true,
                 persistingName: 'ProvisionalPlanId'
             }),
-            provisionalPlan: new app.beans.AbstractSchema({
-                type: app.beans.type.OBJECT,
+            provisionalPlan: new neogenz.beans.AbstractSchema({
+                type: neogenz.beans.type.OBJECT,
                 mandatory: false,
-                constructor: app.beans.ProvisionalPlan,
+                constructor: neogenz.beans.ProvisionalPlan,
                 beanName: 'ProvisionalPlan'
             })
         };
@@ -61,6 +61,6 @@
     }
 
     exports.Movement = Movement;
-    factory.registerBean('Movement', app.beans.Movement);
+    factory.registerBean('Movement', exports.Movement);
 
-})(app.beans, app.beans.factory);
+})(budgetManager.beans, neogenz.beans.factory);

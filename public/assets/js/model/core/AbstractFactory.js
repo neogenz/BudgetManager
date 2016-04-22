@@ -1,4 +1,4 @@
-(function init(exports) {
+(function init(exports, beansNamespace) {
     'use strict';
     //Revealing module pattern
     exports.factory = (function () {
@@ -15,9 +15,9 @@
         function _getBean(type, initializationObject) {
             var Bean = _beanTypes[type];
             var beanCreated = null;
-
+            debugger; //Verif le new Bean ? on pourrais donc enlever les beansNamespaces
             try {
-                beanCreated = (Bean ? new app.beans[type](initializationObject) : null);
+                beanCreated = (Bean ? new Bean(initializationObject) : null);
                 beanCreated.init(initializationObject);
                 return beanCreated;
             } catch (err) {
@@ -44,8 +44,8 @@
                     '_registerBean()',
                     'The bean ' + type + ' do not respect the contract.');
             }
-
-            return app.beans.factory;
+            debugger; // vérifier si exports est pris dans la closure sinon utiliser neoegenz.factory
+            return exports.factory;
         }
 
 
@@ -54,4 +54,4 @@
             registerBean: _registerBean
         };
     })();
-})(app.beans);
+})(neogenz.beans, budgetManager.beans);

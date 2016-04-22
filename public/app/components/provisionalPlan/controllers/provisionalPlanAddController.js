@@ -30,8 +30,8 @@
          */
         function defineScope() {
             $scope.provisionalPlan = provisionalPlan;
-            $scope.mode = (provisionalPlan.id == null ? app.uiManager.formMode.create : app.uiManager.formMode.edit);
-            $scope.modes = app.uiManager.formMode;
+            $scope.mode = (provisionalPlan.id == null ? budgetManager.uiManager.formMode.create : budgetManager.uiManager.formMode.edit);
+            $scope.modes = budgetManager.uiManager.formMode;
         }
 
 

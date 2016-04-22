@@ -1,15 +1,17 @@
 (function () {
     'use strict';
 
-    window.app = {};
+    //Definition of racine namespaces
+    window.budgetManager = {};
     window.neogenz = {};
 
-//Définition des namespaces racines
-    //neogenz.utilities = {};
-    app.beans = {};
-    app.config = {};
-    app.uiManager = {
+    //Definition of sub namespaces
+    budgetManager.beans = {};
+    budgetManager.config = {};
+    budgetManager.uiManager = {
         messages: {},
         formMode: {}
     };
+
+    neogenz.beans = {};
 })();

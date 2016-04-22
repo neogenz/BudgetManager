@@ -1,9 +1,9 @@
 (function init() {
     'use strict';
 
-    neogenz.utilities.defineNamespace(app, 'budgetManager.config');
+    neogenz.utilities.defineNamespace(budgetManager, 'config');
 
-    app.budgetManager.config = {
+    budgetManager.config = {
         mock: false,
         debug: true
     };

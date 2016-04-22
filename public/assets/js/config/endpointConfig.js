@@ -1,10 +1,10 @@
 (function init() {
     'use strict';
 
-    neogenz.utilities.defineNamespace(app, 'budgetManager.config');
-    neogenz.utilities.defineNamespace(app, 'budgetManager.endpoints');
+    neogenz.utilities.defineNamespace(budgetManager, 'config');
+    neogenz.utilities.defineNamespace(budgetManager, 'endpoints');
 
-    app.budgetManager.config.webApi = (function () {
+    budgetManager.config.webApi = (function () {
         var _subdomain = 'budgetmanager',
             _domain = 'localhost',
             _port = '3000', //80
@@ -19,10 +19,10 @@
         };
     })();
 
-    app.budgetManager.endpoints = {
-        nodeEndpoint: app.budgetManager.config.webApi.protocol + '://' +
-            //app.budgetManager.config.webApi.subdomain + '.' +
-        app.budgetManager.config.webApi.domain + ':' +
-        app.budgetManager.config.webApi.port
+    budgetManager.endpoints = {
+        nodeEndpoint: budgetManager.config.webApi.protocol + '://' +
+            //budgetManager.config.webApi.subdomain + '.' +
+        budgetManager.config.webApi.domain + ':' +
+        budgetManager.config.webApi.port
     };
 })();

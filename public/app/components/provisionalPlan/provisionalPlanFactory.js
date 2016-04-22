@@ -27,7 +27,7 @@
                 if (!data) {
                     throw new Error('data');
                 }
-                var factory = app.beans.factory;
+                var factory = neogenz.beans.factory;
                 if (!_.isArray(data)) {
                     throw new Error('The result of promise must be an array');
                 }
@@ -51,7 +51,7 @@
                     '/me/provisionalPlans/' + id);
                 var promise = $http(requestOptions);
                 promise.success(function (data) {
-                    var factory = app.beans.factory;
+                    var factory = neogenz.beans.factory;
                     var provisionalPlans = factory.getBean('ProvisionalPlan', data);
                     def.resolve(provisionalPlans);
                 }).error(function () {

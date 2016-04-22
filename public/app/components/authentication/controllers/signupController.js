@@ -59,7 +59,7 @@
          */
         function _signup(formIsValid) {
             if (_passwordAndConfirmationIsEqual() && formIsValid) {
-                var user = new app.beans.factory.getBean('User', null);
+                var user = new neogenz.beans.factory.getBean('User', null);
                 user.email = $scope.userInput.email.toLowerCase();
                 user.password = $scope.userInput.password;
                 user.firstName = $scope.userInput.firstName;

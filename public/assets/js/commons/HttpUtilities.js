@@ -86,5 +86,5 @@
             url: _baseUrl + ':' + _portNumber + endpoint,
         };
     }
-})(neogenz, app.budgetManager.config.webApi.baseUrl, app.budgetManager.config.webApi.port);
+})(neogenz, budgetManager.config.webApi.baseUrl, budgetManager.config.webApi.port);
 //@todo Remplacer par fichier de conf, tester quand undefined

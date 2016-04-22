@@ -200,7 +200,7 @@
             }
             if (_.isNull(movementToWork)) {
                 //Build new movement by default
-                $scope.movementToWork = app.beans.factory.getBean('Movement', null); //app.data.autocomplete.Movement();
+                $scope.movementToWork = neogenz.beans.factory.getBean('Movement', null); //app.data.autocomplete.Movement();
                 $scope.movementToWork.active = true;
                 $scope.movementToWork.name = 'Mouvement d\'argent';
                 //$scope.movementToWork.name = 'Mouvement d\'argent';
