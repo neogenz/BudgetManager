@@ -5,21 +5,32 @@
      * @class AbstractBean
      * Class inherited by all models class.
      */
-    function AbstractBean() {
-        this._schema = null;
-    }
+    // function AbstractBean() {
+    //     this._schema = null;
+    // }
+    //
+    // AbstractBean.prototype.checkField = _checkField;
+    //
+    // AbstractBean.prototype.init = _init;
+    //
+    // AbstractBean.prototype.initWith = _initWith;
+    //
+    // AbstractBean.prototype.initWithDefaultValue = _initWithDefaultValue;
+    //
+    // AbstractBean.prototype.getValidKeyOfProperty = _getValidKeyOfProperty;
 
-    AbstractBean.prototype.checkField = _checkField;
-
-    AbstractBean.prototype.init = _init;
-
-    AbstractBean.prototype.initWith = _initWith;
-
-    AbstractBean.prototype.initWithDefaultValue = _initWithDefaultValue;
-
-    AbstractBean.prototype.getValidKeyOfProperty = _getValidKeyOfProperty;
-
-
+    var AbstractBean = neogenz.BaseClass.extend({
+        initialize: function () {
+            this._schema = null;
+        },
+        checkField: _checkField,
+        init: _init,
+        initWith: _initWith,
+        initWithDefaultValue: _initWithDefaultValue,
+        getValidKeyOfProperty: _getValidKeyOfProperty
+    });
+    
+    
     /**
      * @name _init
      * Init the current bean in construction. Call the init with default value method or with an initialization

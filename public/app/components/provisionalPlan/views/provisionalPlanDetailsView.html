@@ -41,13 +41,15 @@
                 <div ng-switch-when="0">
                     <div class="row">
                         <div class="col-sm-4">
-                            <div ng-include src="'app/components/movement/views/movementView.html'"></div>
+                            <!--<div ng-include src="'app/components/movement/views/movementView.html'"></div>-->
+                            <movement movement="movement" provisional-plan="provisionalPlan"></movement>
                         </div>
                     </div>
                 </div>
                 <div ng-switch-default>
                     <div class="col-sm-4">
-                        <div ng-include src="'app/components/movement/views/movementView.html'"></div>
+                        <!--<div ng-include src="'app/components/movement/views/movementView.html'"></div>-->
+                        <movement movement="movement" provisional-plan="provisionalPlan"></movement>
                     </div>
                 </div>
             </div>

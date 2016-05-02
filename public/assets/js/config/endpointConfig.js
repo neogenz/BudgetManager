@@ -6,10 +6,10 @@
 
     budgetManager.config.webApi = (function () {
         var _subdomain = 'budgetmanager',
-            _domain = 'localhost',
-            _port = '3000', //80
+            _domain = 'mdesogus.com',
+            _port = '80', //80
             _protocol = 'http',
-            _baseUrl = _protocol + '://' + _domain;
+            _baseUrl = _protocol + '://' + _subdomain + '.' + _domain;
         return {
             subdomain: _subdomain,
             domain: _domain,

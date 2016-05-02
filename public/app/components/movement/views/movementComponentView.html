@@ -1,0 +1,56 @@
+<div class="panel panel-default"
+     ng-style="!movementCtrl.movement.active && {'background-color': '#F5F5F5'}">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>
+                    <a ng-click="movementCtrl.inverseActiveStateClickListener()"
+                       class="pull-right small-left-separation">
+                    <span class="cursor"
+                          ng-class="{true: 'fa fa-toggle-on', false: 'fa fa-toggle-off'}[movementCtrl.movement.active]">
+                    </span>
+                    </a>
+                </h4>
+                <h4>
+                    <a ng-click="movementCtrl.deleteClickListener()"
+                       class="pull-right small-left-separation">
+                    <span class="glyphicon glyphicon-trash cursor">
+                    </span>
+                    </a>
+                </h4>
+                <h4>
+                    <a ng-click="movementCtrl.openEditModalClickListener()" href
+                       class="pull-right">
+                    <span class="glyphicon glyphicon-pencil cursor">
+                    </span>
+                    </a>
+                </h4>
+            </div>
+        </div>
+        <span class="cursor" ng-click="movementCtrl.openMovementDetailsModalClickListener()">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-center margin-top-10">
+                        {{movementCtrl.movement.name}}
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center h2-responsive">
+                        <p ng-show="movementCtrl.movement.type === 'up'" class="color-green">
+                            {{movementCtrl.movement.amount}}€
+                            <span class="fa fa-arrow-up"></span>
+                            <small ng-show="movementCtrl.movement.repeat > 1">x {{movementCtrl.movement.repeat}}</small>
+                        </p>
+                        <p ng-show="movementCtrl.movement.type === 'down'" class="color-red">
+                            {{movementCtrl.movement.amount}}€
+                            <span class="fa fa-arrow-down"></span>
+                            <small ng-show="movementCtrl.movement.repeat > 1">x {{movementCtrl.movement.repeat}}</small>
+                        </p>
+                    </h2>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>

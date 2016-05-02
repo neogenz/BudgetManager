@@ -3,7 +3,7 @@
     angular
         .module('appBudgetManager')
         .factory('provisionalPlanWebApi', ProvisionalPlanWebAPI);
-
+    
     ProvisionalPlanWebAPI.$inject = ['$http', '$q'];
     function ProvisionalPlanWebAPI($http, $q) {
 
@@ -20,7 +20,8 @@
         function _findAll() {
             //var def = $q.defer();
             var requestOptions = neogenz.httpUtilities.buildGetRequestOptToCallThisUrl(
-                '/me/provisionalPlans');
+                '/me/provisionalPlans'
+            );
             var promise = $http(requestOptions);
             return promise.then(function (response) {
                 var data = response.data;
@@ -48,7 +49,8 @@
             }
             else {
                 var requestOptions = neogenz.httpUtilities.buildGetRequestOptToCallThisUrl(
-                    '/me/provisionalPlans/' + id);
+                    '/me/provisionalPlans/' + id
+                );
                 var promise = $http(requestOptions);
                 promise.success(function (data) {
                     var factory = neogenz.beans.factory;
@@ -69,7 +71,8 @@
             else {
                 var requestOptions = neogenz.httpUtilities.buildPostRequestOptToCallThisUrl(
                     '/me/provisionalPlans/' + movementToAdd.provisionalPlanId,
-                    movementToAdd);
+                    movementToAdd
+                );
                 var promise = $http(requestOptions);
                 promise.success(function () {
                     def.resolve();
@@ -133,4 +136,3 @@
     }
 
 })();
-

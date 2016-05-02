@@ -4,7 +4,7 @@
     angular
         .module('appBudgetManager')
         .service('provisionalPlanCalculus', ProvisionalPlanCalculus);
-
+    
     function ProvisionalPlanCalculus() {
         this.getTotalMovementsOf = function (provisionalPlan) {
             var total = provisionalPlan.baseAmount;
@@ -65,5 +65,4 @@
             return total;
         };
     }
-
 })();

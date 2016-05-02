@@ -1,32 +1,54 @@
 (function initSchema(exports) {
     'use strict';
 
-    exports.AbstractSchema = AbstractSchema;
-
     /**
      * @class AbstractSchema
      */
     /*jshint forin: false */
-    function AbstractSchema(initObject) {
-        this.type = null;
-        this.beanName = null;
-        this.mandatory = true;
-        this.persisted = true;
-        this.nullable = false;
-        this.defaultValue = null;
-        this.contentObject = null;
-        this.persistingName = null;
-        this._propertyIsPresentInJson = true;
-        if (!neogenz.utilities.isUndefinedOrNull(initObject)) {
-            for (var key in initObject) {
-                if (!neogenz.utilities.isUndefined(this[key])) {
-                    this[key] = initObject[key];
+    var AbstractSchema = neogenz.BaseClass.extend({
+        initialize: function (initObject) {
+            this.type = null;
+            this.beanName = null;
+            this.mandatory = true;
+            this.persisted = true;
+            this.nullable = false;
+            this.defaultValue = null;
+            this.contentObject = null;
+            this.persistingName = null;
+            this._propertyIsPresentInJson = true;
+            if (!neogenz.utilities.isUndefinedOrNull(initObject)) {
+                for (var key in initObject) {
+                    if (!neogenz.utilities.isUndefined(this[key])) {
+                        this[key] = initObject[key];
+                    }
                 }
             }
-        }
-    }
-
-
+        },
+        _checkTypeIntegrityBySchema: _checkTypeIntegrityBySchema,
+        _getJsonKey: _getJsonKey,
+        _resetControlState: _resetControlState,
+        checkIntegrity: _checkIntegrity
+    })
+    // function AbstractSchema(initObject) {
+    //     this.type = null;
+    //     this.beanName = null;
+    //     this.mandatory = true;
+    //     this.persisted = true;
+    //     this.nullable = false;
+    //     this.defaultValue = null;
+    //     this.contentObject = null;
+    //     this.persistingName = null;
+    //     this._propertyIsPresentInJson = true;
+    //     if (!neogenz.utilities.isUndefinedOrNull(initObject)) {
+    //         for (var key in initObject) {
+    //             if (!neogenz.utilities.isUndefined(this[key])) {
+    //                 this[key] = initObject[key];
+    //             }
+    //         }
+    //     }
+    // }
+    
+    
     /**
      * @function _checkTypeIntegrityBySchema
      * @desc Check the integrity of value by the schema configuration
@@ -35,7 +57,7 @@
      * @param {string} propertyName Name of property tested on schema, to log if an error is occurred
      * @memberOf AbstractSchema.prototype
      */
-    AbstractSchema.prototype._checkTypeIntegrityBySchema = function (schema, value, propertyName) {
+    function _checkTypeIntegrityBySchema(schema, value, propertyName) {
         if (neogenz.utilities.isUndefinedOrNull(schema)) {
             throw new Error('The schema is null or undefined');
         }
@@ -54,7 +76,7 @@
      * @param {string} keyToFindInJson Key to test json
      * @memberOf AbstractSchema.prototype
      */
-    AbstractSchema.prototype._getJsonKey = function (schema, json, keyToFindInJson) {
+    function _getJsonKey(schema, json, keyToFindInJson) {
         var jsonKey = null;
         if (neogenz.utilities.isUndefined(json[keyToFindInJson])) {
             console.warn('This porperty : ' + keyToFindInJson +
@@ -80,7 +102,7 @@
      * @desc Reset the controls states of instance
      * @memberOf AbstractSchema.prototype
      */
-    AbstractSchema.prototype._resetControlState = function () {
+    function _resetControlState() {
         this._propertyIsPresentInJson = true;
     };
 
@@ -94,7 +116,7 @@
      * @param {Object} json Json to test integrity.
      * @memberOf AbstractSchema.prototype
      */
-    AbstractSchema.prototype.checkIntegrity = function (schemaContainer, json) {
+    function _checkIntegrity(schemaContainer, json) {
         var jsonKey, currentSchemaMember, currentJsonMember;
         if (neogenz.utilities.isUndefinedOrNull(schemaContainer)) {
             throw new Error('schemaContainer to test must be defined and not null.');
@@ -214,4 +236,7 @@
             }
         }
     };
+
+    exports.AbstractSchema = AbstractSchema;
+    
 })(neogenz.beans);
