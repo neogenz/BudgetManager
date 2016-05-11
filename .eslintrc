@@ -1,0 +1,4 @@
+"extends": "airbnb/legacy"
+"globals": {
+  "neogenz": true
+  }

@@ -1,0 +1,30 @@
+<div class="centered panel panel-default without-margin">
+    <div class="panel-heading">
+        <h4 class="h4-responsive">Détails du mouvement <strong><em>{{::movementDetailsCtrl.movement.name}}</em></strong>
+        </h4>
+    </div>
+    <div class="panel-body">
+        <table class="table no-margin-bottom">
+            <tbody>
+            <tr>
+                <td class="col-md-1 col-xs-2"><strong>Montant</strong></td>
+                <td>{{::movementDetailsCtrl.movement.amount}}€</td>
+            </tr>
+            <tr>
+                <td><strong>Type</strong></td>
+                <td>
+                    <span class="fa" ng-class="movementDetailsCtrl.arrowClass"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Répétition(s)</strong></td>
+                <td>{{::movementDetailsCtrl.movement.repeat}}</td>
+            </tr>
+            <tr>
+                <td><strong>Commentaire</strong></td>
+                <td>{{::movementDetailsCtrl.movement.comment}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

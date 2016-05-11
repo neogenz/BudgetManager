@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-sm-12 text-center">
+        <!--<h1 ng-show="provisionalPlans.length === 0">Aucun-->
+        <!--<small>plan prévisionnel</small>-->
+        <!--</h1>-->
+
+        <!--<h1 ng-show="provisionalPlans.length === 1">Dernier-->
+        <!--<small>plan prévisionnel</small>-->
+        <!--</h1>-->
+
+        <!--<h1 ng-show="provisionalPlans.length > 1">{{provisionalPlans.length}} derniers-->
+        <!--<small>plans prévisionnels</small>-->
+        <!--</h1>-->
+
+        <h1>{{provisionalPlanListCtrl.multiplicityTitle}}
+            <small>{{provisionalPlanListCtrl.pluralTitle}}</small>
+        </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 text-center medium-bordered">
+        <button class="btn btn-lg btn-info btn-lg-responsive"
+                ng-click="provisionalPlanListCtrl.openModalToAddProvisionalPlanClickListener()">Nouveau plan de
+            prévoyance
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <!--todo placer le ng-repeat sur le composant-->
+        <div ng-repeat="provisionalPlan in provisionalPlanListCtrl.provisionalPlans | orderBy:'-createdAt' ">
+            <provisional-plan-preview-cmp
+                    provisional-plan="provisionalPlan"
+                    ui-sref="provisionalPlanDetails({id:provisionalPlan.id})">
+            </provisional-plan-preview-cmp>
+            <!-- <div ng-include="'app/components/provisionalPlan/views/provisionalPlanPreviewView.html'"></div> -->
+        </div>
+    </div>
+</div>

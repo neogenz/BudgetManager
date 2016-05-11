@@ -74,8 +74,10 @@
                     movementToAdd
                 );
                 var promise = $http(requestOptions);
-                promise.success(function () {
-                    def.resolve();
+                promise.success(function (rawMovementAdded) {
+                    debugger;
+                    var beanMovementAdded = neogenz.beans.factory.getBean('Movement', rawMovementAdded);
+                    def.resolve(beanMovementAdded);
                 }).error(function () {
                     def.reject('Add of movement to provisional plan has occured an error.');
                 });
@@ -90,8 +92,9 @@
             if (!neogenz.utilities.isUndefinedOrNull(bodyReq)) {
                 var requestOptions = neogenz.httpUtilities.buildPostRequestOptToCallThisUrl('/me/provisionalPlans/', bodyReq);
                 promise = $http(requestOptions);
-                promise.success(function () {
-                    def.resolve();
+                promise.success(function (rawCreated) {
+                    var created = neogenz.beans.factory.getBean('ProvisionalPlan', rawCreated);
+                    def.resolve(created);
                 }).error(function () {
                     def.reject();
                 });

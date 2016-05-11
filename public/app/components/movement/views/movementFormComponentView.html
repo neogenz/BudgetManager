@@ -1,0 +1,73 @@
+<div class="centered panel panel-default without-margin">
+    <div class="panel-heading">
+        <h5 class="h5-responsive">{{::movementFormCtrl.modeMessage}}
+            <strong><em>{{::movementFormCtrl.provisionalPlanTitle}}</em></strong></h5>
+    </div>
+    <div class="panel-body">
+        <form role="form" name="movementForm">
+            <div class="form-group" ng-class="{ 'has-error' : movementForm.name.$invalid && movementForm.name.$dirty }">
+                <label for="name">Nom*</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nom"
+                       ng-model="movementFormCtrl.movement.name" required="required">
+                <p ng-show="movementForm.name.$error.required && movementForm.name.$dirty" class="help-block">
+                    Veuillez entrer un nom de mouvement.
+                </p>
+            </div>
+            <div class="form-group"
+                 ng-class="{ 'has-error' : movementForm.amount.$invalid && movementForm.amount.$dirty }">
+                <label for="amount">Montant*</label>
+
+                <input type="number" class="form-control" id="amount" name="amount" placeholder="Montant"
+                       ng-model="movementFormCtrl.movement.amount" required="required">
+                <p ng-show="movementForm.amount.$error.required && movementForm.amount.$dirty" class="help-block">
+                    Veuillez entrer un montant pour ce mouvement.
+                </p>
+                <p ng-show="!movementForm.amount.$error.required && movementForm.amount.$invalid" class="help-block">
+                    Veuillez entrer un chiffre valide.
+                </p>
+            </div>
+            <div class="form-group">
+                <label for="optionsRadios">Type de mouvement*</label>
+                <div class="radio-inline">
+                    <label>
+                        <input checked type="radio" name="optionsRadios" id="optionsRadios" value="down"
+                               ng-model="movementFormCtrl.movement.type">
+                        Déscendant
+                    </label>
+                </div>
+                <div class="radio-inline">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="up"
+                               ng-model="movementFormCtrl.movement.type">
+                        Montant
+                    </label>
+                </div>
+            </div>
+            <div class="form-group"
+                 ng-class="{ 'has-error' : movementForm.repeat.$invalid && movementForm.repeat.$dirty }">
+                <label for="repeat">Répétitions*</label>
+
+                <input type="number" class="form-control" id="repeat" name="repeat" placeholder="Répétitions"
+                       ng-model="movementFormCtrl.movement.repeat" required="required">
+                <p ng-show="movementForm.repeat.$error.required && movementForm.repeat.$dirty" class="help-block">
+                    Veuillez entrer une répétition de mouvement.
+                </p>
+                <p ng-show="!movementForm.repeat.$error.required && movementForm.repeat.$invalid" class="help-block">
+                    Veuillez entrer un chiffre valide.
+                </p>
+            </div>
+            <div class="form-group">
+                <label for="comment">Commentaire</label>
+                <input type="text" class="form-control" id="comment" placeholder="Commentaire"
+                       ng-model="movementFormCtrl.movement.comment">
+            </div>
+        </form>
+        <div class="pull-right">
+            <button class="btn btn-primary" ng-click="movementFormCtrl.ok()" ng-disabled="movementForm.$invalid">
+                Enregistrer
+            </button>
+            <button class="btn btn-warning" ng-click="movementFormCtrl.cancel()">Annuler</button>
+        </div>
+        <br/>
+    </div>
+</div>

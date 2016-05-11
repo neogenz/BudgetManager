@@ -46,8 +46,8 @@
             this._schema = {
                 id: new neogenz.beans.AbstractSchema({
                     type: neogenz.beans.type.STRING,
-                    defaultValue: '0',
-                    persistingName: '_id'
+                    persistingName: '_id',
+                    nullable: true
                 }),
                 name: new neogenz.beans.AbstractSchema({type: neogenz.beans.type.STRING, defaultValue: 'Économies'}),
                 baseAmount: new neogenz.beans.AbstractSchema({type: neogenz.beans.type.NUMBER, defaultValue: 0}),

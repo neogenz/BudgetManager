@@ -1,0 +1,47 @@
+<div class="centered panel panel-default without-margin">
+    <div class="panel-heading background-color-blue-1">
+        <h3 ng-if="mode == modes.create" class="color-white h3-responsive">
+            {{::provisionalPlanFormCtrl.modeMessage}}</h3>
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" name="provisionalPlanForm">
+            <!--<input type="hidden" ng-model="provisionalPlanFormCtrl.provisionalPlan.id"/>-->
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : provisionalPlanForm.name.$invalid && provisionalPlanForm.name.$dirty }">
+                <label for="name" class="col-sm-2 control-label">Nom*</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nom"
+                           ng-model="provisionalPlanFormCtrl.provisionalPlan.name" required="required">
+                </div>
+                <p ng-show="provisionalPlanForm.name.$error.required && provisionalPlanForm.name.$dirty"
+                   class="help-block">
+                    Veuillez entrer un nom pour ce plan prévisionnel.
+                </p>
+            </div>
+            <div class="form-group"
+                 ng-class="{ 'has-error' : provisionalPlanForm.name.$invalid && provisionalPlanForm.name.$dirty }">
+                <label for="amount" class="col-sm-2 control-label">Montant de base*</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="amount" name="amount" placeholder="Montant"
+                           ng-model="provisionalPlanFormCtrl.provisionalPlan.baseAmount" required>
+                </div>
+                <p ng-show="provisionalPlanFormCtrl.amount.$error.required && provisionalPlanFormCtrl.amount.$dirty"
+                   class="help-block">
+                    Veuillez entrer un montant pour ce plan prévisionnel.
+                </p>
+                <p ng-show="!provisionalPlanFormCtrl.amount.$error.required && provisionalPlanFormCtrl.amount.$invalid"
+                   class="help-block">
+                    Veuillez entrer un montant valide.
+                </p>
+            </div>
+        </form>
+        <div class="pull-right">
+            <button class="btn btn-primary" ng-click="provisionalPlanFormCtrl.ok()"
+                    ng-disabled="provisionalPlanFormCtrl.$invalid">Enregistrer
+            </button>
+            <button class="btn btn-warning" ng-click="provisionalPlanFormCtrl.cancel()">Annuler</button>
+        </div>
+        <br/>
+    </div>
+</div>

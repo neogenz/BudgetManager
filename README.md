@@ -53,12 +53,35 @@ Cette application est destinée à rendre conviviale et simple la gestion de son
 - Revealing Module Pattern
 
 ### Structure du projet
-- 01_Commons/ -> Scripts JS utilitaires pour la partie serveur
-- 02_Webservices/ -> Provider de WS exposées
-- 03_DataAcessLayer/ -> Provider d'accès au données (MongoDB)
-- 04_Models/ -> Définition des beans métier & techniques
-- config/ -> Configuration serveur (endpoints, login de base de données)
-- node_modules/ -> Fichier contenant les sources des modules NodeJS
-- public/ -> Répertoire contenant le code du front (client)
-	- app/ -> Code contenant tous le code AngularJS (Controllers, components, views, factory, ...)
-	- assets/ -> Répertoire contenant le code JS natif, librairies externes, etc ...
+```
+budgetmanager
+|-- 01_Commons/                     - Scripts JS utilitaires pour la partie serveur
+|-- 02_Werbservices/                - Provider de WS exposées
+|-- 03_DataAcessLayer/              - Provider d'accès au données (Mongoose)
+|-- 04_Models/                      - Définition des beans métier & techniques
+|-- config/                         - Configuration serveur (endpoints, login de base de données)
+|-- node_modules/                   - Sources et dépendances des modules NodeJS
+|-- public/                         - Code du front (client)
+|   |-- app/                        - Code AngularJS (Controllers, components, views, factory, ...)
+|   |   |-- components/             - Répertoires classés par module métier/technique
+|   |   |   `-- authentication/     - Module technique gérant l'authentification du client
+|   |   |       |-- controllers/    - Définition des contrôleurs, pas obligatoire si peu de contrôleurs
+|   |   |       `-- views/          - Définition des vues, pas obligatoire si peu de vues
+|   |   |-- shared/                 - Pareil que components/ mais pour les composant partageable au sein des projets
+|   |   |-- app.js                  - Définition de l'application AngularJS
+|   |   `-- routing.js              - Définition des routes de l'application
+|   `-- assets/                     - Tout JS non Angular, code vanillaJS, css, images, configurations, etc ...
+|       |-- css/                    - CSS commun du projet
+|       |-- img/                    - Images du projet
+|       |-- js/                     - Code vanillaJS : libraire interne (écrites par sois-même), librairies externes, etc ...
+|       |   |-- commons/            - Librairies utilitaires interne vanillaJS, utilisé un peu partout au sein du front
+|       |   |-- config/             - Script de configuration (environement, endpoint, etc ...)
+|       |   |-- model/              - Bean métiers, adapté depuis le back pour les besoins du front
+|       |   `-- bootstrap.js        - Fichier d'initialisation des namespaces JS racines utilisé au sein de notre code
+|       `-- libs/                   - Librairies externes (embarquant chacune sa structure spécifique, css, etc ...)
+|-- Gruntfile.js                    - Fichier d'automatisation de tâche Grunt
+|-- server.js                       - Définition du serveur Express
+|-- routing.js                      - Définition des routes de base (pour servir les fichiers & pour l'authentification)
+|-- .jslintrc                       - Validation JSLint
+`-- .eslintrc                       - Validation ESLint
+```
