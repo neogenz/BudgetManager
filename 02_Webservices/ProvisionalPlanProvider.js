@@ -66,7 +66,7 @@ function init(provider) {
     var _update = function (req, res) {
         var provisionalPlanId = req.body.id,
             userId = req.user._id;
-        provisionalPlanProvider.updateByIdAndUserId(provisionalPlanId, userId, req.body, function (err) {
+        provisionalPlanProvider.updateByIdAndUserId(provisionalPlanId, userId, req.body, function (err, updated) {
             if (err) {
                 console.log(err);
                 res.statusCode = 500;
@@ -75,7 +75,7 @@ function init(provider) {
                 };
                 res.send(httpErrorResponse);
             } else {
-                res.sendStatus(200);
+                res.send(updated);
             }
         });
     };
@@ -117,7 +117,7 @@ function init(provider) {
                 };
                 res.send(httpErrorResponse);
             } else {
-                res.sendStatus(200);
+                res.send(deleted);
             }
         });
     };

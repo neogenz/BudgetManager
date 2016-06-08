@@ -9,7 +9,7 @@
       _domain = 'localhost',
       _port = '3000', //80
       _protocol = 'http',
-      _baseUrl = _protocol + '://' /*+ _subdomain + '.'*/ + _domain;
+      _baseUrl = _protocol + '://' + /*_subdomain + '.' +*/ _domain;
     return {
       subdomain: _subdomain,
       domain: _domain,

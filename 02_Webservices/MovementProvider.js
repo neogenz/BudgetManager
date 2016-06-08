@@ -56,7 +56,7 @@ function init(provider) {
                 };
                 res.send(httpErrorResponse);
             } else {
-                res.sendStatus(200);
+                res.send(updated);
             }
         });
     };
@@ -74,7 +74,7 @@ function init(provider) {
                 };
                 res.send(httpErrorResponse);
             } else {
-                res.sendStatus(200);
+                res.send(deleted);
             }
         });
     };

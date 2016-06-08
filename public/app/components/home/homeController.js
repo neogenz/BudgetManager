@@ -11,7 +11,6 @@
 
   HomeController.$inject = ['$localStorage', '$state'];
 
-
   /**
    * @desc Controllers of ProvisionalPlans
    * @namespace HomeController
@@ -23,7 +22,7 @@
       defineScope();
       defineListeners();
     })();
-    
+
     /**
      * @desc Defines all $scope variables
      * @function defineScope
@@ -31,7 +30,6 @@
      */
     function defineScope() {
     }
-
 
     /**
      * @desc Attach view listeners to this controller

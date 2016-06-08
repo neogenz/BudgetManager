@@ -124,8 +124,8 @@
             movementToUpdate.repeat = newMovementData.repeat;
             movementToUpdate.comment = newMovementData.comment;
             movementToUpdate.active = newMovementData.active;
-            user.save(function (err, saved) {
-                return callback(err, movementToUpdate);
+            user.save(function (err, userSaved) {
+                return callback(err, userSaved.provisionalPlans.id(provisionalPlanId).movements.id(newMovementData.id));
             });
         });
     };
