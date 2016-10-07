@@ -5,12 +5,19 @@ var userProvider = require('./03_DataAcessLayer/UserProvider');
 var authenticationHelpers = require('./01_Commons/authenticationHelpers');
 
 module.exports = function (provider) {
-  var publicDir = __dirname + '/public/';
-  var css = publicDir; // + "css/";
-  var js = publicDir;// + "js/";
-  var fonts = publicDir;
+  var publicDir = __dirname + '/public/',
+    css = publicDir,
+    js = publicDir,
+    fonts = publicDir,
+    nodeModulesDir = __dirname + '/node_modules/';
 
-  // var userProvider = new UserProvider();
+
+  provider.get(['*/nm/*'],
+    function (req, res) {
+      var urlOfFile = req.originalUrl.split('/nm/')[1];
+      res.sendFile(nodeModulesDir + urlOfFile);
+    }
+  );
 
   provider.get(['/', '*/app/components/*.html', '*/app/shared/*.html'],
     function (req, res) {
@@ -19,21 +26,26 @@ module.exports = function (provider) {
         urlOfFile = 'index.html';
       }
       res.sendFile(publicDir + urlOfFile);
-    });
+    }
+  );
 
   provider.get(['*/app/app.js', '*/app/routing.js', '*/assets/libs/*.js',
       '*/assets/js/*.js', '*/app/components/*.js', '*/app/shared/*.js'],
     function (req, res) {
       res.sendFile(js + req.originalUrl);
-    });
+    }
+  );
 
-  provider.get('*.css', function (req, res) {
-    res.sendFile(css + req.originalUrl);
-  });
+  provider.get(['*.css', '!*/node_modules/*'], function (req, res) {
+      res.sendFile(css + req.originalUrl);
+    }
+  );
 
   provider.get(['*.woff', '*.ttf', '*.woff2'], function (req, res) {
-    res.sendFile(fonts + req.path);
-  });
+      res.sendFile(fonts + req.path);
+    }
+  );
+
 
   // Signin ==============================================================
   provider.post('/signin', function (req, res) {

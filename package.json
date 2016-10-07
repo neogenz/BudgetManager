@@ -2,6 +2,7 @@
   "name": "BudgetManager",
   "author": "Maxime De Sogus",
   "dependencies": {
+    "angular-toastr": "^2.1.1",
     "bcrypt-nodejs": "latest",
     "body-parser": "latest",
     "cookie-parser": "latest",
@@ -11,7 +12,8 @@
     "jsonwebtoken": "latest",
     "mongoose": "^4.2.5",
     "morgan": "latest",
-    "mysql": "latest"
+    "mysql": "latest",
+    "nodemon": "^1.11.0"
   },
   "devDependencies": {
     "eslint": "^2.9.0",
@@ -24,5 +26,10 @@
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-shell": "^1.1.2"
+  },
+  "scripts": {
+    "mongo": "(nohup mongod --dbpath=./db/) &",
+    "mongo-dev": "mongod --dbpath=./db/",
+    "start": "./node_modules/.bin/nodemon server.js"
   }
 }

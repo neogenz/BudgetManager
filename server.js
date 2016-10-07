@@ -60,7 +60,8 @@ process.on('SIGINT', function () {
     });
 });
 
-app.listen(3000);
+app.listen(app.get('port'));
+
 //});
 
 //exports.app = app;

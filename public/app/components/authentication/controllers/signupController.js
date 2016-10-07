@@ -67,7 +67,7 @@
                 user.username = user.email;
 
                 authenticateWebApi.signup(user).then(function () {
-                    toastr.success(app.uiManager.messages.signup.success);
+                    toastr.success(budgetManager.uiManager.messages.signup.success);
                     $state.go('provisionalPlans');
                 }, function () {
                     $rootScope.error = 'Failed to signup';
