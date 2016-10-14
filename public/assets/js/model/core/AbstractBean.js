@@ -5,20 +5,6 @@
      * @class AbstractBean
      * Class inherited by all models class.
      */
-    // function AbstractBean() {
-    //     this._schema = null;
-    // }
-    //
-    // AbstractBean.prototype.checkField = _checkField;
-    //
-    // AbstractBean.prototype.init = _init;
-    //
-    // AbstractBean.prototype.initWith = _initWith;
-    //
-    // AbstractBean.prototype.initWithDefaultValue = _initWithDefaultValue;
-    //
-    // AbstractBean.prototype.getValidKeyOfProperty = _getValidKeyOfProperty;
-
     var AbstractBean = neogenz.BaseClass.extend({
         initialize: function () {
             this._schema = null;
@@ -29,8 +15,8 @@
         initWithDefaultValue: _initWithDefaultValue,
         getValidKeyOfProperty: _getValidKeyOfProperty
     });
-    
-    
+
+
     /**
      * @name _init
      * Init the current bean in construction. Call the init with default value method or with an initialization
@@ -75,18 +61,32 @@
             if (_.isNull(objectKey)) {
                 continue;
             }
-            if (_isAPrimaryType(objectToInit[objectKey])) {
+            if (this._schema[schemaKey].type === neogenz.beans.type.DATE) {
+                this[schemaKey] = new Date(
+                  objectToInit[objectKey]
+                );
+                //}
+                //else if (this._schema[schemaKey].type === neogenz.beans.type.OBJECT_OR_ID) {
+                //  if(neogenz.beans.type.OBJECT_OR_ID.isObject(objectToInit[objectKey])){
+                //    objectToInit[objectKey] = neogenz.beans.factory.getBean(
+                //      this._schema[schemaKey].beanName,
+                //      objectToInit[objectKey]
+                //    );
+                //  }else{
+                //
+                //  }
+            } else if (_isAPrimaryType(objectToInit[objectKey]) && this._schema[schemaKey].type !== neogenz.beans.type.ARRAY_OBJECT) {
                 this[schemaKey] = objectToInit[objectKey];
             } else if (_isAComplexeType(objectToInit[objectKey])) {
                 if (this._schema[schemaKey].type === neogenz.beans.type.ARRAY_OBJECT) {
                     this[schemaKey] = _getArrayBeanByBeanNameAndInitObject(
-                        this._schema[schemaKey].contentObject.beanName,
-                        objectToInit[objectKey]
+                      this._schema[schemaKey].contentObject.beanName,
+                      objectToInit[objectKey]
                     );
                 } else {
                     this[schemaKey] = neogenz.beans.factory.getBean(
-                        this._schema[schemaKey].beanName,
-                        objectToInit[objectKey]
+                      this._schema[schemaKey].beanName,
+                      objectToInit[objectKey]
                     );
                 }
             }
@@ -137,7 +137,7 @@
      * @return {boolean} Is a primary type.
      */
     function _isAPrimaryType(value) {
-        return (!_.isUndefined(value) && !_.isObject(value));
+        return (!_.isUndefined(value) && (!_.isObject(value) || _.isArray(value)) );
     }
 
 

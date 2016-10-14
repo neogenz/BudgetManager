@@ -43,11 +43,15 @@
             this.baseAmount = null;
             this.movements = null;
             this.userId = null;
+            this.createdAt = null;
             this._schema = {
                 id: new neogenz.beans.AbstractSchema({
                     type: neogenz.beans.type.STRING,
                     persistingName: '_id',
                     nullable: true
+                }),
+                createdAt: new neogenz.beans.AbstractSchema({
+                    type: neogenz.beans.type.DATE
                 }),
                 name: new neogenz.beans.AbstractSchema({type: neogenz.beans.type.STRING, defaultValue: 'Économies'}),
                 baseAmount: new neogenz.beans.AbstractSchema({type: neogenz.beans.type.NUMBER, defaultValue: 0}),

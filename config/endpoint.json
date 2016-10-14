@@ -5,7 +5,7 @@
     "domain": "localhost"
   },
   "production": {
-    "portNumber": "5000",
+    "portNumber": "3000",
     "subDomain": "budgetManager",
     "domain": "localhost"
   }

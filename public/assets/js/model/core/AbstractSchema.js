@@ -28,7 +28,7 @@
         _getJsonKey: _getJsonKey,
         _resetControlState: _resetControlState,
         checkIntegrity: _checkIntegrity
-    })
+    });
     // function AbstractSchema(initObject) {
     //     this.type = null;
     //     this.beanName = null;
@@ -47,8 +47,8 @@
     //         }
     //     }
     // }
-    
-    
+
+
     /**
      * @function _checkTypeIntegrityBySchema
      * @desc Check the integrity of value by the schema configuration
@@ -80,8 +80,8 @@
         var jsonKey = null;
         if (neogenz.utilities.isUndefined(json[keyToFindInJson])) {
             console.warn('This porperty : ' + keyToFindInJson +
-                ' is not defined in json. See with persisting name' +
-                ' if he is specified.');
+              ' is not defined in json. See with persisting name' +
+              ' if he is specified.');
             //see in persistingName
             var persistingName = schema.persistingName;
             if (neogenz.utilities.isUndefined(json[persistingName])) {
@@ -128,14 +128,14 @@
                 jsonKey = AbstractSchema.prototype._getJsonKey(currentSchemaMember, json, key);
                 currentJsonMember = json[jsonKey];
                 _validMandatoryConstraint(
-                    schemaContainer[key],
-                    currentSchemaMember.mandatory,
-                    key
+                  schemaContainer[key],
+                  currentSchemaMember.mandatory,
+                  key
                 );
                 _validNullableConstraint(
-                    currentJsonMember,
-                    currentSchemaMember.nullable,
-                    key
+                  currentJsonMember,
+                  currentSchemaMember.nullable,
+                  key
                 );
                 if (!_.isUndefined(currentJsonMember) && !_.isNull(currentJsonMember)) {
                     AbstractSchema.prototype._checkTypeIntegrityBySchema(currentSchemaMember, currentJsonMember, key);
@@ -157,7 +157,7 @@
     function _validNullableConstraint(value, isNullable, propertyKeyTested) {
         if (_.isNull(value) && !isNullable) {
             throw new Error('The property ' + propertyKeyTested +
-                ' can\'t be null.');
+              ' can\'t be null.');
         }
     }
 
@@ -173,7 +173,7 @@
     function _validMandatoryConstraint(isPresent, isMandatory, propertyKeyTested) {
         if (!isPresent && isMandatory) {
             throw new Error('The property ' + propertyKeyTested +
-                ' is mandatory in schema but undefined in json.');
+              ' is mandatory in schema but undefined in json.');
         }
     }
 
@@ -234,9 +234,28 @@
             checkIntegrity: function (value) {
                 return _.isBoolean(value);
             }
+        },
+        DATE: {
+            toString: function () {
+                return 'date';
+            },
+            checkIntegrity: function (value) {
+                return _.isString(value) || _.isDate(value);
+            }
+        },
+        OBJECT_OR_ID: {
+            toString: function () {
+                return 'object or id (string)';
+            },
+            checkIntegrity: function (value) {
+                return _.isString(value) || _.isObject(value);
+            },
+            isObject: function (value) {
+                return _.isObject(value);
+            }
         }
     };
 
     exports.AbstractSchema = AbstractSchema;
-    
+
 })(neogenz.beans);
