@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-sm-12 text-center">
+        <h1>{{provisionalPlanModelListCtrl.multiplicityTitle}}
+            <small>{{provisionalPlanModelListCtrl.pluralTitle}}</small>
+        </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 text-center medium-bordered">
+        <button class="btn btn-lg btn-info btn-lg-responsive"
+                ng-click="provisionalPlanModelListCtrl.openModalToAddProvisionalPlanModelModelClickListener()">Nouveau modèle
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <provisional-plan-preview-cmp
+                ng-repeat="provisionalPlan in provisionalPlanModelListCtrl.provisionalPlansModels | orderBy:'-createdAt' "
+                provisional-plan="provisionalPlan"
+                ui-sref="provisionalPlanDetails({id:provisionalPlan.id})">
+        </provisional-plan-preview-cmp>
+    </div>
+</div>
