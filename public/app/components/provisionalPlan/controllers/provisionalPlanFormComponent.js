@@ -4,7 +4,9 @@
   var provisionalPlanFormComponent = {
     bindings: {
       provisionalPlan: '<',
-      modalInstance: '<'
+      provisionalPlanModels: '<',
+      modalInstance: '<',
+      isForModel : '<'
     },
     templateUrl: 'app/components/provisionalPlan/views/provisionalPlanFormComponentView.html',
     controller: ProvisionalPlanFormController,
@@ -38,6 +40,10 @@
       self.mode = (_.isNull(self.provisionalPlan.id) ? budgetManager.uiManager.formMode.create : budgetManager.uiManager.formMode.edit);
       self.modeMessage = self.mode == self.modes.create ?
         'Ajouter un plan prévisionnel' : 'Édition d\'un plan prévisionnel';
+      self.provisionalPlanForm = {
+        byModel: false,
+        modelChoosed: null
+      };
     }
 
 
@@ -48,6 +54,7 @@
     function defineListeners() {
       self.ok = _ok;
       self.cancel = _cancel;
+      self.refreshForm = _refreshForm;
     }
 
 
@@ -56,7 +63,12 @@
      * @function _ok
      */
     function _ok() {
-      self.modalInstance.close(self.provisionalPlan);
+      if(self.provisionalPlanForm.byModel){
+        self.provisionalPlanForm.modelChoosed.name = self.provisionalPlan.name;
+        self.modalInstance.close(self.provisionalPlanForm.modelChoosed);
+      }else{
+        self.modalInstance.close(self.provisionalPlan);
+      }
     }
 
 
@@ -66,6 +78,15 @@
      */
     function _cancel() {
       self.modalInstance.dismiss('Ajout du plan prévisionel annulé');
+    }
+
+
+    /**
+     * @desc Hide or display a part of form by the "By model" state
+     * @function _refreshForm
+     */
+    function _refreshForm(){
+
     }
 
   }

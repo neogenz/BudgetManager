@@ -9,8 +9,8 @@
 
             <div class="form-group"
                  ng-class="{ 'has-error' : provisionalPlanForm.name.$invalid && provisionalPlanForm.name.$dirty }">
-                <label for="name" class="col-sm-2 control-label">Nom*</label>
-                <div class="col-sm-10">
+                <label for="name" class="col-sm-3 control-label">Nom*</label>
+                <div class="col-sm-9">
                     <input type="text" class="form-control" id="name" name="name" placeholder="Nom"
                            ng-model="provisionalPlanFormCtrl.provisionalPlan.name" required="required">
                 </div>
@@ -21,10 +21,11 @@
             </div>
             <div class="form-group"
                  ng-class="{ 'has-error' : provisionalPlanForm.name.$invalid && provisionalPlanForm.name.$dirty }">
-                <label for="amount" class="col-sm-2 control-label">Montant de base*</label>
-                <div class="col-sm-10">
+                <label for="amount" class="col-sm-3 control-label">Montant de base*</label>
+                <div class="col-sm-9">
                     <input type="text" class="form-control" id="amount" name="amount" placeholder="Montant"
-                           ng-model="provisionalPlanFormCtrl.provisionalPlan.baseAmount" required>
+                           ng-model="provisionalPlanFormCtrl.provisionalPlan.baseAmount" required
+                           ng-disabled="provisionalPlanFormCtrl.provisionalPlanForm.byModel">
                 </div>
                 <p ng-show="provisionalPlanFormCtrl.amount.$error.required && provisionalPlanFormCtrl.amount.$dirty"
                    class="help-block">
@@ -35,6 +36,37 @@
                     Veuillez entrer un montant valide.
                 </p>
             </div>
+            <div class="form-group" ng-if="!provisionalPlanFormCtrl.isForModel">
+                <div class="col-sm-offset-3 col-sm-9">
+                    <div class="checkbox">
+                        <label for="byModel" class="control-label">
+                            <input type="checkbox" id="byModel" name="byModel"
+                                   ng-model="provisionalPlanFormCtrl.provisionalPlanForm.byModel" required
+                                   ng-click="provisionalPlanFormCtrl.refreshForm()">À partir d'un
+                            modèle
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : provisionalPlanForm.modelChoosed.$invalid && provisionalPlanForm.modelChoosed.$dirty }"
+                 ng-show="provisionalPlanFormCtrl.provisionalPlanForm.byModel">
+                <label for="modelChoosed" class="col-sm-3 control-label">Modèles*</label>
+                <div class="col-sm-9">
+                    <select id="modelChoosed" name="modelChoosed"
+                            ng-model="provisionalPlanFormCtrl.provisionalPlanForm.modelChoosed"
+                            ng-options="provisionalPlanModel.name for provisionalPlanModel in provisionalPlanFormCtrl.provisionalPlanModels"
+                            class="col-sm-12"></select>
+                    <!--todo: required on select-->
+                </div>
+                <p ng-show="provisionalPlanForm.name.$error.required && provisionalPlanForm.name.$dirty"
+                   class="help-block">
+                    Veuillez entrer un nom pour ce plan prévisionnel.
+                </p>
+            </div>
+
+
         </form>
         <div class="pull-right">
             <button class="btn btn-primary" ng-click="provisionalPlanFormCtrl.ok()"

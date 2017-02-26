@@ -16,13 +16,14 @@
 
   ProvisionalPlanListController.$inject = [
     'provisionalPlanWebApi',
-    '$modal'
+    '$modal',
+    '$q'
   ];
 
   /**
    * @desc Controllers of ProvisionalPlanDetails component
    */
-  function ProvisionalPlanListController(provisionalPlanWebApi, $modal) {
+  function ProvisionalPlanListController(provisionalPlanWebApi, $modal, $q) {
     var self = this;
 
     (function init() {
@@ -36,6 +37,8 @@
      * @function defineScope
      */
     function defineScope() {
+      self.provisionalPlanModels = _.where(self.provisionalPlans, { isModel: true } );
+      self.provisionalPlans = _.where(self.provisionalPlans, { isModel: false } );
       self.multiplicityTitle = '';
       self.pluralTitle = '';
       _refreshTitles();
@@ -80,19 +83,36 @@
       function openModal() {
         //@todo Make an utilities method to build modal with component and get just $modal instance
         var _provisionalPlanModalAddOpts = {
-          template: '<provisional-plan-form-cmp provisional-plan="provisionalPlanByDefault" modal-instance="modalInstance"></provisional-plan-form-cmp>',
+          template: '<provisional-plan-form-cmp provisional-plan-models="provisionalPlanModels" provisional-plan="provisionalPlanByDefault" modal-instance="modalInstance"></provisional-plan-form-cmp>',
           /*Re-wrap data in $scope to can access to this from HTML attributes of component
            We do this because it's an specially case : we use a modal
            */
           controller: function ($scope, $modalInstance) {
             $scope.modalInstance = $modalInstance;
             $scope.provisionalPlanByDefault = provisionalPlanByDefault;
+            $scope.provisionalPlanModels = self.provisionalPlanModels;
           }
         };
         var modalInstance = $modal.open(_provisionalPlanModalAddOpts);
 
         modalInstance.result.then(function (provisionalPlan) {
-            return provisionalPlanWebApi.create(provisionalPlan);
+            if(provisionalPlan.isModel){
+              var arrayPromises = [];
+              provisionalPlan.isModel = false;
+              return provisionalPlanWebApi.create(provisionalPlan).then(function(created){
+                provisionalPlan.movements.forEach(function(movement){
+                  movement.provisionalPlanId = created.id;
+                  arrayPromises.push(provisionalPlanWebApi.addMovement(movement));
+                });
+                return $q.all(arrayPromises).then(function(responses){
+                  console.debug('created all : ', responses);
+                  created.movements = responses;
+                  return created;
+                });
+              })
+            }else{
+              return provisionalPlanWebApi.create(provisionalPlan);
+            }
           }, function () {
             console.log('Modal dismissed at: ' + new Date());
           })

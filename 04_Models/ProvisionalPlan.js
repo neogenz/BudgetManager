@@ -9,7 +9,8 @@
         baseAmount: Number,
         updatedAt: Date,
         createdAt: Date,
-        movements: {type: [Movement.schema], default: []}
+        movements: {type: [Movement.schema], default: []},
+        isModel: {type: Boolean, default: false},
     });
 
     /**

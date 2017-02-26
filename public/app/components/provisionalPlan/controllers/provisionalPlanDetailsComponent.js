@@ -101,30 +101,6 @@
       }
 
       openModal();
-
-
-      /*  function _buildProvisionalPlanEditModalOpts() {
-       return {
-       // Url du template HTML
-       templateUrl: 'app/components/provisionalPlan/views/provisionalPlanFormView.html',
-       controller: 'provisionalPlanAddController',
-       resolve: {
-       provisionalPlan: function () {
-       return _.clone(self.provisionalPlan);
-       }
-       }
-       };
-       }
-
-       var modalInstance = $modal.open(_buildProvisionalPlanEditModalOpts());
-       modalInstance.result.then(function (provisionalPlan) {
-       _update(provisionalPlan);
-       }, function () {
-       console.log('Modal dismissed at: ' + new Date());
-       }).then(function(){
-       debugger;
-       _refreshTotalOfMovements();
-       });*/
     }
 
 
@@ -190,7 +166,7 @@
     function _openModalToAddMovementClickListener() {
       var beanMovementByDefault = null;
       //Build new movement by default
-      beanMovementByDefault = neogenz.beans.factory.getBean('Movement', null); //app.data.autocomplete.Movement();
+      beanMovementByDefault = neogenz.beans.factory.getBean('Movement', null);
       beanMovementByDefault.active = true;
       beanMovementByDefault.name = 'Mouvement d\'argent';
       //Assign to this movement the provisionalPlanId to add

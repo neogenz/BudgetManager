@@ -53,22 +53,38 @@
           user: isAuthenticated
         }
       }).state('provisionalPlans', {
-      url: '/provisionalPlans',
-      template: '<provisional-plan-list-cmp provisional-plans="provisionalPlans"></provisional-plan-list-cmp>',
-      controller: ['$scope', 'provisionalPlans', function ($scope, provisionalPlans) {
-        $scope.provisionalPlans = provisionalPlans;
-      }],
-      resolve: {
-        provisionalPlans: function ($stateParams, provisionalPlanWebApi) {
-          try {
-            return provisionalPlanWebApi.findAll();
-          } catch (err) {
-            throw new Error(err);
-          }
-        },
-        user: isAuthenticated
-      }
-    }).state('provisionalPlanDetails', {
+        url: '/provisionalPlans',
+        template: '<provisional-plan-list-cmp provisional-plans="provisionalPlans"></provisional-plan-list-cmp>',
+        controller: ['$scope', 'provisionalPlans', function ($scope, provisionalPlans) {
+          $scope.provisionalPlans = provisionalPlans;
+        }],
+        resolve: {
+          provisionalPlans: function ($stateParams, provisionalPlanWebApi) {
+            try {
+              return provisionalPlanWebApi.findAll();
+            } catch (err) {
+              throw new Error(err);
+            }
+          },
+          user: isAuthenticated
+        }
+      }).state('provisionalPlansModels', {
+        url: '/provisionalPlans/models',
+        template: '<provisional-plan-model-list-cmp provisional-plans-models="provisionalPlansModels"></provisional-plan-model-list-cmp>',
+        controller: ['$scope', 'provisionalPlansModels', function ($scope, provisionalPlansModels) {
+          $scope.provisionalPlansModels = provisionalPlansModels;
+        }],
+        resolve: {
+          provisionalPlansModels: function ($stateParams, provisionalPlanWebApi) {
+            try {
+              return provisionalPlanWebApi.findAllModel();
+            } catch (err) {
+              throw new Error(err);
+            }
+          },
+          user: isAuthenticated
+        }
+      }).state('provisionalPlanDetails', {
       url: '/provisionalPlans/:id',
       template: '<provisional-plan-details-cmp provisional-plan="provisionalPlan"></provisional-plan-details-cmp>',
       controller: ['$scope', 'provisionalPlan', function ($scope, provisionalPlan) {

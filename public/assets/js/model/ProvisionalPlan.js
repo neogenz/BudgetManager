@@ -44,6 +44,7 @@
             this.movements = null;
             this.userId = null;
             this.createdAt = null;
+            this.isModel = null;
             this._schema = {
                 id: new neogenz.beans.AbstractSchema({
                     type: neogenz.beans.type.STRING,
@@ -65,6 +66,10 @@
                         beanName: 'Movement',
                         constructor: neogenz.beans.Movement
                     })
+                }),
+                isModel : new neogenz.beans.AbstractSchema({
+                    type: neogenz.beans.type.BOOLEAN,
+                    defaultValue: false
                 })
             };
         }

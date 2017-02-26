@@ -28,11 +28,21 @@
         </div>
 
         <!-- Collection of nav links, forms, and other content for toggling -->
-        <div id="navbarCollapse" class="collapse navbar-collapse">
+        <div id="navbarCollapse" class="collapse navbar-collapse" ng-controller="MenuController as menuCtrl">
             <ul class="nav navbar-nav">
                 <li ng-show="$root.user">
                     <a ui-sref="provisionalPlans" class="link-color">
-                        <span class="fa fa-calculator"></span>
+                        Mes plans
+                    </a>
+                </li>
+                <li ng-show="$root.user">
+                    <a ui-sref="provisionalPlansModels" class="link-color">
+                        Mes modèles de plans
+                    </a>
+                </li>
+                <li ng-show="$root.user">
+                    <a ng-click="menuCtrl.openModalToAddProvisionalPlanModelClickListener()" class="link-color">
+                        Créer un modèle de plan
                     </a>
                 </li>
                 <!--<li>-->
@@ -54,12 +64,12 @@
                 </li>
             </ul>
         </div>
-        </div>
+    </div>
 </nav>
 
 <div class="container">
     <div ui-view></div>
-    </div>
+</div>
 <script src="assets/libs/jquery-2.2.0.min.js"></script>
 <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/libs/angular/angular.min.js"></script>
@@ -90,6 +100,7 @@
 <script src="assets/js/commons/uiManager.js"></script>
 <script src="app/app.js"></script>
 <script src="app/routing.js"></script>
+<script src="app/components/menu/menuController.js"></script>
 <script src="app/components/authentication/authenticateFactory.js"></script>
 <script src="app/components/provisionalPlan/provisionalPlanFactory.js"></script>
 <script src="app/components/provisionalPlan/provisionalPlanServices.js"></script>
@@ -99,6 +110,7 @@
 <script src="app/components/authentication/controllers/signupController.js"></script>
 <script src="app/components/authentication/controllers/signinController.js"></script>
 <script src="app/shared/confirmAction/actionConfirmController.js"></script>
+<script src="app/components/provisionalPlanModel/components/provisionalPlanModelListComponent.js"></script>
 <script src="app/components/movement/controllers/movementDetailsComponent.js"></script>
 <script src="app/components/movement/controllers/movementComponent.js"></script>
 <script src="app/components/movement/controllers/movementFormComponent.js"></script>

@@ -1,7 +1,6 @@
 (function init(exports) {
 
   function BaseClass() {
-    debugger;
     if (this.initialize !== undefined && this.initialize !== null) {
       this.initialize.apply(this, arguments);
     }
